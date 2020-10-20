@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="author" content="Gordon Freeman"/>
+    <title>Freeman's Music Collection</title>
+    <style>
+        body {
+            background-image: url("../static/background.jpg");
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        {# 井号(#)表示为id所指向的元素设置格式 #}
+        #list1 {
+        {# 设置元素占用一半宽度 #} width: 49.5%;
+        {# 设置元素浮动向左 #} float: left;
+            border-right-style: solid;
+            border-right-color: lemonchiffon;
+            border-right-width: 2px;
+        {# 设置内容居中 #} text-align: center;
+        }
+
+        #list2 {
+            width: 48%;
+            float: right;
+            text-align: center;
+        }
+
+        {# 点(.)表示为一类元素设置格式 #}
+        .musicInfo {
+            font-family: Arial;
+            font-size: 16px;
+            color: lemonchiffon;
+        }
+
+        .columnHead {
+            color: lemonchiffon;
+        }
+    </style>
+</head>
+
+<body>
+<h1 style="text-align: center; color: lemonchiffon;">
+    Freeman's Music Collection
+</h1>
+<hr/>
+<div id="list1">
+    <h2 class="columnHead">Male Artists</h2>
+    {# 这条语句装载一条注释 #}
+    {# 使用花括号和百分号装载控制语句 #}
+    {% for id in dict1 %}
+        {% with idDir=dict1[id]["idDir"], textContent=dict1[id]["textContent"] %}
+            {# ~用于拼接字符串 #}
+            {% with picDir=idDir~".png", musicDir=idDir~".mp3" %}
+                {# 使用两个花括号装载变量 #}
+                <pre class="musicInfo">{{ textContent }}</pre>
+                <img src="{{ picDir }}" width="100" height="100"
+                     alt="There seems to be some problems with the image."/>
+                <pre></pre> {# 使用空白的<pre>元素人为插入两个空行 #}
+                <audio src="{{ musicDir }}" controls="controls">
+                    There seems to be some problems with the music file.
+                </audio>
+            {% endwith %}
+        {% endwith %}
+    {% endfor %}
+</div>
+<div id="list2">
+    <h2 class="columnHead">Female Artists</h2>
+    {% for id in dict2 %}
+        {% with idDir=dict2[id]["idDir"], textContent=dict2[id]["textContent"] %}
+            {# ~用于拼接字符串 #}
+            {% with picDir=idDir~".png", musicDir=idDir~".mp3" %}
+                {# 使用两个花括号装载变量 #}
+                <pre class="musicInfo">{{ textContent }}</pre>
+                <img src="{{ picDir }}" width="100" height="100"
+                     alt="There seems to be some problems with the image."/>
+                <pre></pre>
+                <audio src="{{ musicDir }}" controls="controls">
+                    There seems to be some problems with the music file.
+                </audio>
+            {% endwith %}
+        {% endwith %}
+    {% endfor %}
+</div>
+</body>
+</html>

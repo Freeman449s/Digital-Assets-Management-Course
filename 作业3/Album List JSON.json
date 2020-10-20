@@ -1,0 +1,3306 @@
+[
+    {
+        "creator": {
+            "picture": "https://img3.doubanio.com\/icon\/ul194298828-2.jpg",
+            "songlists_count": 399,
+            "url": "https:\/\/www.douban.com\/people\/194298828\/",
+            "create_time": "2019.04.01",
+            "type": "user",
+            "id": "194298828",
+            "name": "illchilli"
+        },
+        "covers": {
+            "large": "https://img3.doubanio.com\/img\/songlist\/large\/39166415-1.png",
+            "raw": "https://img3.doubanio.com\/img\/songlist\/raw\/39166415-1.png",
+            "auto": "https://img3.doubanio.com\/img\/songlist\/large\/39166415-1.png"
+        },
+        "duration": 2395,
+        "intro": "8bit流行音乐翻编",
+        "cover_type": 1,
+        "created_time": "2019-08-23 06:00:00",
+        "id": 39166415,
+        "show_not_playable": null,
+        "title_color": "#FFFFFF",
+        "dark_cover": "https://img3.doubanio.com\/img\/songlist\/large\/39166415-1.png",
+        "title": "「8bit」像素电音 童趣复古",
+        "type": 6,
+        "description": "8bit流行音乐翻编",
+        "collected_count": 209,
+        "sample_songs": [
+            {
+                "artist": "8-Bit Universe",
+                "taste_status": 0,
+                "title": "Shake It Off(8-Bit Version)",
+                "like": 0,
+                "sid": "4044916"
+            },
+            {
+                "artist": "8-Bit Universe",
+                "taste_status": 0,
+                "title": "Don't(8-Bit Version)",
+                "like": 0,
+                "sid": "4196404"
+            },
+            {
+                "artist": "8-Bit Universe",
+                "taste_status": 0,
+                "title": "Afire Love(8-Bit Version)",
+                "like": 0,
+                "sid": "4045024"
+            }
+        ],
+        "cover_color": "#FA81CE",
+        "rec_reason": "",
+        "is_public": true,
+        "songs_count": 11,
+        "can_edit": null,
+        "cover": "https://img3.doubanio.com\/img\/songlist\/large\/39166415-1.png",
+        "updated_time": "2020-04-13 15:08:52",
+        "detailed_intro": "用8bit世界的“声音”\n带你领略我们世界中的歌曲"
+    },
+    {
+        "creator": {
+            "picture": "https://img2.doubanio.com\/icon\/ul194298822-3.jpg",
+            "songlists_count": 356,
+            "url": "https:\/\/www.douban.com\/people\/194298822\/",
+            "create_time": "2019.04.01",
+            "type": "user",
+            "id": "194298822",
+            "name": "锅炉不是锅"
+        },
+        "covers": {
+            "large": "https://img3.doubanio.com\/img\/songlist\/large\/42531675-1.png",
+            "raw": "https://img3.doubanio.com\/img\/songlist\/raw\/42531675-1.png",
+            "auto": "https://img3.doubanio.com\/img\/songlist\/large\/42531675-1.png"
+        },
+        "duration": 1391,
+        "intro": "嘻哈天王，潮流icon",
+        "cover_type": 1,
+        "created_time": "2020-02-18 06:00:00",
+        "id": 42531675,
+        "show_not_playable": null,
+        "title_color": "#FFFFFF",
+        "dark_cover": "https://img3.doubanio.com\/img\/songlist\/large\/42531675-1.png",
+        "title": "Travis Scott：潮流icon",
+        "type": 6,
+        "description": "嘻哈天王，潮流icon",
+        "collected_count": 87,
+        "sample_songs": [
+            {
+                "artist": "SZA \/ Travis Scott \/ The Weeknd",
+                "taste_status": 0,
+                "title": "Power is Power",
+                "like": 0,
+                "sid": "5134774"
+            },
+            {
+                "artist": "SZA \/ Travis Scott",
+                "taste_status": 0,
+                "title": "Love Galore",
+                "like": 0,
+                "sid": "6574343"
+            },
+            {
+                "artist": "Offset  \/ Kodak Black \/ Travis Scott",
+                "taste_status": 0,
+                "title": "ZEZE",
+                "like": 0,
+                "sid": "7144246"
+            }
+        ],
+        "cover_color": "#c6aa69",
+        "rec_reason": "",
+        "is_public": true,
+        "songs_count": 6,
+        "can_edit": null,
+        "cover": "https://img3.doubanio.com\/img\/songlist\/large\/42531675-1.png",
+        "updated_time": "2020-02-18 00:13:22",
+        "detailed_intro": "嘻哈天王，潮流icon"
+    },
+    {
+        "creator": {
+            "picture": "https://img2.doubanio.com\/icon\/ul194298822-3.jpg",
+            "songlists_count": 356,
+            "url": "https:\/\/www.douban.com\/people\/194298822\/",
+            "create_time": "2019.04.01",
+            "type": "user",
+            "id": "194298822",
+            "name": "锅炉不是锅"
+        },
+        "covers": {
+            "large": "https://img3.doubanio.com\/img\/songlist\/large\/42958437-1.png",
+            "raw": "https://img3.doubanio.com\/img\/songlist\/raw\/42958437-1.png",
+            "auto": "https://img3.doubanio.com\/img\/songlist\/large\/42958437-1.png"
+        },
+        "duration": 1928,
+        "intro": "神经神秘神曲，三神归一",
+        "cover_type": 1,
+        "created_time": "2020-03-16 06:00:00",
+        "id": 42958437,
+        "show_not_playable": null,
+        "title_color": "#333333",
+        "dark_cover": "https://img3.doubanio.com\/img\/songlist\/large\/42958437-1.png",
+        "title": "Sia：酷毙了的“女神经病”",
+        "type": 6,
+        "description": "神经神秘神曲，三神归一",
+        "collected_count": 120,
+        "sample_songs": [
+            {
+                "artist": "Sia",
+                "taste_status": 0,
+                "title": "I'm In Here",
+                "like": 0,
+                "sid": "1637897"
+            },
+            {
+                "artist": "Sia",
+                "taste_status": 0,
+                "title": "Unstoppable",
+                "like": 0,
+                "sid": "2581126"
+            },
+            {
+                "artist": "Sia",
+                "taste_status": 0,
+                "title": "Cheap Thrills",
+                "like": 0,
+                "sid": "2566327"
+            }
+        ],
+        "cover_color": "#90d3c3",
+        "rec_reason": "",
+        "is_public": true,
+        "songs_count": 9,
+        "can_edit": null,
+        "cover": "https://img3.doubanio.com\/img\/songlist\/large\/42958437-1.png",
+        "updated_time": "2020-03-15 21:39:00",
+        "detailed_intro": "神经神秘神曲，三神归一"
+    },
+    {
+        "creator": {
+            "picture": "https://img2.doubanio.com\/icon\/ul194298822-3.jpg",
+            "songlists_count": 356,
+            "url": "https:\/\/www.douban.com\/people\/194298822\/",
+            "create_time": "2019.04.01",
+            "type": "user",
+            "id": "194298822",
+            "name": "锅炉不是锅"
+        },
+        "covers": {
+            "large": "https://img3.doubanio.com\/img\/songlist\/large\/43095583-1.png",
+            "raw": "https://img3.doubanio.com\/img\/songlist\/raw\/43095583-1.png",
+            "auto": "https://img3.doubanio.com\/img\/songlist\/large\/43095583-1.png"
+        },
+        "duration": 2492,
+        "intro": "好久没有Pitbull的消息了",
+        "cover_type": 1,
+        "created_time": "2020-03-24 06:00:00",
+        "id": 43095583,
+        "show_not_playable": null,
+        "title_color": "#333333",
+        "dark_cover": "https://img3.doubanio.com\/img\/songlist\/large\/43095583-1.png",
+        "title": "Pitbull：突然消失的古巴喊麦王",
+        "type": 6,
+        "description": "好久没有Pitbull的消息了",
+        "collected_count": 63,
+        "sample_songs": [
+            {
+                "artist": "Kesha \/ Pitbull",
+                "taste_status": 0,
+                "title": "Timber",
+                "like": 0,
+                "sid": "3443699"
+            },
+            {
+                "artist": "Adassa \/ Pitbull \/ L.O.K.A.!",
+                "taste_status": 0,
+                "title": "Loca",
+                "like": 0,
+                "sid": "4420526"
+            },
+            {
+                "artist": "Pitbull",
+                "taste_status": 0,
+                "title": "Hotel Room Service",
+                "like": 0,
+                "sid": "3312117"
+            }
+        ],
+        "cover_color": "#240a00",
+        "rec_reason": "",
+        "is_public": true,
+        "songs_count": 10,
+        "can_edit": null,
+        "cover": "https://img3.doubanio.com\/img\/songlist\/large\/43095583-1.png",
+        "updated_time": "2020-03-24 00:11:19",
+        "detailed_intro": "好久没有Pitbull的消息了"
+    },
+    {
+        "creator": {
+            "picture": "https://img3.doubanio.com\/icon\/ul194298826-1.jpg",
+            "songlists_count": 46,
+            "url": "https:\/\/www.douban.com\/people\/194298826\/",
+            "create_time": "2019.04.01",
+            "type": "user",
+            "id": "194298826",
+            "name": "我小我"
+        },
+        "covers": {
+            "large": "https://img3.doubanio.com\/img\/songlist\/large\/39184898-1.png",
+            "raw": "https://img3.doubanio.com\/img\/songlist\/raw\/39184898-1.png",
+            "auto": "https://img3.doubanio.com\/img\/songlist\/large\/39184898-1.png"
+        },
+        "duration": 3560,
+        "intro": "一边听一边学",
+        "cover_type": 1,
+        "created_time": "2019-10-05 06:00:00",
+        "id": 39184898,
+        "show_not_playable": null,
+        "title_color": "#FFFFFF",
+        "dark_cover": "https://img3.doubanio.com\/img\/songlist\/large\/39184898-1.png",
+        "title": "Kenny G 萨克斯经典单曲",
+        "type": 6,
+        "description": "一边听一边学",
+        "collected_count": 228,
+        "sample_songs": [
+            {
+                "artist": "Kenny G",
+                "taste_status": 0,
+                "title": "You Raise Me Up",
+                "like": 0,
+                "sid": "25247"
+            },
+            {
+                "artist": "Kenny G",
+                "taste_status": 0,
+                "title": "As Time Goes By",
+                "like": 0,
+                "sid": "25246"
+            },
+            {
+                "artist": "Kenny G",
+                "taste_status": 0,
+                "title": "If I Aint Got You",
+                "like": 0,
+                "sid": "25241"
+            }
+        ],
+        "cover_color": "#1F23D3",
+        "rec_reason": "",
+        "is_public": true,
+        "songs_count": 16,
+        "can_edit": null,
+        "cover": "https://img3.doubanio.com\/img\/songlist\/large\/39184898-1.png",
+        "updated_time": "2019-08-21 10:52:27",
+        "detailed_intro": "Kenny G（肯尼-基）1956年6月5日出生于美国西雅图，是全球最著名的高音萨克斯演奏家，专辑累计销量冲破7500万张，称霸世界。是当代最畅销爵士乐乐手。肯尼基非凡的才华赢得了格莱美奖、全美音乐奖、灵魂列车奖、世界音乐奖。"
+    },
+    {
+        "creator": {
+            "picture": "https://img2.doubanio.com\/icon\/ul194298822-3.jpg",
+            "songlists_count": 356,
+            "url": "https:\/\/www.douban.com\/people\/194298822\/",
+            "create_time": "2019.04.01",
+            "type": "user",
+            "id": "194298822",
+            "name": "锅炉不是锅"
+        },
+        "covers": {
+            "large": "https://img3.doubanio.com\/img\/songlist\/large\/42515723-1.png",
+            "raw": "https://img3.doubanio.com\/img\/songlist\/raw\/42515723-1.png",
+            "auto": "https://img3.doubanio.com\/img\/songlist\/large\/42515723-1.png"
+        },
+        "duration": 2254,
+        "intro": "创作才子",
+        "cover_type": 1,
+        "created_time": "2020-02-17 06:00:00",
+        "id": 42515723,
+        "show_not_playable": null,
+        "title_color": "#333333",
+        "dark_cover": "https://img3.doubanio.com\/img\/songlist\/large\/42515723-1.png",
+        "title": "Ed Sheeran：音乐才子毛茸茸",
+        "type": 6,
+        "description": "创作才子",
+        "collected_count": 368,
+        "sample_songs": [
+            {
+                "artist": "Ed Sheeran",
+                "taste_status": 0,
+                "title": "Thinking Out Loud",
+                "like": 0,
+                "sid": "2087169"
+            },
+            {
+                "artist": "Ed Sheeran",
+                "taste_status": 0,
+                "title": "Perfect",
+                "like": 0,
+                "sid": "2708994"
+            },
+            {
+                "artist": "Ed Sheeran",
+                "taste_status": 0,
+                "title": "Shape of You",
+                "like": 0,
+                "sid": "2708993"
+            }
+        ],
+        "cover_color": "#516b7e",
+        "rec_reason": "",
+        "is_public": true,
+        "songs_count": 9,
+        "can_edit": null,
+        "cover": "https://img3.doubanio.com\/img\/songlist\/large\/42515723-1.png",
+        "updated_time": "2020-02-16 22:44:30",
+        "detailed_intro": "创作才子"
+    },
+    {
+        "creator": {
+            "picture": "https://img2.doubanio.com\/icon\/ul194298822-3.jpg",
+            "songlists_count": 356,
+            "url": "https:\/\/www.douban.com\/people\/194298822\/",
+            "create_time": "2019.04.01",
+            "type": "user",
+            "id": "194298822",
+            "name": "锅炉不是锅"
+        },
+        "covers": {
+            "large": "https://img3.doubanio.com\/img\/songlist\/large\/42121273-1.png",
+            "raw": "https://img3.doubanio.com\/img\/songlist\/raw\/42121273-1.png",
+            "auto": "https://img3.doubanio.com\/img\/songlist\/large\/42121273-1.png"
+        },
+        "duration": 2755,
+        "intro": "不愤怒，不叛逆，也可以很摇滚",
+        "cover_type": 1,
+        "created_time": "2020-01-19 06:00:00",
+        "id": 42121273,
+        "show_not_playable": null,
+        "title_color": "#FFFFFF",
+        "dark_cover": "https://img3.doubanio.com\/img\/songlist\/large\/42121273-1.png",
+        "title": "Coldplay：音乐构成的缤纷世界",
+        "type": 6,
+        "description": "不愤怒，不叛逆，也可以很摇滚",
+        "collected_count": 309,
+        "sample_songs": [
+            {
+                "artist": "Coldplay",
+                "taste_status": 0,
+                "title": "Viva La Vida",
+                "like": 0,
+                "sid": "297871"
+            },
+            {
+                "artist": "The Chainsmokers \/ Coldplay",
+                "taste_status": 0,
+                "title": "Something Just Like This",
+                "like": 0,
+                "sid": "2707229"
+            },
+            {
+                "artist": "Coldplay",
+                "taste_status": 0,
+                "title": "Adventure of a Lifetime",
+                "like": 0,
+                "sid": "2548637"
+            }
+        ],
+        "cover_color": "#2b211d",
+        "rec_reason": "",
+        "is_public": true,
+        "songs_count": 10,
+        "can_edit": null,
+        "cover": "https://img3.doubanio.com\/img\/songlist\/large\/42121273-1.png",
+        "updated_time": "2020-01-19 00:52:48",
+        "detailed_intro": "不愤怒，不叛逆，也可以很摇滚"
+    },
+    {
+        "creator": {
+            "picture": "https://img2.doubanio.com\/icon\/ul194298822-3.jpg",
+            "songlists_count": 356,
+            "url": "https:\/\/www.douban.com\/people\/194298822\/",
+            "create_time": "2019.04.01",
+            "type": "user",
+            "id": "194298822",
+            "name": "锅炉不是锅"
+        },
+        "covers": {
+            "large": "https://img3.doubanio.com\/img\/songlist\/large\/43199037-1.png",
+            "raw": "https://img3.doubanio.com\/img\/songlist\/raw\/43199037-1.png",
+            "auto": "https://img3.doubanio.com\/img\/songlist\/large\/43199037-1.png"
+        },
+        "duration": 3441,
+        "intro": "席帝威武！",
+        "cover_type": 1,
+        "created_time": "2020-03-30 06:00:00",
+        "id": 43199037,
+        "show_not_playable": null,
+        "title_color": "#333333",
+        "dark_cover": "https://img3.doubanio.com\/img\/songlist\/large\/43199037-1.png",
+        "title": "Céline Dion：此嗓只应天上有",
+        "type": 6,
+        "description": "席帝威武！",
+        "collected_count": 229,
+        "sample_songs": [
+            {
+                "artist": "Céline Dion",
+                "taste_status": 0,
+                "title": "I Surrender",
+                "like": 0,
+                "sid": "694902"
+            },
+            {
+                "artist": "Céline Dion",
+                "taste_status": 0,
+                "title": "My Heart Will Go On",
+                "like": 0,
+                "sid": "1007519"
+            },
+            {
+                "artist": "Céline Dion",
+                "taste_status": 0,
+                "title": "Another Year Has Gone By",
+                "like": 0,
+                "sid": "697620"
+            }
+        ],
+        "cover_color": "#86ffc2",
+        "rec_reason": "",
+        "is_public": true,
+        "songs_count": 13,
+        "can_edit": null,
+        "cover": "https://img3.doubanio.com\/img\/songlist\/large\/43199037-1.png",
+        "updated_time": "2020-03-29 21:16:40",
+        "detailed_intro": "席帝威武！"
+    },
+    {
+        "creator": {
+            "picture": "https://img2.doubanio.com\/icon\/ul194298822-3.jpg",
+            "songlists_count": 356,
+            "url": "https:\/\/www.douban.com\/people\/194298822\/",
+            "create_time": "2019.04.01",
+            "type": "user",
+            "id": "194298822",
+            "name": "锅炉不是锅"
+        },
+        "covers": {
+            "large": "https://img3.doubanio.com\/img\/songlist\/large\/39310205-1.png",
+            "raw": "https://img3.doubanio.com\/img\/songlist\/raw\/39310205-1.png",
+            "auto": "https://img3.doubanio.com\/img\/songlist\/large\/39310205-1.png"
+        },
+        "duration": 2585,
+        "intro": "又高又帅又有钱，音乐还做得棒",
+        "cover_type": 1,
+        "created_time": "2019-10-20 06:00:00",
+        "id": 39310205,
+        "show_not_playable": null,
+        "title_color": "#FFFFFF",
+        "dark_cover": "https://img3.doubanio.com\/img\/songlist\/large\/39310205-1.png",
+        "title": "高富帅——Calvin Harris",
+        "type": 6,
+        "description": "又高又帅又有钱，音乐还做得棒",
+        "collected_count": 53,
+        "sample_songs": [
+            {
+                "artist": "Calvin Harris",
+                "taste_status": 0,
+                "title": "Electro Man",
+                "like": 0,
+                "sid": "1385003"
+            },
+            {
+                "artist": "Calvin Harris \/ Young Thug \/ Pharrell Williams \/ Ariana Grande",
+                "taste_status": 0,
+                "title": "Heatstroke ",
+                "like": 0,
+                "sid": "3031426"
+            },
+            {
+                "artist": "Calvin Harris \/ Rihanna",
+                "taste_status": 0,
+                "title": "This Is What You Came For",
+                "like": 0,
+                "sid": "2618158"
+            }
+        ],
+        "cover_color": "#02DEA5",
+        "rec_reason": "",
+        "is_public": true,
+        "songs_count": 11,
+        "can_edit": null,
+        "cover": "https://img3.doubanio.com\/img\/songlist\/large\/39310205-1.png",
+        "updated_time": "2019-08-26 17:22:29",
+        "detailed_intro": "卡尔文·哈里斯（Calvin Harris），1984年1月17日出生于苏格兰丹弗里斯镇，英国苏格兰创作歌手、音乐制作人和DJ。2007年发行首张个人录音室专辑《I Created Disco》出道。2009年，发行第二张个人录音室专辑《Ready For The Weekend》，歌曲《Yeah Yeah Yeah La La La》成为了百事可乐的广告歌曲。专辑被英国唱片协会被认证为金唱片。2011年底，由卡尔文一手创作并制作，由蕾哈娜演唱的《We Found Love》发行。2014年全球百大DJ排名中名列第11位。2015年5月，获得2015公告牌音乐奖最佳舞蹈、电子歌手。同年11月，发行第四张录音室专辑《Motion》。"
+    },
+    {
+        "creator": {
+            "picture": "https://img3.doubanio.com\/icon\/ul194298828-2.jpg",
+            "songlists_count": 399,
+            "url": "https:\/\/www.douban.com\/people\/194298828\/",
+            "create_time": "2019.04.01",
+            "type": "user",
+            "id": "194298828",
+            "name": "illchilli"
+        },
+        "covers": {
+            "large": "https://img3.doubanio.com\/img\/songlist\/large\/41906046-1.png",
+            "raw": "https://img3.doubanio.com\/img\/songlist\/raw\/41906046-1.png",
+            "auto": "https://img3.doubanio.com\/img\/songlist\/large\/41906046-1.png"
+        },
+        "duration": 2155,
+        "intro": "",
+        "cover_type": 1,
+        "created_time": "2020-01-07 06:00:00",
+        "id": 41906046,
+        "show_not_playable": null,
+        "title_color": "#FFFFFF",
+        "dark_cover": "https://img3.doubanio.com\/img\/songlist\/large\/41906046-1.png",
+        "title": "法语|流行|温暖的歌温暖你的窝",
+        "type": 6,
+        "description": "",
+        "collected_count": 100,
+        "sample_songs": [
+            {
+                "artist": "Line Renaud",
+                "taste_status": 0,
+                "title": "Le complet gris",
+                "like": 0,
+                "sid": "10895451"
+            },
+            {
+                "artist": "Jean Sablon",
+                "taste_status": 0,
+                "title": "J'attendrai",
+                "like": 0,
+                "sid": "10901532"
+            },
+            {
+                "artist": "Les Chaussettes Noires",
+                "taste_status": 0,
+                "title": "Daniela",
+                "like": 0,
+                "sid": "10889630"
+            }
+        ],
+        "cover_color": "#ff9002",
+        "rec_reason": "",
+        "is_public": true,
+        "songs_count": 13,
+        "can_edit": null,
+        "cover": "https://img3.doubanio.com\/img\/songlist\/large\/41906046-1.png",
+        "updated_time": "2020-09-23 16:58:22",
+        "detailed_intro": ""
+    },
+    {
+        "creator": {
+            "picture": "https://img2.doubanio.com\/icon\/ul194298822-3.jpg",
+            "songlists_count": 356,
+            "url": "https:\/\/www.douban.com\/people\/194298822\/",
+            "create_time": "2019.04.01",
+            "type": "user",
+            "id": "194298822",
+            "name": "锅炉不是锅"
+        },
+        "covers": {
+            "large": "https://img3.doubanio.com\/img\/songlist\/large\/41982702-1.png",
+            "raw": "https://img3.doubanio.com\/img\/songlist\/raw\/41982702-1.png",
+            "auto": "https://img3.doubanio.com\/img\/songlist\/large\/41982702-1.png"
+        },
+        "duration": 2312,
+        "intro": "跳舞吧！",
+        "cover_type": 1,
+        "created_time": "2020-01-11 06:00:00",
+        "id": 41982702,
+        "show_not_playable": null,
+        "title_color": "#FFFFFF",
+        "dark_cover": "https://img3.doubanio.com\/img\/songlist\/large\/41982702-1.png",
+        "title": "地,风,火：Funk you up！",
+        "type": 6,
+        "description": "跳舞吧！",
+        "collected_count": 54,
+        "sample_songs": [
+            {
+                "artist": "Earth, Wind & Fire",
+                "taste_status": 0,
+                "title": "September",
+                "like": 0,
+                "sid": "7819652"
+            },
+            {
+                "artist": "Earth, Wind & Fire",
+                "taste_status": 0,
+                "title": "Let's Groove",
+                "like": 0,
+                "sid": "3410348"
+            },
+            {
+                "artist": "Earth, Wind & Fire",
+                "taste_status": 0,
+                "title": "Boogie Wonderland",
+                "like": 0,
+                "sid": "3435853"
+            }
+        ],
+        "cover_color": "#ea41c4",
+        "rec_reason": "",
+        "is_public": true,
+        "songs_count": 9,
+        "can_edit": null,
+        "cover": "https://img3.doubanio.com\/img\/songlist\/large\/41982702-1.png",
+        "updated_time": "2020-01-10 23:24:27",
+        "detailed_intro": "跳舞吧！"
+    },
+    {
+        "creator": {
+            "picture": "https://img3.doubanio.com\/icon\/ul194298824-1.jpg",
+            "songlists_count": 54,
+            "url": "https:\/\/www.douban.com\/people\/194298824\/",
+            "create_time": "2019.04.01",
+            "type": "user",
+            "id": "194298824",
+            "name": "苏七"
+        },
+        "covers": {
+            "large": "https://img3.doubanio.com\/img\/songlist\/large\/39027796-1.png",
+            "raw": "https://img3.doubanio.com\/img\/songlist\/raw\/39027796-1.png",
+            "auto": "https://img3.doubanio.com\/img\/songlist\/large\/39027796-1.png"
+        },
+        "duration": 1866,
+        "intro": "孙燕姿的冷门遗珠你听过多少",
+        "cover_type": 1,
+        "created_time": "2019-08-16 06:00:00",
+        "id": 39027796,
+        "show_not_playable": null,
+        "title_color": "#333333",
+        "dark_cover": "https://img3.doubanio.com\/img\/songlist\/large\/39027796-1.png",
+        "title": "测测你有多爱孙燕姿",
+        "type": 6,
+        "description": "孙燕姿的冷门遗珠你听过多少",
+        "collected_count": 556,
+        "sample_songs": [
+            {
+                "artist": "孙燕姿",
+                "taste_status": 0,
+                "title": "害怕",
+                "like": 0,
+                "sid": "17984"
+            },
+            {
+                "artist": "孙燕姿",
+                "taste_status": 0,
+                "title": "同类",
+                "like": 0,
+                "sid": "262390"
+            },
+            {
+                "artist": "孙燕姿",
+                "taste_status": 0,
+                "title": "了解",
+                "like": 0,
+                "sid": "317613"
+            }
+        ],
+        "cover_color": "#C67A6B",
+        "rec_reason": "",
+        "is_public": true,
+        "songs_count": 8,
+        "can_edit": null,
+        "cover": "https://img3.doubanio.com\/img\/songlist\/large\/39027796-1.png",
+        "updated_time": "2019-08-20 14:26:29",
+        "detailed_intro": "你的青春一定少不了这个短发女生"
+    },
+    {
+        "creator": {
+            "picture": "https://img3.doubanio.com\/icon\/ul194298828-2.jpg",
+            "songlists_count": 399,
+            "url": "https:\/\/www.douban.com\/people\/194298828\/",
+            "create_time": "2019.04.01",
+            "type": "user",
+            "id": "194298828",
+            "name": "illchilli"
+        },
+        "covers": {
+            "large": "https://img3.doubanio.com\/img\/songlist\/large\/41299469-1.png",
+            "raw": "https://img3.doubanio.com\/img\/songlist\/raw\/41299469-1.png",
+            "auto": "https://img3.doubanio.com\/img\/songlist\/large\/41299469-1.png"
+        },
+        "duration": 2197,
+        "intro": "",
+        "cover_type": 1,
+        "created_time": "2019-12-06 06:00:00",
+        "id": 41299469,
+        "show_not_playable": null,
+        "title_color": "#FFFFFF",
+        "dark_cover": "https://img3.doubanio.com\/img\/songlist\/large\/41299469-1.png",
+        "title": "出行必备｜驾车不瞌睡",
+        "type": 6,
+        "description": "",
+        "collected_count": 392,
+        "sample_songs": [
+            {
+                "artist": "Coldplay",
+                "taste_status": 0,
+                "title": "Viva La Vida",
+                "like": 0,
+                "sid": "297871"
+            },
+            {
+                "artist": "Alan Walker",
+                "taste_status": 0,
+                "title": "Alan Walker - 01 - Faded -Rocket Girl Remix__44k-24b_MP3",
+                "like": 0,
+                "sid": "9245907"
+            },
+            {
+                "artist": "Charlie Puth",
+                "taste_status": 0,
+                "title": "See You Again (feat. Charlie Puth) [From \"Furious 7\"]",
+                "like": 0,
+                "sid": "2582659"
+            }
+        ],
+        "cover_color": "#339590",
+        "rec_reason": "",
+        "is_public": true,
+        "songs_count": 10,
+        "can_edit": null,
+        "cover": "https://img3.doubanio.com\/img\/songlist\/large\/41299469-1.png",
+        "updated_time": "2019-12-05 19:52:04",
+        "detailed_intro": ""
+    },
+    {
+        "creator": {
+            "picture": "https://img3.doubanio.com\/icon\/ul194298826-1.jpg",
+            "songlists_count": 46,
+            "url": "https:\/\/www.douban.com\/people\/194298826\/",
+            "create_time": "2019.04.01",
+            "type": "user",
+            "id": "194298826",
+            "name": "我小我"
+        },
+        "covers": {
+            "large": "https://img3.doubanio.com\/img\/songlist\/large\/38440943-1.png",
+            "raw": "https://img3.doubanio.com\/img\/songlist\/raw\/38440943-1.png",
+            "auto": "https://img3.doubanio.com\/img\/songlist\/large\/38440943-1.png"
+        },
+        "duration": 1939,
+        "intro": "该重温一遍电影了",
+        "cover_type": 1,
+        "created_time": "2019-07-24 06:00:00",
+        "id": 38440943,
+        "show_not_playable": null,
+        "title_color": "#FFFFFF",
+        "dark_cover": "https://img3.doubanio.com\/img\/songlist\/large\/38440943-1.png",
+        "title": "这些歌，好多电影都用过",
+        "type": 6,
+        "description": "该重温一遍电影了",
+        "collected_count": 358,
+        "sample_songs": [
+            {
+                "artist": "Barry Louis Polisar",
+                "taste_status": 0,
+                "title": "All I Want Is You",
+                "like": 0,
+                "sid": "519812"
+            },
+            {
+                "artist": "Sufjan Stevens",
+                "taste_status": 0,
+                "title": "Mystery of Love",
+                "like": 0,
+                "sid": "2741085"
+            },
+            {
+                "artist": "Sufjan Stevens",
+                "taste_status": 0,
+                "title": "Visions of Gideon",
+                "like": 0,
+                "sid": "2741089"
+            }
+        ],
+        "cover_color": "#8D0F16",
+        "rec_reason": "",
+        "is_public": true,
+        "songs_count": 9,
+        "can_edit": null,
+        "cover": "https://img3.doubanio.com\/img\/songlist\/large\/38440943-1.png",
+        "updated_time": "2019-07-23 10:29:21",
+        "detailed_intro": ""
+    },
+    {
+        "creator": {
+            "picture": "https://img3.doubanio.com\/icon\/ul194298828-2.jpg",
+            "songlists_count": 399,
+            "url": "https:\/\/www.douban.com\/people\/194298828\/",
+            "create_time": "2019.04.01",
+            "type": "user",
+            "id": "194298828",
+            "name": "illchilli"
+        },
+        "covers": {
+            "large": "https://img3.doubanio.com\/img\/songlist\/large\/42181116-1.png",
+            "raw": "https://img3.doubanio.com\/img\/songlist\/raw\/42181116-1.png",
+            "auto": "https://img3.doubanio.com\/img\/songlist\/large\/42181116-1.png"
+        },
+        "duration": 1157,
+        "intro": "",
+        "cover_type": 1,
+        "created_time": "2020-01-23 06:00:00",
+        "id": 42181116,
+        "show_not_playable": null,
+        "title_color": "#333333",
+        "dark_cover": "https://img3.doubanio.com\/img\/songlist\/large\/42181116-1.png",
+        "title": "英语流行｜明天就要放假啦！听听开心的歌",
+        "type": 6,
+        "description": "",
+        "collected_count": 50,
+        "sample_songs": [
+            {
+                "artist": "Bruno Mars",
+                "taste_status": 0,
+                "title": "Count On Me",
+                "like": 0,
+                "sid": "1562814"
+            },
+            {
+                "artist": "Bruno Mars",
+                "taste_status": 0,
+                "title": "The Lazy Song",
+                "like": 0,
+                "sid": "2031120"
+            },
+            {
+                "artist": "One Direction",
+                "taste_status": 0,
+                "title": "Drag Me Down",
+                "like": 0,
+                "sid": "2499470"
+            }
+        ],
+        "cover_color": "#02c2fb",
+        "rec_reason": "",
+        "is_public": true,
+        "songs_count": 6,
+        "can_edit": null,
+        "cover": "https://img3.doubanio.com\/img\/songlist\/large\/42181116-1.png",
+        "updated_time": "2020-01-22 20:11:16",
+        "detailed_intro": ""
+    },
+    {
+        "creator": {
+            "picture": "https://img2.doubanio.com\/icon\/ul194298822-3.jpg",
+            "songlists_count": 356,
+            "url": "https:\/\/www.douban.com\/people\/194298822\/",
+            "create_time": "2019.04.01",
+            "type": "user",
+            "id": "194298822",
+            "name": "锅炉不是锅"
+        },
+        "covers": {
+            "large": "https://img3.doubanio.com\/img\/songlist\/large\/39326354-1.png",
+            "raw": "https://img3.doubanio.com\/img\/songlist\/raw\/39326354-1.png",
+            "auto": "https://img3.doubanio.com\/img\/songlist\/large\/39326354-1.png"
+        },
+        "duration": 1795,
+        "intro": "岁月陈酿，越老越香",
+        "cover_type": 1,
+        "created_time": "2019-08-30 06:00:00",
+        "id": 39326354,
+        "show_not_playable": null,
+        "title_color": "#FFFFFF",
+        "dark_cover": "https://img3.doubanio.com\/img\/songlist\/large\/39326354-1.png",
+        "title": "音乐不是穿着打扮不会过气",
+        "type": 6,
+        "description": "岁月陈酿，越老越香",
+        "collected_count": 282,
+        "sample_songs": [
+            {
+                "artist": "Glenn Frey",
+                "taste_status": 0,
+                "title": "The One You Love",
+                "like": 0,
+                "sid": "1508115"
+            },
+            {
+                "artist": "Babyface",
+                "taste_status": 0,
+                "title": "Every Time I Close My Eyes",
+                "like": 0,
+                "sid": "3213556"
+            },
+            {
+                "artist": "Eric Clapton",
+                "taste_status": 0,
+                "title": "Wonderful Tonight",
+                "like": 0,
+                "sid": "3710463"
+            }
+        ],
+        "cover_color": "#B2937F",
+        "rec_reason": "",
+        "is_public": true,
+        "songs_count": 6,
+        "can_edit": null,
+        "cover": "https://img3.doubanio.com\/img\/songlist\/large\/39326354-1.png",
+        "updated_time": "2019-08-27 14:50:03",
+        "detailed_intro": "太多人追赶流行迷失了自己，音乐不是穿着打扮不会过气。"
+    },
+    {
+        "creator": {
+            "picture": "https://img3.doubanio.com\/icon\/ul194298824-1.jpg",
+            "songlists_count": 54,
+            "url": "https:\/\/www.douban.com\/people\/194298824\/",
+            "create_time": "2019.04.01",
+            "type": "user",
+            "id": "194298824",
+            "name": "苏七"
+        },
+        "covers": {
+            "large": "https://img3.doubanio.com\/img\/songlist\/large\/37980702-1.png",
+            "raw": "https://img3.doubanio.com\/img\/songlist\/raw\/37980702-1.png",
+            "auto": "https://img3.doubanio.com\/img\/songlist\/large\/37980702-1.png"
+        },
+        "duration": 2455,
+        "intro": "传统R&B与新音乐风格的结合",
+        "cover_type": 1,
+        "created_time": "2019-10-02 06:00:00",
+        "id": 37980702,
+        "show_not_playable": null,
+        "title_color": "#FFFFFF",
+        "dark_cover": "https://img3.doubanio.com\/img\/songlist\/large\/37980702-1.png",
+        "title": "一张歌单带你走进当代节奏布鲁斯",
+        "type": 6,
+        "description": "传统R&B与新音乐风格的结合",
+        "collected_count": 131,
+        "sample_songs": [
+            {
+                "artist": "Boyz II Men \/ Mariah Carey",
+                "taste_status": 0,
+                "title": "One Sweet Day",
+                "like": 0,
+                "sid": "490609"
+            },
+            {
+                "artist": "TLC",
+                "taste_status": 0,
+                "title": "Waterfalls",
+                "like": 0,
+                "sid": "1984786"
+            },
+            {
+                "artist": "Whitney Houston",
+                "taste_status": 0,
+                "title": "I Will Always Love You",
+                "like": 0,
+                "sid": "1940519"
+            }
+        ],
+        "cover_color": "#EDCD23",
+        "rec_reason": "",
+        "is_public": true,
+        "songs_count": 9,
+        "can_edit": null,
+        "cover": "https://img3.doubanio.com\/img\/songlist\/large\/37980702-1.png",
+        "updated_time": "2019-08-20 14:33:27",
+        "detailed_intro": "Contemporary R&B（当代节奏布鲁斯）结合了传统R&B（1940、1950年代出现的老派R&B）、Pop、Soul、Hip Hop、Funk、电子音乐等风格的音乐元素。尽管简写“R&B”会让人联想到最早的Rhythm and Blues，但是Contemporary R&B通常特指是1980年代当迪斯科（Disco）没落之后的带有R&B元素的美国黑人音乐。Contemporary R&B的入耳旋律、鲜明节拍以及丝滑松弛的嗓音让它一直拥有广大的受众，是当代流行音乐中的主流。而随着时代发展，电子元素和更多的制作手法也让Contemporary R&B一直与时俱进。\n代表人物：Janet Jackson, Mariah Carey, Whitney Houston, Erykah Badu, Usher, Alicia Keys, Beyoncé, Chris Brown, Rihanna, Bruno Mars"
+    },
+    {
+        "creator": {
+            "picture": "https://img2.doubanio.com\/icon\/ul194298822-3.jpg",
+            "songlists_count": 356,
+            "url": "https:\/\/www.douban.com\/people\/194298822\/",
+            "create_time": "2019.04.01",
+            "type": "user",
+            "id": "194298822",
+            "name": "锅炉不是锅"
+        },
+        "covers": {
+            "large": "https://img3.doubanio.com\/img\/songlist\/large\/43061846-1.png",
+            "raw": "https://img3.doubanio.com\/img\/songlist\/raw\/43061846-1.png",
+            "auto": "https://img3.doubanio.com\/img\/songlist\/large\/43061846-1.png"
+        },
+        "duration": 1387,
+        "intro": "拾取那些被遗忘的好歌。",
+        "cover_type": 1,
+        "created_time": "2020-03-22 06:00:00",
+        "id": 43061846,
+        "show_not_playable": null,
+        "title_color": "#FFFFFF",
+        "dark_cover": "https://img3.doubanio.com\/img\/songlist\/large\/43061846-1.png",
+        "title": "梁汉文：一字一句唱进你的心",
+        "type": 6,
+        "description": "拾取那些被遗忘的好歌。",
+        "collected_count": 70,
+        "sample_songs": [
+            {
+                "artist": "梁汉文",
+                "taste_status": 0,
+                "title": "七友",
+                "like": 0,
+                "sid": "3490162"
+            },
+            {
+                "artist": "杨千嬅 \/ 梁汉文",
+                "taste_status": 0,
+                "title": "滚",
+                "like": 0,
+                "sid": "3478089"
+            },
+            {
+                "artist": "梁汉文",
+                "taste_status": 0,
+                "title": "最悲哀的事",
+                "like": 0,
+                "sid": "3481338"
+            }
+        ],
+        "cover_color": "#1b3046",
+        "rec_reason": "",
+        "is_public": true,
+        "songs_count": 6,
+        "can_edit": null,
+        "cover": "https://img3.doubanio.com\/img\/songlist\/large\/43061846-1.png",
+        "updated_time": "2020-03-21 23:13:44",
+        "detailed_intro": "拾取那些被遗忘的好歌。"
+    },
+    {
+        "creator": {
+            "picture": "https://img2.doubanio.com\/icon\/ul194298822-3.jpg",
+            "songlists_count": 356,
+            "url": "https:\/\/www.douban.com\/people\/194298822\/",
+            "create_time": "2019.04.01",
+            "type": "user",
+            "id": "194298822",
+            "name": "锅炉不是锅"
+        },
+        "covers": {
+            "large": "https://img3.doubanio.com\/img\/songlist\/large\/42780735-1.png",
+            "raw": "https://img3.doubanio.com\/img\/songlist\/raw\/42780735-1.png",
+            "auto": "https://img3.doubanio.com\/img\/songlist\/large\/42780735-1.png"
+        },
+        "duration": 1194,
+        "intro": "所以算是正式出道了？",
+        "cover_type": 1,
+        "created_time": "2020-03-05 06:00:00",
+        "id": 42780735,
+        "show_not_playable": null,
+        "title_color": "#333333",
+        "dark_cover": "https://img3.doubanio.com\/img\/songlist\/large\/42780735-1.png",
+        "title": "历史上的今天：猫王的首次电视演出",
+        "type": 6,
+        "description": "所以算是正式出道了？",
+        "collected_count": 61,
+        "sample_songs": [
+            {
+                "artist": "Elvis Presley",
+                "taste_status": 0,
+                "title": "Can't Help Falling In Love",
+                "like": 0,
+                "sid": "574861"
+            },
+            {
+                "artist": "Elvis Presley",
+                "taste_status": 0,
+                "title": "Jailhouse Rock",
+                "like": 0,
+                "sid": "405460"
+            },
+            {
+                "artist": "Elvis Presley",
+                "taste_status": 0,
+                "title": "Hound Dog",
+                "like": 0,
+                "sid": "22707"
+            }
+        ],
+        "cover_color": "#ff78b9",
+        "rec_reason": "",
+        "is_public": true,
+        "songs_count": 8,
+        "can_edit": null,
+        "cover": "https://img3.doubanio.com\/img\/songlist\/large\/42780735-1.png",
+        "updated_time": "2020-03-04 21:28:30",
+        "detailed_intro": "所以算是正式出道了？"
+    },
+    {
+        "creator": {
+            "picture": "https://img2.doubanio.com\/icon\/ul188236445-3.jpg",
+            "songlists_count": 126,
+            "url": "https:\/\/www.douban.com\/people\/188236445\/",
+            "create_time": "2018.12.04",
+            "type": "user",
+            "id": "188236445",
+            "name": "豆瓣FM官方"
+        },
+        "covers": {
+            "large": "https://img3.doubanio.com\/img\/songlist\/large\/39792823-1.png",
+            "raw": "https://img3.doubanio.com\/img\/songlist\/raw\/39792823-1.png",
+            "auto": "https://img3.doubanio.com\/img\/songlist\/large\/39792823-1.png"
+        },
+        "duration": 1882,
+        "intro": "你哭了吗？",
+        "cover_type": 1,
+        "created_time": "2019-09-18 06:00:00",
+        "id": 39792823,
+        "show_not_playable": null,
+        "title_color": "#FFFFFF",
+        "dark_cover": "https://img3.doubanio.com\/img\/songlist\/large\/39792823-1.png",
+        "title": "可是听到这些歌时，我们还是会哭",
+        "type": 6,
+        "description": "你哭了吗？",
+        "collected_count": 349,
+        "sample_songs": [
+            {
+                "artist": "Eric Clapton",
+                "taste_status": 0,
+                "title": "Tears In Heaven",
+                "like": 0,
+                "sid": "16465"
+            },
+            {
+                "artist": "My Chemical Romance",
+                "taste_status": 0,
+                "title": "Welcome to the black parade",
+                "like": 0,
+                "sid": "1969539"
+            },
+            {
+                "artist": "蔡依林",
+                "taste_status": 0,
+                "title": "柠檬草的味道",
+                "like": 0,
+                "sid": "473545"
+            }
+        ],
+        "cover_color": "#5A8081",
+        "rec_reason": "",
+        "is_public": true,
+        "songs_count": 7,
+        "can_edit": null,
+        "cover": "https://img3.doubanio.com\/img\/songlist\/large\/39792823-1.png",
+        "updated_time": "2019-09-17 18:15:06",
+        "detailed_intro": ""
+    },
+    {
+        "creator": {
+            "picture": "https://img2.doubanio.com\/icon\/ul194298822-3.jpg",
+            "songlists_count": 356,
+            "url": "https:\/\/www.douban.com\/people\/194298822\/",
+            "create_time": "2019.04.01",
+            "type": "user",
+            "id": "194298822",
+            "name": "锅炉不是锅"
+        },
+        "covers": {
+            "large": "https://img3.doubanio.com\/img\/songlist\/large\/41684116-1.png",
+            "raw": "https://img3.doubanio.com\/img\/songlist\/raw\/41684116-1.png",
+            "auto": "https://img3.doubanio.com\/img\/songlist\/large\/41684116-1.png"
+        },
+        "duration": 2873,
+        "intro": "永远的天后",
+        "cover_type": 1,
+        "created_time": "2020-01-07 06:00:00",
+        "id": 41684116,
+        "show_not_playable": null,
+        "title_color": "#FFFFFF",
+        "dark_cover": "https://img3.doubanio.com\/img\/songlist\/large\/41684116-1.png",
+        "title": "惠特妮休斯顿：美利坚之声",
+        "type": 6,
+        "description": "永远的天后",
+        "collected_count": 298,
+        "sample_songs": [
+            {
+                "artist": "Mariah Carey \/ Whitney Houston",
+                "taste_status": 0,
+                "title": "When You Believe",
+                "like": 0,
+                "sid": "9868"
+            },
+            {
+                "artist": "Whitney Houston",
+                "taste_status": 0,
+                "title": "Call You Tonight",
+                "like": 0,
+                "sid": "1464676"
+            },
+            {
+                "artist": "Whitney Houston",
+                "taste_status": 0,
+                "title": "One Moment In Time",
+                "like": 0,
+                "sid": "3301155"
+            }
+        ],
+        "cover_color": "#9200a0",
+        "rec_reason": "",
+        "is_public": true,
+        "songs_count": 11,
+        "can_edit": null,
+        "cover": "https://img3.doubanio.com\/img\/songlist\/large\/41684116-1.png",
+        "updated_time": "2019-12-25 16:25:58",
+        "detailed_intro": "永远的天后"
+    },
+    {
+        "creator": {
+            "picture": "https://img2.doubanio.com\/icon\/ul194298822-3.jpg",
+            "songlists_count": 356,
+            "url": "https:\/\/www.douban.com\/people\/194298822\/",
+            "create_time": "2019.04.01",
+            "type": "user",
+            "id": "194298822",
+            "name": "锅炉不是锅"
+        },
+        "covers": {
+            "large": "https://img3.doubanio.com\/img\/songlist\/large\/40881279-1.png",
+            "raw": "https://img3.doubanio.com\/img\/songlist\/raw\/40881279-1.png",
+            "auto": "https://img3.doubanio.com\/img\/songlist\/large\/40881279-1.png"
+        },
+        "duration": 2309,
+        "intro": "回忆杀",
+        "cover_type": 1,
+        "created_time": "2019-11-13 06:00:00",
+        "id": 40881279,
+        "show_not_playable": null,
+        "title_color": "#333333",
+        "dark_cover": "https://img3.doubanio.com\/img\/songlist\/large\/40881279-1.png",
+        "title": "华语精选Vol.9—2008年我们听什么",
+        "type": 6,
+        "description": "回忆杀",
+        "collected_count": 172,
+        "sample_songs": [
+            {
+                "artist": "王若琳",
+                "taste_status": 0,
+                "title": "有你的快乐",
+                "like": 0,
+                "sid": "187766"
+            },
+            {
+                "artist": "王若琳",
+                "taste_status": 0,
+                "title": "迷宫",
+                "like": 0,
+                "sid": "187765"
+            },
+            {
+                "artist": "杨丞琳",
+                "taste_status": 0,
+                "title": "带我走",
+                "like": 0,
+                "sid": "3129895"
+            }
+        ],
+        "cover_color": "#e21607",
+        "rec_reason": "",
+        "is_public": true,
+        "songs_count": 10,
+        "can_edit": null,
+        "cover": "https://img3.doubanio.com\/img\/songlist\/large\/40881279-1.png",
+        "updated_time": "2019-11-13 10:42:24",
+        "detailed_intro": "回忆杀 Vol.9"
+    },
+    {
+        "creator": {
+            "picture": "https://img3.doubanio.com\/icon\/ul194298825-1.jpg",
+            "songlists_count": 98,
+            "url": "https:\/\/www.douban.com\/people\/194298825\/",
+            "create_time": "2019.04.01",
+            "type": "user",
+            "id": "194298825",
+            "name": "停云"
+        },
+        "covers": {
+            "large": "https://img3.doubanio.com\/img\/songlist\/large\/37022373-1.png",
+            "raw": "https://img3.doubanio.com\/img\/songlist\/raw\/37022373-1.png",
+            "auto": "https://img3.doubanio.com\/img\/songlist\/large\/37022373-1.png"
+        },
+        "duration": 1683,
+        "intro": "\"看我女巫魔法棒！ \"",
+        "cover_type": 1,
+        "created_time": "2019-06-10 06:00:00",
+        "id": 37022373,
+        "show_not_playable": null,
+        "title_color": "#FFFFFF",
+        "dark_cover": "https://img3.doubanio.com\/img\/songlist\/large\/37022373-1.png",
+        "title": "Kate Bush：另类女王漫游奇境",
+        "type": 6,
+        "description": "\"看我女巫魔法棒！ \"",
+        "collected_count": 46,
+        "sample_songs": [
+            {
+                "artist": "Kate Bush",
+                "taste_status": 0,
+                "title": "Army Dreamers",
+                "like": 0,
+                "sid": "440705"
+            },
+            {
+                "artist": "Kate Bush",
+                "taste_status": 0,
+                "title": "Moments of Pleasure",
+                "like": 0,
+                "sid": "1803626"
+            },
+            {
+                "artist": "Kate Bush",
+                "taste_status": 0,
+                "title": "Pi",
+                "like": 0,
+                "sid": "1024349"
+            }
+        ],
+        "cover_color": "#000000",
+        "rec_reason": "",
+        "is_public": true,
+        "songs_count": 6,
+        "can_edit": null,
+        "cover": "https://img3.doubanio.com\/img\/songlist\/large\/37022373-1.png",
+        "updated_time": "2019-06-06 15:51:15",
+        "detailed_intro": "该如何定义Kate Bush与她的音乐世界？语言似乎都有些词不达意，唯有聆听能带我们触碰那片刻的真实与奇异。这里是另类女王的奇境，请闭上双眼，以聆听来畅游。"
+    },
+    {
+        "creator": {
+            "picture": "https://img2.doubanio.com\/icon\/ul194298822-3.jpg",
+            "songlists_count": 356,
+            "url": "https:\/\/www.douban.com\/people\/194298822\/",
+            "create_time": "2019.04.01",
+            "type": "user",
+            "id": "194298822",
+            "name": "锅炉不是锅"
+        },
+        "covers": {
+            "large": "https://img3.doubanio.com\/img\/songlist\/large\/42196380-1.png",
+            "raw": "https://img3.doubanio.com\/img\/songlist\/raw\/42196380-1.png",
+            "auto": "https://img3.doubanio.com\/img\/songlist\/large\/42196380-1.png"
+        },
+        "duration": 1354,
+        "intro": "可以说是舞王了！",
+        "cover_type": 1,
+        "created_time": "2020-01-26 06:00:00",
+        "id": 42196380,
+        "show_not_playable": null,
+        "title_color": "#FFFFFF",
+        "dark_cover": "https://img3.doubanio.com\/img\/songlist\/large\/42196380-1.png",
+        "title": "Chris Brown：唱跳俱佳大喜碧",
+        "type": 6,
+        "description": "可以说是舞王了！",
+        "collected_count": 109,
+        "sample_songs": [
+            {
+                "artist": "Chris Brown",
+                "taste_status": 0,
+                "title": "Yeah 3X",
+                "like": 0,
+                "sid": "1670542"
+            },
+            {
+                "artist": "Chris Brown",
+                "taste_status": 0,
+                "title": "Zero",
+                "like": 0,
+                "sid": "2565913"
+            },
+            {
+                "artist": "Chris Brown \/ Tyga",
+                "taste_status": 0,
+                "title": "Ayo",
+                "like": 0,
+                "sid": "2217779"
+            }
+        ],
+        "cover_color": "#40464c",
+        "rec_reason": "",
+        "is_public": true,
+        "songs_count": 6,
+        "can_edit": null,
+        "cover": "https://img3.doubanio.com\/img\/songlist\/large\/42196380-1.png",
+        "updated_time": "2020-01-23 20:38:00",
+        "detailed_intro": "可以说是舞王了！"
+    },
+    {
+        "creator": {
+            "picture": "https://img2.doubanio.com\/icon\/ul194298822-3.jpg",
+            "songlists_count": 356,
+            "url": "https:\/\/www.douban.com\/people\/194298822\/",
+            "create_time": "2019.04.01",
+            "type": "user",
+            "id": "194298822",
+            "name": "锅炉不是锅"
+        },
+        "covers": {
+            "large": "https://img3.doubanio.com\/img\/songlist\/large\/42905804-1.png",
+            "raw": "https://img3.doubanio.com\/img\/songlist\/raw\/42905804-1.png",
+            "auto": "https://img3.doubanio.com\/img\/songlist\/large\/42905804-1.png"
+        },
+        "duration": 1795,
+        "intro": "经典",
+        "cover_type": 1,
+        "created_time": "2020-03-13 06:00:00",
+        "id": 42905804,
+        "show_not_playable": null,
+        "title_color": "#FFFFFF",
+        "dark_cover": "https://img3.doubanio.com\/img\/songlist\/large\/42905804-1.png",
+        "title": "【老歌】姜是老的辣，酒是陈的香",
+        "type": 6,
+        "description": "经典",
+        "collected_count": 283,
+        "sample_songs": [
+            {
+                "artist": "Glenn Frey",
+                "taste_status": 0,
+                "title": "The One You Love",
+                "like": 0,
+                "sid": "1508115"
+            },
+            {
+                "artist": "Babyface",
+                "taste_status": 0,
+                "title": "Every Time I Close My Eyes",
+                "like": 0,
+                "sid": "3213556"
+            },
+            {
+                "artist": "Eric Clapton",
+                "taste_status": 0,
+                "title": "Wonderful Tonight",
+                "like": 0,
+                "sid": "3710463"
+            }
+        ],
+        "cover_color": "#95151e",
+        "rec_reason": "",
+        "is_public": true,
+        "songs_count": 6,
+        "can_edit": null,
+        "cover": "https://img3.doubanio.com\/img\/songlist\/large\/42905804-1.png",
+        "updated_time": "2020-03-12 16:06:40",
+        "detailed_intro": "经典"
+    },
+    {
+        "creator": {
+            "picture": "https://img3.doubanio.com\/icon\/ul194298824-1.jpg",
+            "songlists_count": 54,
+            "url": "https:\/\/www.douban.com\/people\/194298824\/",
+            "create_time": "2019.04.01",
+            "type": "user",
+            "id": "194298824",
+            "name": "苏七"
+        },
+        "covers": {
+            "large": "https://img3.doubanio.com\/img\/songlist\/large\/37977617-1.png",
+            "raw": "https://img3.doubanio.com\/img\/songlist\/raw\/37977617-1.png",
+            "auto": "https://img3.doubanio.com\/img\/songlist\/large\/37977617-1.png"
+        },
+        "duration": 2233,
+        "intro": "黑人音乐的集大成",
+        "cover_type": 1,
+        "created_time": "2019-08-08 06:00:00",
+        "id": 37977617,
+        "show_not_playable": null,
+        "title_color": "#FFFFFF",
+        "dark_cover": "https://img3.doubanio.com\/img\/songlist\/large\/37977617-1.png",
+        "title": "R&B｜交织于慵懒声线中的撩人节奏",
+        "type": 6,
+        "description": "黑人音乐的集大成",
+        "collected_count": 177,
+        "sample_songs": [
+            {
+                "artist": "Bill Withers",
+                "taste_status": 0,
+                "title": "Lean On Me",
+                "like": 0,
+                "sid": "133807"
+            },
+            {
+                "artist": "Solomon Burke",
+                "taste_status": 0,
+                "title": "None Of Us Are Free",
+                "like": 0,
+                "sid": "2089546"
+            },
+            {
+                "artist": "Otis Redding",
+                "taste_status": 0,
+                "title": "Stand By Me",
+                "like": 0,
+                "sid": "326699"
+            }
+        ],
+        "cover_color": "#3936DE",
+        "rec_reason": "",
+        "is_public": true,
+        "songs_count": 11,
+        "can_edit": null,
+        "cover": "https://img3.doubanio.com\/img\/songlist\/large\/37977617-1.png",
+        "updated_time": "2020-04-09 15:18:45",
+        "detailed_intro": "R&B（节奏布鲁斯）起源于1940年代的美国非洲裔艺术家群体，Rhythm and Blues 这个音乐术语由Billboard于1940年代提出，最初是Billboard杂志的Jerry Waxler创造出来取代Race Music（种族音乐，又译黑人音乐）的名词，融合了爵士乐、福音音乐和电子布鲁斯音乐。其实Rhythm and Blues这个术语的涵义经历了很多次的变化，在50年代早期它被用来描述布鲁斯唱片，50年代中期用来描述由电子布鲁斯、福音和灵魂乐衍生出来的音乐风格，到了60年代，也有人把The Rolling Stones, The Who和The Animals这几只摇滚乐队也称作R&B乐队，因为他们采用了大量的布鲁斯音乐元素，到了70年代，Rhythm and Blues这个术语的意思又发生了改变，用来统称灵魂乐（Soul）和放克音乐（Funk），到了80年代末，R&B音乐继续发展，演变成了“Contemporary R&B\"。\n说到R&B这种风格不得不提Motown Records，它位于底特律的汽车城，是音乐史上最具影响力的唱片公司之一，旗下有很多极具影响力的艺人：Marvin Gaye、Stevie Wonder、The Temptations、The Jackson5、The Four Tops等等，因此也有人把60年代R&B称为Motown R&B，它代表了整个年代的声音，也极大影响了之后的现代流行音乐发展。\n代表人物：Marvin Gaye, R. Kelly, Stevie Wonder, Chaka Khan, Whitney Houston"
+    },
+    {
+        "creator": {
+            "picture": "https://img3.doubanio.com\/icon\/ul194298816-2.jpg",
+            "songlists_count": 56,
+            "url": "https:\/\/www.douban.com\/people\/194298816\/",
+            "create_time": "2019.04.01",
+            "type": "user",
+            "id": "194298816",
+            "name": "LinXiaoYue"
+        },
+        "covers": {
+            "large": "https://img3.doubanio.com\/img\/songlist\/large\/40058376-1.png",
+            "raw": "https://img3.doubanio.com\/img\/songlist\/raw\/40058376-1.png",
+            "auto": "https://img3.doubanio.com\/img\/songlist\/large\/40058376-1.png"
+        },
+        "duration": 1782,
+        "intro": "",
+        "cover_type": 1,
+        "created_time": "2019-10-29 06:00:00",
+        "id": 40058376,
+        "show_not_playable": null,
+        "title_color": "#333333",
+        "dark_cover": "https://img3.doubanio.com\/img\/songlist\/large\/40058376-1.png",
+        "title": "【年代】Mama&papa去舞厅跳舞了",
+        "type": 6,
+        "description": "",
+        "collected_count": 159,
+        "sample_songs": [
+            {
+                "artist": "郑智化",
+                "taste_status": 0,
+                "title": "年轻时代",
+                "like": 0,
+                "sid": "677366"
+            },
+            {
+                "artist": "Elvis Presley",
+                "taste_status": 0,
+                "title": "Jailhouse Rock",
+                "like": 0,
+                "sid": "405460"
+            },
+            {
+                "artist": "The Clash",
+                "taste_status": 0,
+                "title": "Bankrobber",
+                "like": 0,
+                "sid": "2004358"
+            }
+        ],
+        "cover_color": "#FFB613",
+        "rec_reason": "",
+        "is_public": true,
+        "songs_count": 8,
+        "can_edit": null,
+        "cover": "https://img3.doubanio.com\/img\/songlist\/large\/40058376-1.png",
+        "updated_time": "2019-09-30 15:59:30",
+        "detailed_intro": ""
+    },
+    {
+        "creator": {
+            "picture": "https://img3.doubanio.com\/icon\/ul194298816-2.jpg",
+            "songlists_count": 56,
+            "url": "https:\/\/www.douban.com\/people\/194298816\/",
+            "create_time": "2019.04.01",
+            "type": "user",
+            "id": "194298816",
+            "name": "LinXiaoYue"
+        },
+        "covers": {
+            "large": "https://img3.doubanio.com\/img\/songlist\/large\/39696402-1.png",
+            "raw": "https://img3.doubanio.com\/img\/songlist\/raw\/39696402-1.png",
+            "auto": "https://img3.doubanio.com\/img\/songlist\/large\/39696402-1.png"
+        },
+        "duration": 1412,
+        "intro": "英伦摇滚乐队精选歌单",
+        "cover_type": 1,
+        "created_time": "2019-11-05 06:00:00",
+        "id": 39696402,
+        "show_not_playable": null,
+        "title_color": "#FFFFFF",
+        "dark_cover": "https://img3.doubanio.com\/img\/songlist\/large\/39696402-1.png",
+        "title": "英伦摇滚|你家住哪儿？ 英国！伦敦！",
+        "type": 6,
+        "description": "英伦摇滚乐队精选歌单",
+        "collected_count": 150,
+        "sample_songs": [
+            {
+                "artist": "Kasabian",
+                "taste_status": 0,
+                "title": "Goodbye Kiss",
+                "like": 0,
+                "sid": "1703024"
+            },
+            {
+                "artist": "Supergrass",
+                "taste_status": 0,
+                "title": "Alright",
+                "like": 0,
+                "sid": "2557108"
+            },
+            {
+                "artist": "Primal Scream",
+                "taste_status": 0,
+                "title": "Love you",
+                "like": 0,
+                "sid": "1492999"
+            }
+        ],
+        "cover_color": "#000000",
+        "rec_reason": "",
+        "is_public": true,
+        "songs_count": 6,
+        "can_edit": null,
+        "cover": "https://img3.doubanio.com\/img\/songlist\/large\/39696402-1.png",
+        "updated_time": "2019-09-20 16:16:33",
+        "detailed_intro": "英伦摇滚乐队精选歌单"
+    },
+    {
+        "creator": {
+            "picture": "https://img2.doubanio.com\/icon\/ul194298822-3.jpg",
+            "songlists_count": 356,
+            "url": "https:\/\/www.douban.com\/people\/194298822\/",
+            "create_time": "2019.04.01",
+            "type": "user",
+            "id": "194298822",
+            "name": "锅炉不是锅"
+        },
+        "covers": {
+            "large": "https://img3.doubanio.com\/img\/songlist\/large\/41040308-1.png",
+            "raw": "https://img3.doubanio.com\/img\/songlist\/raw\/41040308-1.png",
+            "auto": "https://img3.doubanio.com\/img\/songlist\/large\/41040308-1.png"
+        },
+        "duration": 2722,
+        "intro": "回忆杀欧美版",
+        "cover_type": 1,
+        "created_time": "2019-11-27 06:00:00",
+        "id": 41040308,
+        "show_not_playable": null,
+        "title_color": "#333333",
+        "dark_cover": "https://img3.doubanio.com\/img\/songlist\/large\/41040308-1.png",
+        "title": "【欧美精选】十年前的歌，我们今天还在听",
+        "type": 6,
+        "description": "回忆杀欧美版",
+        "collected_count": 221,
+        "sample_songs": [
+            {
+                "artist": "Train",
+                "taste_status": 0,
+                "title": "Hey, Soul Sister",
+                "like": 0,
+                "sid": "1474817"
+            },
+            {
+                "artist": "Lady Antebellum",
+                "taste_status": 0,
+                "title": "Need You Now",
+                "like": 0,
+                "sid": "1453203"
+            },
+            {
+                "artist": "Adam Lambert",
+                "taste_status": 0,
+                "title": "Whataya Want From Me",
+                "like": 0,
+                "sid": "1469018"
+            }
+        ],
+        "cover_color": "#eb88d1",
+        "rec_reason": "",
+        "is_public": true,
+        "songs_count": 12,
+        "can_edit": null,
+        "cover": "https://img3.doubanio.com\/img\/songlist\/large\/41040308-1.png",
+        "updated_time": "2019-11-25 16:13:40",
+        "detailed_intro": "回忆杀欧美版"
+    },
+    {
+        "creator": {
+            "picture": "https://img2.doubanio.com\/icon\/ul194298822-3.jpg",
+            "songlists_count": 356,
+            "url": "https:\/\/www.douban.com\/people\/194298822\/",
+            "create_time": "2019.04.01",
+            "type": "user",
+            "id": "194298822",
+            "name": "锅炉不是锅"
+        },
+        "covers": {
+            "large": "https://img3.doubanio.com\/img\/songlist\/large\/40881464-1.png",
+            "raw": "https://img3.doubanio.com\/img\/songlist\/raw\/40881464-1.png",
+            "auto": "https://img3.doubanio.com\/img\/songlist\/large\/40881464-1.png"
+        },
+        "duration": 2840,
+        "intro": "回忆杀",
+        "cover_type": 1,
+        "created_time": "2019-11-13 06:00:00",
+        "id": 40881464,
+        "show_not_playable": null,
+        "title_color": "#333333",
+        "dark_cover": "https://img3.doubanio.com\/img\/songlist\/large\/40881464-1.png",
+        "title": "华语精选Vol.⑩—2009年我们听什么",
+        "type": 6,
+        "description": "回忆杀",
+        "collected_count": 166,
+        "sample_songs": [
+            {
+                "artist": "黄小琥",
+                "taste_status": 0,
+                "title": "没那么简单",
+                "like": 0,
+                "sid": "1451474"
+            },
+            {
+                "artist": "张芸京",
+                "taste_status": 0,
+                "title": "偏爱",
+                "like": 0,
+                "sid": "1391860"
+            },
+            {
+                "artist": "方大同",
+                "taste_status": 0,
+                "title": "红豆",
+                "like": 0,
+                "sid": "2007138"
+            }
+        ],
+        "cover_color": "#f59f19",
+        "rec_reason": "",
+        "is_public": true,
+        "songs_count": 12,
+        "can_edit": null,
+        "cover": "https://img3.doubanio.com\/img\/songlist\/large\/40881464-1.png",
+        "updated_time": "2019-11-13 10:43:16",
+        "detailed_intro": "回忆杀Vol.10"
+    },
+    {
+        "creator": {
+            "picture": "https://img2.doubanio.com\/icon\/ul194298822-3.jpg",
+            "songlists_count": 356,
+            "url": "https:\/\/www.douban.com\/people\/194298822\/",
+            "create_time": "2019.04.01",
+            "type": "user",
+            "id": "194298822",
+            "name": "锅炉不是锅"
+        },
+        "covers": {
+            "large": "https://img3.doubanio.com\/img\/songlist\/large\/40723956-1.png",
+            "raw": "https://img3.doubanio.com\/img\/songlist\/raw\/40723956-1.png",
+            "auto": "https://img3.doubanio.com\/img\/songlist\/large\/40723956-1.png"
+        },
+        "duration": 3249,
+        "intro": "回忆杀",
+        "cover_type": 1,
+        "created_time": "2019-11-06 06:00:00",
+        "id": 40723956,
+        "show_not_playable": null,
+        "title_color": "#333333",
+        "dark_cover": "https://img3.doubanio.com\/img\/songlist\/large\/40723956-1.png",
+        "title": "华语精选Vol.2—2001年我们听什么",
+        "type": 6,
+        "description": "回忆杀",
+        "collected_count": 396,
+        "sample_songs": [
+            {
+                "artist": "张惠妹",
+                "taste_status": 0,
+                "title": "记得",
+                "like": 0,
+                "sid": "628267"
+            },
+            {
+                "artist": "蔡依林",
+                "taste_status": 0,
+                "title": "你怎么连话都说不清楚",
+                "like": 0,
+                "sid": "3115086"
+            },
+            {
+                "artist": "李玟",
+                "taste_status": 0,
+                "title": "月光爱人",
+                "like": 0,
+                "sid": "2060204"
+            }
+        ],
+        "cover_color": "#d2cdbf",
+        "rec_reason": "",
+        "is_public": true,
+        "songs_count": 12,
+        "can_edit": null,
+        "cover": "https://img3.doubanio.com\/img\/songlist\/large\/40723956-1.png",
+        "updated_time": "2019-11-04 14:42:16",
+        "detailed_intro": "回忆杀 Vol.2"
+    },
+    {
+        "creator": {
+            "picture": "https://img3.doubanio.com\/icon\/ul194298816-2.jpg",
+            "songlists_count": 56,
+            "url": "https:\/\/www.douban.com\/people\/194298816\/",
+            "create_time": "2019.04.01",
+            "type": "user",
+            "id": "194298816",
+            "name": "LinXiaoYue"
+        },
+        "covers": {
+            "large": "https://img3.doubanio.com\/img\/songlist\/large\/39188775-1.png",
+            "raw": "https://img3.doubanio.com\/img\/songlist\/raw\/39188775-1.png",
+            "auto": "https://img3.doubanio.com\/img\/songlist\/large\/39188775-1.png"
+        },
+        "duration": 2761,
+        "intro": "大吊车",
+        "cover_type": 1,
+        "created_time": "2019-10-30 06:00:00",
+        "id": 39188775,
+        "show_not_playable": null,
+        "title_color": "#FFFFFF",
+        "dark_cover": "https://img3.doubanio.com\/img\/songlist\/large\/39188775-1.png",
+        "title": "爆炸核能丨运动健身的超级补给站",
+        "type": 6,
+        "description": "大吊车",
+        "collected_count": 150,
+        "sample_songs": [
+            {
+                "artist": "Judas Priest",
+                "taste_status": 0,
+                "title": "One Shot At Glory",
+                "like": 0,
+                "sid": "406538"
+            },
+            {
+                "artist": "Unearth",
+                "taste_status": 0,
+                "title": "Incinerate",
+                "like": 0,
+                "sid": "8539394"
+            },
+            {
+                "artist": "Lamb Of God",
+                "taste_status": 0,
+                "title": "Foot To The Throat",
+                "like": 0,
+                "sid": "196661"
+            }
+        ],
+        "cover_color": "#666666",
+        "rec_reason": "",
+        "is_public": true,
+        "songs_count": 11,
+        "can_edit": null,
+        "cover": "https://img3.doubanio.com\/img\/songlist\/large\/39188775-1.png",
+        "updated_time": "2020-04-21 14:33:28",
+        "detailed_intro": "我们最凶猛！"
+    },
+    {
+        "creator": {
+            "picture": "https://img2.doubanio.com\/icon\/ul194298822-3.jpg",
+            "songlists_count": 356,
+            "url": "https:\/\/www.douban.com\/people\/194298822\/",
+            "create_time": "2019.04.01",
+            "type": "user",
+            "id": "194298822",
+            "name": "锅炉不是锅"
+        },
+        "covers": {
+            "large": "https://img3.doubanio.com\/img\/songlist\/large\/41684223-1.png",
+            "raw": "https://img3.doubanio.com\/img\/songlist\/raw\/41684223-1.png",
+            "auto": "https://img3.doubanio.com\/img\/songlist\/large\/41684223-1.png"
+        },
+        "duration": 3749,
+        "intro": "保持愤怒",
+        "cover_type": 1,
+        "created_time": "2020-01-06 06:00:00",
+        "id": 41684223,
+        "show_not_playable": null,
+        "title_color": "#FFFFFF",
+        "dark_cover": "https://img3.doubanio.com\/img\/songlist\/large\/41684223-1.png",
+        "title": "RATM：保持愤怒，新金属领军乐队",
+        "type": 6,
+        "description": "保持愤怒",
+        "collected_count": 88,
+        "sample_songs": [
+            {
+                "artist": "Rage Against The Machine",
+                "taste_status": 0,
+                "title": "Wake Up",
+                "like": 0,
+                "sid": "1442125"
+            },
+            {
+                "artist": "Rage Against The Machine",
+                "taste_status": 0,
+                "title": "Sleep Now In The Fire",
+                "like": 0,
+                "sid": "1557972"
+            },
+            {
+                "artist": "Rage Against The Machine",
+                "taste_status": 0,
+                "title": "Testify",
+                "like": 0,
+                "sid": "1557968"
+            }
+        ],
+        "cover_color": "#54668d",
+        "rec_reason": "",
+        "is_public": true,
+        "songs_count": 13,
+        "can_edit": null,
+        "cover": "https://img3.doubanio.com\/img\/songlist\/large\/41684223-1.png",
+        "updated_time": "2019-12-25 16:30:25",
+        "detailed_intro": "保持愤怒"
+    },
+    {
+        "creator": {
+            "picture": "https://img2.doubanio.com\/icon\/ul194298822-3.jpg",
+            "songlists_count": 356,
+            "url": "https:\/\/www.douban.com\/people\/194298822\/",
+            "create_time": "2019.04.01",
+            "type": "user",
+            "id": "194298822",
+            "name": "锅炉不是锅"
+        },
+        "covers": {
+            "large": "https://img3.doubanio.com\/img\/songlist\/large\/40726268-1.png",
+            "raw": "https://img3.doubanio.com\/img\/songlist\/raw\/40726268-1.png",
+            "auto": "https://img3.doubanio.com\/img\/songlist\/large\/40726268-1.png"
+        },
+        "duration": 1551,
+        "intro": "回忆杀",
+        "cover_type": 1,
+        "created_time": "2019-11-07 06:00:00",
+        "id": 40726268,
+        "show_not_playable": null,
+        "title_color": "#333333",
+        "dark_cover": "https://img3.doubanio.com\/img\/songlist\/large\/40726268-1.png",
+        "title": "华语精选Vol.3—2002年我们听什么",
+        "type": 6,
+        "description": "回忆杀",
+        "collected_count": 346,
+        "sample_songs": [
+            {
+                "artist": "彭佳慧",
+                "taste_status": 0,
+                "title": "相见恨晚",
+                "like": 0,
+                "sid": "725787"
+            },
+            {
+                "artist": "莫文蔚",
+                "taste_status": 0,
+                "title": "爱",
+                "like": 0,
+                "sid": "1433020"
+            },
+            {
+                "artist": "陶喆",
+                "taste_status": 0,
+                "title": "Melody",
+                "like": 0,
+                "sid": "642976"
+            }
+        ],
+        "cover_color": "#909791",
+        "rec_reason": "",
+        "is_public": true,
+        "songs_count": 6,
+        "can_edit": null,
+        "cover": "https://img3.doubanio.com\/img\/songlist\/large\/40726268-1.png",
+        "updated_time": "2019-11-04 15:52:51",
+        "detailed_intro": "回忆杀 Vol.3"
+    },
+    {
+        "creator": {
+            "picture": "https://img3.doubanio.com\/icon\/ul194298828-2.jpg",
+            "songlists_count": 399,
+            "url": "https:\/\/www.douban.com\/people\/194298828\/",
+            "create_time": "2019.04.01",
+            "type": "user",
+            "id": "194298828",
+            "name": "illchilli"
+        },
+        "covers": {
+            "large": "https://img3.doubanio.com\/img\/songlist\/large\/41263335-1.png",
+            "raw": "https://img3.doubanio.com\/img\/songlist\/raw\/41263335-1.png",
+            "auto": "https://img3.doubanio.com\/img\/songlist\/large\/41263335-1.png"
+        },
+        "duration": 1414,
+        "intro": "忘不了",
+        "cover_type": 1,
+        "created_time": "2019-12-04 06:00:00",
+        "id": 41263335,
+        "show_not_playable": null,
+        "title_color": "#FFFFFF",
+        "dark_cover": "https://img3.doubanio.com\/img\/songlist\/large\/41263335-1.png",
+        "title": "华语流行｜这些歌曲你忘不了",
+        "type": 6,
+        "description": "忘不了",
+        "collected_count": 247,
+        "sample_songs": [
+            {
+                "artist": "孙燕姿",
+                "taste_status": 0,
+                "title": "遇见",
+                "like": 0,
+                "sid": "1028196"
+            },
+            {
+                "artist": "戴佩妮",
+                "taste_status": 0,
+                "title": "你要的爱",
+                "like": 0,
+                "sid": "3118771"
+            },
+            {
+                "artist": "蔡依林",
+                "taste_status": 0,
+                "title": "说爱你",
+                "like": 0,
+                "sid": "18254"
+            }
+        ],
+        "cover_color": "#6768AF",
+        "rec_reason": "",
+        "is_public": true,
+        "songs_count": 6,
+        "can_edit": null,
+        "cover": "https://img3.doubanio.com\/img\/songlist\/large\/41263335-1.png",
+        "updated_time": "2019-12-03 20:08:12",
+        "detailed_intro": ""
+    },
+    {
+        "creator": {
+            "picture": "https://img2.doubanio.com\/icon\/ul194298822-3.jpg",
+            "songlists_count": 356,
+            "url": "https:\/\/www.douban.com\/people\/194298822\/",
+            "create_time": "2019.04.01",
+            "type": "user",
+            "id": "194298822",
+            "name": "锅炉不是锅"
+        },
+        "covers": {
+            "large": "https://img3.doubanio.com\/img\/songlist\/large\/40522049-1.png",
+            "raw": "https://img3.doubanio.com\/img\/songlist\/raw\/40522049-1.png",
+            "auto": "https://img3.doubanio.com\/img\/songlist\/large\/40522049-1.png"
+        },
+        "duration": 1156,
+        "intro": "燃！",
+        "cover_type": 1,
+        "created_time": "2019-10-27 06:00:00",
+        "id": 40522049,
+        "show_not_playable": null,
+        "title_color": "#FFFFFF",
+        "dark_cover": "https://img3.doubanio.com\/img\/songlist\/large\/40522049-1.png",
+        "title": "「史诗感」你就是这个世界的主宰！",
+        "type": 6,
+        "description": "燃！",
+        "collected_count": 205,
+        "sample_songs": [
+            {
+                "artist": "Coldplay",
+                "taste_status": 0,
+                "title": "Viva La Vida",
+                "like": 0,
+                "sid": "297871"
+            },
+            {
+                "artist": "Linkin Park",
+                "taste_status": 0,
+                "title": "Numb",
+                "like": 0,
+                "sid": "683727"
+            },
+            {
+                "artist": "Icona Pop \/ Charli XCX",
+                "taste_status": 0,
+                "title": "I Love It",
+                "like": 0,
+                "sid": "2026107"
+            }
+        ],
+        "cover_color": "#7e96b0",
+        "rec_reason": "",
+        "is_public": true,
+        "songs_count": 6,
+        "can_edit": null,
+        "cover": "https://img3.doubanio.com\/img\/songlist\/large\/40522049-1.png",
+        "updated_time": "2019-10-24 18:26:05",
+        "detailed_intro": "燃爆！"
+    },
+    {
+        "creator": {
+            "picture": "https://img2.doubanio.com\/icon\/ul194298822-3.jpg",
+            "songlists_count": 356,
+            "url": "https:\/\/www.douban.com\/people\/194298822\/",
+            "create_time": "2019.04.01",
+            "type": "user",
+            "id": "194298822",
+            "name": "锅炉不是锅"
+        },
+        "covers": {
+            "large": "https://img3.doubanio.com\/img\/songlist\/large\/42905856-1.png",
+            "raw": "https://img3.doubanio.com\/img\/songlist\/raw\/42905856-1.png",
+            "auto": "https://img3.doubanio.com\/img\/songlist\/large\/42905856-1.png"
+        },
+        "duration": 1477,
+        "intro": "飞翔的英国人(?)",
+        "cover_type": 1,
+        "created_time": "2020-03-13 06:00:00",
+        "id": 42905856,
+        "show_not_playable": null,
+        "title_color": "#FFFFFF",
+        "dark_cover": "https://img3.doubanio.com\/img\/songlist\/large\/42905856-1.png",
+        "title": "Blur：Woo Hoo~ 起飞~",
+        "type": 6,
+        "description": "飞翔的英国人(?)",
+        "collected_count": 64,
+        "sample_songs": [
+            {
+                "artist": "Blur",
+                "taste_status": 0,
+                "title": "Under The Westway",
+                "like": 0,
+                "sid": "1823422"
+            },
+            {
+                "artist": "Blur",
+                "taste_status": 0,
+                "title": "Ong Ong",
+                "like": 0,
+                "sid": "2435072"
+            },
+            {
+                "artist": "Blur",
+                "taste_status": 0,
+                "title": "Best Days (2012 - Remaster)",
+                "like": 0,
+                "sid": "2022700"
+            }
+        ],
+        "cover_color": "#241f3f",
+        "rec_reason": "",
+        "is_public": true,
+        "songs_count": 6,
+        "can_edit": null,
+        "cover": "https://img3.doubanio.com\/img\/songlist\/large\/42905856-1.png",
+        "updated_time": "2020-03-12 16:09:05",
+        "detailed_intro": "飞翔的英国人(?)"
+    },
+    {
+        "creator": {
+            "picture": "https://img2.doubanio.com\/icon\/ul194298822-3.jpg",
+            "songlists_count": 356,
+            "url": "https:\/\/www.douban.com\/people\/194298822\/",
+            "create_time": "2019.04.01",
+            "type": "user",
+            "id": "194298822",
+            "name": "锅炉不是锅"
+        },
+        "covers": {
+            "large": "https://img3.doubanio.com\/img\/songlist\/large\/41518486-1.png",
+            "raw": "https://img3.doubanio.com\/img\/songlist\/raw\/41518486-1.png",
+            "auto": "https://img3.doubanio.com\/img\/songlist\/large\/41518486-1.png"
+        },
+        "duration": 1660,
+        "intro": "R&B all the day",
+        "cover_type": 1,
+        "created_time": "2019-12-18 06:00:00",
+        "id": 41518486,
+        "show_not_playable": null,
+        "title_color": "#333333",
+        "dark_cover": "https://img3.doubanio.com\/img\/songlist\/large\/41518486-1.png",
+        "title": "R&B的话…16 hours真的不够长",
+        "type": 6,
+        "description": "R&B all the day",
+        "collected_count": 97,
+        "sample_songs": [
+            {
+                "artist": "R. Kelly",
+                "taste_status": 0,
+                "title": "I Decided",
+                "like": 0,
+                "sid": "159443"
+            },
+            {
+                "artist": "Babyface",
+                "taste_status": 0,
+                "title": "Every Time I Close My Eyes",
+                "like": 0,
+                "sid": "3213556"
+            },
+            {
+                "artist": "Joe",
+                "taste_status": 0,
+                "title": "The Love Scene",
+                "like": 0,
+                "sid": "1936425"
+            }
+        ],
+        "cover_color": "#4323cd",
+        "rec_reason": "",
+        "is_public": true,
+        "songs_count": 6,
+        "can_edit": null,
+        "cover": "https://img3.doubanio.com\/img\/songlist\/large\/41518486-1.png",
+        "updated_time": "2019-12-17 23:14:52",
+        "detailed_intro": "16 hours不够长，我们要R&B all day long。"
+    },
+    {
+        "creator": {
+            "picture": "https://img2.doubanio.com\/icon\/ul194298822-3.jpg",
+            "songlists_count": 356,
+            "url": "https:\/\/www.douban.com\/people\/194298822\/",
+            "create_time": "2019.04.01",
+            "type": "user",
+            "id": "194298822",
+            "name": "锅炉不是锅"
+        },
+        "covers": {
+            "large": "https://img3.doubanio.com\/img\/songlist\/large\/42184660-1.png",
+            "raw": "https://img3.doubanio.com\/img\/songlist\/raw\/42184660-1.png",
+            "auto": "https://img3.doubanio.com\/img\/songlist\/large\/42184660-1.png"
+        },
+        "duration": 1652,
+        "intro": "春晚经典歌曲精选",
+        "cover_type": 1,
+        "created_time": "2020-01-24 06:00:00",
+        "id": 42184660,
+        "show_not_playable": null,
+        "title_color": "#FFFFFF",
+        "dark_cover": "https://img3.doubanio.com\/img\/songlist\/large\/42184660-1.png",
+        "title": "【华语】在春晚惊艳了全国的那些歌",
+        "type": 6,
+        "description": "春晚经典歌曲精选",
+        "collected_count": 88,
+        "sample_songs": [
+            {
+                "artist": "林忆莲",
+                "taste_status": 0,
+                "title": "至少还有你",
+                "like": 0,
+                "sid": "741203"
+            },
+            {
+                "artist": "叶倩文",
+                "taste_status": 0,
+                "title": "我的爱对你说",
+                "like": 0,
+                "sid": "1508854"
+            },
+            {
+                "artist": "郭富城",
+                "taste_status": 0,
+                "title": "动起来",
+                "like": 0,
+                "sid": "191182"
+            }
+        ],
+        "cover_color": "#df0022",
+        "rec_reason": "",
+        "is_public": true,
+        "songs_count": 6,
+        "can_edit": null,
+        "cover": "https://img3.doubanio.com\/img\/songlist\/large\/42184660-1.png",
+        "updated_time": "2020-01-23 01:50:39",
+        "detailed_intro": "春晚经典歌曲精选"
+    },
+    {
+        "creator": {
+            "picture": "https://img3.doubanio.com\/icon\/ul194298828-2.jpg",
+            "songlists_count": 399,
+            "url": "https:\/\/www.douban.com\/people\/194298828\/",
+            "create_time": "2019.04.01",
+            "type": "user",
+            "id": "194298828",
+            "name": "illchilli"
+        },
+        "covers": {
+            "large": "https://img3.doubanio.com\/img\/songlist\/large\/39767014-1.png",
+            "raw": "https://img3.doubanio.com\/img\/songlist\/raw\/39767014-1.png",
+            "auto": "https://img3.doubanio.com\/img\/songlist\/large\/39767014-1.png"
+        },
+        "duration": 1409,
+        "intro": "经典对唱歌曲Vol.2",
+        "cover_type": 1,
+        "created_time": "2019-11-04 06:00:00",
+        "id": 39767014,
+        "show_not_playable": null,
+        "title_color": "#333333",
+        "dark_cover": "https://img3.doubanio.com\/img\/songlist\/large\/39767014-1.png",
+        "title": "「经典对唱第二集」男(男)女搭配",
+        "type": 6,
+        "description": "经典对唱歌曲Vol.2",
+        "collected_count": 107,
+        "sample_songs": [
+            {
+                "artist": "The Chainsmokers \/ Halsey",
+                "taste_status": 0,
+                "title": "Closer",
+                "like": 0,
+                "sid": "3038316"
+            },
+            {
+                "artist": "Coldplay \/ Tove Lo",
+                "taste_status": 0,
+                "title": "Fun (feat. Tove Lo)",
+                "like": 0,
+                "sid": "2560509"
+            },
+            {
+                "artist": "Linkin Park",
+                "taste_status": 0,
+                "title": "Good Goodbye (feat. Pusha T and Stormzy)",
+                "like": 0,
+                "sid": "2722621"
+            }
+        ],
+        "cover_color": "#CABEA7",
+        "rec_reason": "",
+        "is_public": true,
+        "songs_count": 6,
+        "can_edit": null,
+        "cover": "https://img3.doubanio.com\/img\/songlist\/large\/39767014-1.png",
+        "updated_time": "2019-11-01 16:52:59",
+        "detailed_intro": "你一言我一语\n你一句我一句\n一起唱歌 一起欢笑\n经典对唱 \n男(男)女搭配 唱歌不累🎤"
+    },
+    {
+        "creator": {
+            "picture": "https://img2.doubanio.com\/icon\/ul194298822-3.jpg",
+            "songlists_count": 356,
+            "url": "https:\/\/www.douban.com\/people\/194298822\/",
+            "create_time": "2019.04.01",
+            "type": "user",
+            "id": "194298822",
+            "name": "锅炉不是锅"
+        },
+        "covers": {
+            "large": "https://img3.doubanio.com\/img\/songlist\/large\/41113210-1.png",
+            "raw": "https://img3.doubanio.com\/img\/songlist\/raw\/41113210-1.png",
+            "auto": "https://img3.doubanio.com\/img\/songlist\/large\/41113210-1.png"
+        },
+        "duration": 1749,
+        "intro": "回忆杀欧美版",
+        "cover_type": 1,
+        "created_time": "2019-11-30 06:00:00",
+        "id": 41113210,
+        "show_not_playable": null,
+        "title_color": "#FFFFFF",
+        "dark_cover": "https://img3.doubanio.com\/img\/songlist\/large\/41113210-1.png",
+        "title": "欧美丨公鸭要霸榜，卡迪B说不okurrr",
+        "type": 6,
+        "description": "回忆杀欧美版",
+        "collected_count": 88,
+        "sample_songs": [
+            {
+                "artist": "Ed Sheeran",
+                "taste_status": 0,
+                "title": "Perfect",
+                "like": 0,
+                "sid": "2708994"
+            },
+            {
+                "artist": "Childish Gambino",
+                "taste_status": 0,
+                "title": "This Is America",
+                "like": 0,
+                "sid": "3035834"
+            },
+            {
+                "artist": "Dua Lipa",
+                "taste_status": 0,
+                "title": "New Rules",
+                "like": 0,
+                "sid": "2724787"
+            }
+        ],
+        "cover_color": "#c1484c",
+        "rec_reason": "",
+        "is_public": true,
+        "songs_count": 8,
+        "can_edit": null,
+        "cover": "https://img3.doubanio.com\/img\/songlist\/large\/41113210-1.png",
+        "updated_time": "2019-11-25 16:39:02",
+        "detailed_intro": "回忆杀欧美版"
+    },
+    {
+        "creator": {
+            "picture": "https://img3.doubanio.com\/icon\/ul194298830-1.jpg",
+            "songlists_count": 4,
+            "url": "https:\/\/www.douban.com\/people\/194298830\/",
+            "create_time": "2019.04.01",
+            "type": "user",
+            "id": "194298830",
+            "name": "Split Works开功"
+        },
+        "covers": {
+            "large": "https://img3.doubanio.com\/img\/songlist\/large\/38132980-1.png",
+            "raw": "https://img3.doubanio.com\/img\/songlist\/raw\/38132980-1.png",
+            "auto": "https://img3.doubanio.com\/img\/songlist\/large\/38132980-1.png"
+        },
+        "duration": 1771,
+        "intro": "听了忍不住想跳舞",
+        "cover_type": 1,
+        "created_time": "2019-07-14 06:00:00",
+        "id": 38132980,
+        "show_not_playable": null,
+        "title_color": "#FFFFFF",
+        "dark_cover": "https://img3.doubanio.com\/img\/songlist\/large\/38132980-1.png",
+        "title": "这里是开功牌多巴胺制造机",
+        "type": 6,
+        "description": "听了忍不住想跳舞",
+        "collected_count": 294,
+        "sample_songs": [
+            {
+                "artist": "John Denver",
+                "taste_status": 0,
+                "title": "Take Me Home Country Roads",
+                "like": 0,
+                "sid": "1674379"
+            },
+            {
+                "artist": "Fitz And The Tantrums",
+                "taste_status": 0,
+                "title": "HandClap",
+                "like": 0,
+                "sid": "2695883"
+            },
+            {
+                "artist": "A-ha",
+                "taste_status": 0,
+                "title": "Take On Me",
+                "like": 0,
+                "sid": "2194394"
+            }
+        ],
+        "cover_color": "#A51227",
+        "rec_reason": "",
+        "is_public": true,
+        "songs_count": 8,
+        "can_edit": null,
+        "cover": "https://img3.doubanio.com\/img\/songlist\/large\/38132980-1.png",
+        "updated_time": "2019-07-13 18:09:23",
+        "detailed_intro": "一周结束，不和Split Works一起跳个舞吗？"
+    },
+    {
+        "creator": {
+            "picture": "https://img2.doubanio.com\/icon\/ul194298822-3.jpg",
+            "songlists_count": 356,
+            "url": "https:\/\/www.douban.com\/people\/194298822\/",
+            "create_time": "2019.04.01",
+            "type": "user",
+            "id": "194298822",
+            "name": "锅炉不是锅"
+        },
+        "covers": {
+            "large": "https://img3.doubanio.com\/img\/songlist\/large\/41152085-1.png",
+            "raw": "https://img3.doubanio.com\/img\/songlist\/raw\/41152085-1.png",
+            "auto": "https://img3.doubanio.com\/img\/songlist\/large\/41152085-1.png"
+        },
+        "duration": 1802,
+        "intro": "答应我，一定要开心！",
+        "cover_type": 1,
+        "created_time": "2019-11-29 06:00:00",
+        "id": 41152085,
+        "show_not_playable": null,
+        "title_color": "#FFFFFF",
+        "dark_cover": "https://img3.doubanio.com\/img\/songlist\/large\/41152085-1.png",
+        "title": "【流行精选】我只想让你，开心一点",
+        "type": 6,
+        "description": "答应我，一定要开心！",
+        "collected_count": 184,
+        "sample_songs": [
+            {
+                "artist": "Yael Naïm",
+                "taste_status": 0,
+                "title": "New Soul",
+                "like": 0,
+                "sid": "358289"
+            },
+            {
+                "artist": "Bruno Mars",
+                "taste_status": 0,
+                "title": "The Lazy Song",
+                "like": 0,
+                "sid": "2031120"
+            },
+            {
+                "artist": "Pharrell Williams",
+                "taste_status": 0,
+                "title": "Happy",
+                "like": 0,
+                "sid": "1931670"
+            }
+        ],
+        "cover_color": "#7073f5",
+        "rec_reason": "",
+        "is_public": true,
+        "songs_count": 8,
+        "can_edit": null,
+        "cover": "https://img3.doubanio.com\/img\/songlist\/large\/41152085-1.png",
+        "updated_time": "2019-11-27 17:24:36",
+        "detailed_intro": "答应我，一定要开心！"
+    },
+    {
+        "creator": {
+            "picture": "https://img2.doubanio.com\/icon\/ul194298822-3.jpg",
+            "songlists_count": 356,
+            "url": "https:\/\/www.douban.com\/people\/194298822\/",
+            "create_time": "2019.04.01",
+            "type": "user",
+            "id": "194298822",
+            "name": "锅炉不是锅"
+        },
+        "covers": {
+            "large": "https://img3.doubanio.com\/img\/songlist\/large\/41131984-1.png",
+            "raw": "https://img3.doubanio.com\/img\/songlist\/raw\/41131984-1.png",
+            "auto": "https://img3.doubanio.com\/img\/songlist\/large\/41131984-1.png"
+        },
+        "duration": 1965,
+        "intro": "建议申请非物质文化遗产",
+        "cover_type": 1,
+        "created_time": "2019-11-29 06:00:00",
+        "id": 41131984,
+        "show_not_playable": null,
+        "title_color": "#FFFFFF",
+        "dark_cover": "https://img3.doubanio.com\/img\/songlist\/large\/41131984-1.png",
+        "title": "【养老金系列】光收版税就够吃一辈子的歌",
+        "type": 6,
+        "description": "建议申请非物质文化遗产",
+        "collected_count": 93,
+        "sample_songs": [
+            {
+                "artist": "蔡依林 \/ 陶喆",
+                "taste_status": 0,
+                "title": "今天你要嫁给我",
+                "like": 0,
+                "sid": "177436"
+            },
+            {
+                "artist": "Clean Bandit \/ Jess Glynne",
+                "taste_status": 0,
+                "title": "Rather Be (Feat. Jess Glynne)",
+                "like": 0,
+                "sid": "2214600"
+            },
+            {
+                "artist": "Lou Bega",
+                "taste_status": 0,
+                "title": "Angelina",
+                "like": 0,
+                "sid": "1403390"
+            }
+        ],
+        "cover_color": "#72847a",
+        "rec_reason": "",
+        "is_public": true,
+        "songs_count": 8,
+        "can_edit": null,
+        "cover": "https://img3.doubanio.com\/img\/songlist\/large\/41131984-1.png",
+        "updated_time": "2019-11-26 16:00:50",
+        "detailed_intro": "建议申请非物质文化遗产"
+    },
+    {
+        "creator": {
+            "picture": "https://img3.doubanio.com\/icon\/ul194298816-2.jpg",
+            "songlists_count": 56,
+            "url": "https:\/\/www.douban.com\/people\/194298816\/",
+            "create_time": "2019.04.01",
+            "type": "user",
+            "id": "194298816",
+            "name": "LinXiaoYue"
+        },
+        "covers": {
+            "large": "https://img3.doubanio.com\/img\/songlist\/large\/40057712-1.png",
+            "raw": "https://img3.doubanio.com\/img\/songlist\/raw\/40057712-1.png",
+            "auto": "https://img3.doubanio.com\/img\/songlist\/large\/40057712-1.png"
+        },
+        "duration": 1665,
+        "intro": "欧美流行精选歌单",
+        "cover_type": 1,
+        "created_time": "2019-11-01 06:00:00",
+        "id": 40057712,
+        "show_not_playable": null,
+        "title_color": "#FFFFFF",
+        "dark_cover": "https://img3.doubanio.com\/img\/songlist\/large\/40057712-1.png",
+        "title": "【欧美流行】我想和你一起去旅行",
+        "type": 6,
+        "description": "欧美流行精选歌单",
+        "collected_count": 123,
+        "sample_songs": [
+            {
+                "artist": "Sia",
+                "taste_status": 0,
+                "title": "Where I Belong",
+                "like": 0,
+                "sid": "692318"
+            },
+            {
+                "artist": "The Chainsmokers \/ Coldplay",
+                "taste_status": 0,
+                "title": "Something Just Like This",
+                "like": 0,
+                "sid": "2707229"
+            },
+            {
+                "artist": "Kesha",
+                "taste_status": 0,
+                "title": "The Harold Song",
+                "like": 0,
+                "sid": "3192619"
+            }
+        ],
+        "cover_color": "#657E9F",
+        "rec_reason": "",
+        "is_public": true,
+        "songs_count": 7,
+        "can_edit": null,
+        "cover": "https://img3.doubanio.com\/img\/songlist\/large\/40057712-1.png",
+        "updated_time": "2019-09-30 15:27:26",
+        "detailed_intro": ""
+    },
+    {
+        "creator": {
+            "picture": "https://img3.doubanio.com\/icon\/ul194298816-2.jpg",
+            "songlists_count": 56,
+            "url": "https:\/\/www.douban.com\/people\/194298816\/",
+            "create_time": "2019.04.01",
+            "type": "user",
+            "id": "194298816",
+            "name": "LinXiaoYue"
+        },
+        "covers": {
+            "large": "https://img3.doubanio.com\/img\/songlist\/large\/39405734-1.png",
+            "raw": "https://img3.doubanio.com\/img\/songlist\/raw\/39405734-1.png",
+            "auto": "https://img3.doubanio.com\/img\/songlist\/large\/39405734-1.png"
+        },
+        "duration": 1079,
+        "intro": "THE BEATLES歌曲精选",
+        "cover_type": 1,
+        "created_time": "2019-11-03 06:00:00",
+        "id": 39405734,
+        "show_not_playable": null,
+        "title_color": "#FFFFFF",
+        "dark_cover": "https://img3.doubanio.com\/img\/songlist\/large\/39405734-1.png",
+        "title": "TheBeatles|永不过时的摇滚乐队",
+        "type": 6,
+        "description": "THE BEATLES歌曲精选",
+        "collected_count": 350,
+        "sample_songs": [
+            {
+                "artist": "The Beatles",
+                "taste_status": 0,
+                "title": "Penny Lane",
+                "like": 0,
+                "sid": "4903085"
+            },
+            {
+                "artist": "The Beatles",
+                "taste_status": 0,
+                "title": "Eight Days a Week",
+                "like": 0,
+                "sid": "5823714"
+            },
+            {
+                "artist": "The Beatles",
+                "taste_status": 0,
+                "title": "Hello, Goodbye",
+                "like": 0,
+                "sid": "4904408"
+            }
+        ],
+        "cover_color": "#000000",
+        "rec_reason": "",
+        "is_public": true,
+        "songs_count": 7,
+        "can_edit": null,
+        "cover": "https://img3.doubanio.com\/img\/songlist\/large\/39405734-1.png",
+        "updated_time": "2019-09-05 11:35:23",
+        "detailed_intro": ""
+    },
+    {
+        "creator": {
+            "picture": "https://img2.doubanio.com\/icon\/ul194298822-3.jpg",
+            "songlists_count": 356,
+            "url": "https:\/\/www.douban.com\/people\/194298822\/",
+            "create_time": "2019.04.01",
+            "type": "user",
+            "id": "194298822",
+            "name": "锅炉不是锅"
+        },
+        "covers": {
+            "large": "https://img3.doubanio.com\/img\/songlist\/large\/41664573-1.png",
+            "raw": "https://img3.doubanio.com\/img\/songlist\/raw\/41664573-1.png",
+            "auto": "https://img3.doubanio.com\/img\/songlist\/large\/41664573-1.png"
+        },
+        "duration": 1640,
+        "intro": "毋庸置疑，当代天后",
+        "cover_type": 1,
+        "created_time": "2020-01-09 06:00:00",
+        "id": 41664573,
+        "show_not_playable": null,
+        "title_color": "#FFFFFF",
+        "dark_cover": "https://img3.doubanio.com\/img\/songlist\/large\/41664573-1.png",
+        "title": "玛利亚凯莉：热爱演小品的神级Diva",
+        "type": 6,
+        "description": "毋庸置疑，当代天后",
+        "collected_count": 210,
+        "sample_songs": [
+            {
+                "artist": "Mariah Carey",
+                "taste_status": 0,
+                "title": "Hero",
+                "like": 0,
+                "sid": "490558"
+            },
+            {
+                "artist": "Mariah Carey",
+                "taste_status": 0,
+                "title": "Touch My Body",
+                "like": 0,
+                "sid": "2441214"
+            },
+            {
+                "artist": "Mariah Carey \/ Whitney Houston",
+                "taste_status": 0,
+                "title": "When You Believe",
+                "like": 0,
+                "sid": "9868"
+            }
+        ],
+        "cover_color": "#aa4739",
+        "rec_reason": "",
+        "is_public": true,
+        "songs_count": 7,
+        "can_edit": null,
+        "cover": "https://img3.doubanio.com\/img\/songlist\/large\/41664573-1.png",
+        "updated_time": "2019-12-24 16:43:06",
+        "detailed_intro": "毋庸置疑，当代天后"
+    },
+    {
+        "creator": {
+            "picture": "https://img2.doubanio.com\/icon\/ul188236445-3.jpg",
+            "songlists_count": 126,
+            "url": "https:\/\/www.douban.com\/people\/188236445\/",
+            "create_time": "2018.12.04",
+            "type": "user",
+            "id": "188236445",
+            "name": "豆瓣FM官方"
+        },
+        "covers": {
+            "large": "https://img3.doubanio.com\/img\/songlist\/large\/46944208-1.png",
+            "raw": "https://img3.doubanio.com\/img\/songlist\/raw\/46944208-1.png",
+            "auto": "https://img3.doubanio.com\/img\/songlist\/large\/46944208-1.png"
+        },
+        "duration": 2281,
+        "intro": "",
+        "cover_type": 1,
+        "created_time": "2020-10-01 06:00:00",
+        "id": 46944208,
+        "show_not_playable": null,
+        "title_color": "#FFFFFF",
+        "dark_cover": "https://img3.doubanio.com\/img\/songlist\/large\/46944208-1.png",
+        "title": "那些音乐里的中国风",
+        "type": 6,
+        "description": "",
+        "collected_count": 0,
+        "sample_songs": [
+            {
+                "artist": "陶喆",
+                "taste_status": 0,
+                "title": "Susan说",
+                "like": 0,
+                "sid": "98617"
+            },
+            {
+                "artist": "王力宏",
+                "taste_status": 0,
+                "title": "在梅边",
+                "like": 0,
+                "sid": "3106320"
+            },
+            {
+                "artist": "飞儿乐团",
+                "taste_status": 0,
+                "title": "月牙湾",
+                "like": 0,
+                "sid": "3124392"
+            }
+        ],
+        "cover_color": "#706454",
+        "rec_reason": "",
+        "is_public": true,
+        "songs_count": 9,
+        "can_edit": null,
+        "cover": "https://img3.doubanio.com\/img\/songlist\/large\/46944208-1.png",
+        "updated_time": "2020-09-29 16:51:49",
+        "detailed_intro": ""
+    },
+    {
+        "creator": {
+            "picture": "https://img2.doubanio.com\/icon\/ul188236445-3.jpg",
+            "songlists_count": 126,
+            "url": "https:\/\/www.douban.com\/people\/188236445\/",
+            "create_time": "2018.12.04",
+            "type": "user",
+            "id": "188236445",
+            "name": "豆瓣FM官方"
+        },
+        "covers": {
+            "large": "https://img3.doubanio.com\/img\/songlist\/large\/45733641-1.png",
+            "raw": "https://img3.doubanio.com\/img\/songlist\/raw\/45733641-1.png",
+            "auto": "https://img3.doubanio.com\/img\/songlist\/large\/45733641-1.png"
+        },
+        "duration": 1972,
+        "intro": "选自部分豆友投稿的私人推荐歌曲",
+        "cover_type": 1,
+        "created_time": "2020-08-07 06:00:00",
+        "id": 45733641,
+        "show_not_playable": null,
+        "title_color": "#333333",
+        "dark_cover": "https://img3.doubanio.com\/img\/songlist\/large\/45733641-1.png",
+        "title": "每日私享歌单里的好音乐",
+        "type": 6,
+        "description": "选自部分豆友投稿的私人推荐歌曲",
+        "collected_count": 99,
+        "sample_songs": [
+            {
+                "artist": "孙燕姿",
+                "taste_status": 0,
+                "title": "害怕",
+                "like": 0,
+                "sid": "17984"
+            },
+            {
+                "artist": "Sia",
+                "taste_status": 0,
+                "title": "Big Girls Cry",
+                "like": 0,
+                "sid": "2089963"
+            },
+            {
+                "artist": "DEPAPEPE",
+                "taste_status": 0,
+                "title": "Wedding Bell",
+                "like": 0,
+                "sid": "368030"
+            }
+        ],
+        "cover_color": "#00C16C",
+        "rec_reason": "",
+        "is_public": true,
+        "songs_count": 7,
+        "can_edit": null,
+        "cover": "https://img3.doubanio.com\/img\/songlist\/large\/45733641-1.png",
+        "updated_time": "2020-08-06 17:04:58",
+        "detailed_intro": "每日私享歌单推荐中，藏着每个人的私人口味，而在它之中，有没有一首歌会让你有不经意的惊喜？评判音乐的标准，属于正在聆听的你。\n\n此歌单歌曲选自豆瓣FM小组，歌曲征集「每日私享歌单里的好音乐」豆友投稿活动，好音乐值得被听见。"
+    },
+    {
+        "creator": {
+            "picture": "https://img2.doubanio.com\/icon\/ul194298822-3.jpg",
+            "songlists_count": 356,
+            "url": "https:\/\/www.douban.com\/people\/194298822\/",
+            "create_time": "2019.04.01",
+            "type": "user",
+            "id": "194298822",
+            "name": "锅炉不是锅"
+        },
+        "covers": {
+            "large": "https://img3.doubanio.com\/img\/songlist\/large\/39937034-1.png",
+            "raw": "https://img3.doubanio.com\/img\/songlist\/raw\/39937034-1.png",
+            "auto": "https://img3.doubanio.com\/img\/songlist\/large\/39937034-1.png"
+        },
+        "duration": 1963,
+        "intro": "经得住时间的美。",
+        "cover_type": 1,
+        "created_time": "2019-09-27 06:00:00",
+        "id": 39937034,
+        "show_not_playable": null,
+        "title_color": "#333333",
+        "dark_cover": "https://img3.doubanio.com\/img\/songlist\/large\/39937034-1.png",
+        "title": "【华语女声】女人花似梦，摇曳红尘中",
+        "type": 6,
+        "description": "经得住时间的美。",
+        "collected_count": 345,
+        "sample_songs": [
+            {
+                "artist": "林忆莲",
+                "taste_status": 0,
+                "title": "至少还有你",
+                "like": 0,
+                "sid": "741203"
+            },
+            {
+                "artist": "苏芮",
+                "taste_status": 0,
+                "title": "奉献",
+                "like": 0,
+                "sid": "3137168"
+            },
+            {
+                "artist": "黄莺莺",
+                "taste_status": 0,
+                "title": "哭砂",
+                "like": 0,
+                "sid": "2055676"
+            }
+        ],
+        "cover_color": "#799ECA",
+        "rec_reason": "",
+        "is_public": true,
+        "songs_count": 7,
+        "can_edit": null,
+        "cover": "https://img3.doubanio.com\/img\/songlist\/large\/39937034-1.png",
+        "updated_time": "2019-09-24 17:50:01",
+        "detailed_intro": "很久以前，没有胭脂，女人的脸只为情郎红。"
+    },
+    {
+        "creator": {
+            "picture": "https://img3.doubanio.com\/icon\/ul194298828-2.jpg",
+            "songlists_count": 399,
+            "url": "https:\/\/www.douban.com\/people\/194298828\/",
+            "create_time": "2019.04.01",
+            "type": "user",
+            "id": "194298828",
+            "name": "illchilli"
+        },
+        "covers": {
+            "large": "https://img3.doubanio.com\/img\/songlist\/large\/39500547-1.png",
+            "raw": "https://img3.doubanio.com\/img\/songlist\/raw\/39500547-1.png",
+            "auto": "https://img3.doubanio.com\/img\/songlist\/large\/39500547-1.png"
+        },
+        "duration": 1092,
+        "intro": "安安静静",
+        "cover_type": 1,
+        "created_time": "2019-09-04 06:00:00",
+        "id": 39500547,
+        "show_not_playable": null,
+        "title_color": "#FFFFFF",
+        "dark_cover": "https://img3.doubanio.com\/img\/songlist\/large\/39500547-1.png",
+        "title": "欧美民谣|你绝对没听过的豆瓣高分民谣",
+        "type": 6,
+        "description": "安安静静",
+        "collected_count": 747,
+        "sample_songs": [
+            {
+                "artist": "Bob Dylan",
+                "taste_status": 0,
+                "title": "Blowin' In The Wind",
+                "like": 0,
+                "sid": "675819"
+            },
+            {
+                "artist": "Simon & Garfunkel",
+                "taste_status": 0,
+                "title": "Roving Gambler",
+                "like": 0,
+                "sid": "3272894"
+            },
+            {
+                "artist": "Joan Baez",
+                "taste_status": 0,
+                "title": "Donna Donna",
+                "like": 0,
+                "sid": "366797"
+            }
+        ],
+        "cover_color": "#EFA125",
+        "rec_reason": "",
+        "is_public": true,
+        "songs_count": 7,
+        "can_edit": null,
+        "cover": "https://img3.doubanio.com\/img\/songlist\/large\/39500547-1.png",
+        "updated_time": "2019-09-03 17:36:38",
+        "detailed_intro": "一把吉他\n一个人\n一个麦克\n一段文"
+    },
+    {
+        "creator": {
+            "picture": "https://img2.doubanio.com\/icon\/ul188236445-3.jpg",
+            "songlists_count": 126,
+            "url": "https:\/\/www.douban.com\/people\/188236445\/",
+            "create_time": "2018.12.04",
+            "type": "user",
+            "id": "188236445",
+            "name": "豆瓣FM官方"
+        },
+        "covers": {
+            "large": "https://img3.doubanio.com\/img\/songlist\/large\/46944208-1.png",
+            "raw": "https://img3.doubanio.com\/img\/songlist\/raw\/46944208-1.png",
+            "auto": "https://img3.doubanio.com\/img\/songlist\/large\/46944208-1.png"
+        },
+        "duration": 2281,
+        "intro": "",
+        "created_time": "2020-10-01 06:00:00",
+        "id": 46944208,
+        "show_not_playable": null,
+        "title_color": "#FFFFFF",
+        "dark_cover": "https://img3.doubanio.com\/img\/songlist\/large\/46944208-1.png",
+        "title": "那些音乐里的中国风",
+        "collected_count": 0,
+        "type": 6,
+        "description": "",
+        "cover_type": 1,
+        "sample_songs": [
+            {
+                "artist": "陶喆",
+                "taste_status": 0,
+                "title": "Susan说",
+                "like": 0,
+                "sid": "98617"
+            },
+            {
+                "artist": "王力宏",
+                "taste_status": 0,
+                "title": "在梅边",
+                "like": 0,
+                "sid": "3106320"
+            },
+            {
+                "artist": "飞儿乐团",
+                "taste_status": 0,
+                "title": "月牙湾",
+                "like": 0,
+                "sid": "3124392"
+            }
+        ],
+        "cover_color": "#706454",
+        "rec_reason": "",
+        "is_public": true,
+        "songs_count": 9,
+        "can_edit": null,
+        "cover": "https://img3.doubanio.com\/img\/songlist\/large\/46944208-1.png",
+        "updated_time": "2020-09-29 16:51:49",
+        "detailed_intro": ""
+    },
+    {
+        "creator": {
+            "picture": "https://img3.doubanio.com\/icon\/ul194298826-1.jpg",
+            "songlists_count": 46,
+            "url": "https:\/\/www.douban.com\/people\/194298826\/",
+            "create_time": "2019.04.01",
+            "type": "user",
+            "id": "194298826",
+            "name": "我小我"
+        },
+        "covers": {
+            "large": "https://img3.doubanio.com\/img\/songlist\/large\/39195238-1.png",
+            "raw": "https://img3.doubanio.com\/img\/songlist\/raw\/39195238-1.png",
+            "auto": "https://img3.doubanio.com\/img\/songlist\/large\/39195238-1.png"
+        },
+        "duration": 2065,
+        "intro": "午后咖啡时光",
+        "cover_type": 1,
+        "created_time": "2019-10-01 06:00:00",
+        "id": 39195238,
+        "show_not_playable": null,
+        "title_color": "#FFFFFF",
+        "dark_cover": "https://img3.doubanio.com\/img\/songlist\/large\/39195238-1.png",
+        "title": "再给你一杯咖啡的时间",
+        "type": 6,
+        "description": "午后咖啡时光",
+        "collected_count": 120,
+        "sample_songs": [
+            {
+                "artist": "Leonard Cohen",
+                "taste_status": 0,
+                "title": "Be For Real",
+                "like": 0,
+                "sid": "150853"
+            },
+            {
+                "artist": "Kat Edmonson",
+                "taste_status": 0,
+                "title": "I Just Wasn’t Made for These Times",
+                "like": 0,
+                "sid": "2145237"
+            },
+            {
+                "artist": "Ray Parker Jr.",
+                "taste_status": 0,
+                "title": "Let Me Go",
+                "like": 0,
+                "sid": "3360141"
+            }
+        ],
+        "cover_color": "#E48E46",
+        "rec_reason": "",
+        "is_public": true,
+        "songs_count": 7,
+        "can_edit": null,
+        "cover": "https://img3.doubanio.com\/img\/songlist\/large\/39195238-1.png",
+        "updated_time": "2019-08-21 18:31:41",
+        "detailed_intro": ""
+    },
+    {
+        "creator": {
+            "picture": "https://img2.doubanio.com\/icon\/ul194298822-3.jpg",
+            "songlists_count": 356,
+            "url": "https:\/\/www.douban.com\/people\/194298822\/",
+            "create_time": "2019.04.01",
+            "type": "user",
+            "id": "194298822",
+            "name": "锅炉不是锅"
+        },
+        "covers": {
+            "large": "https://img3.doubanio.com\/img\/songlist\/large\/41369424-1.png",
+            "raw": "https://img3.doubanio.com\/img\/songlist\/raw\/41369424-1.png",
+            "auto": "https://img3.doubanio.com\/img\/songlist\/large\/41369424-1.png"
+        },
+        "duration": 1135,
+        "intro": "Rest In Peace.",
+        "cover_type": 1,
+        "created_time": "2019-12-10 06:00:00",
+        "id": 41369424,
+        "show_not_playable": null,
+        "title_color": "#FFFFFF",
+        "dark_cover": "https://img3.doubanio.com\/img\/songlist\/large\/41369424-1.png",
+        "title": "R.I.P Juice WRLD",
+        "type": 6,
+        "description": "Rest In Peace.",
+        "collected_count": 51,
+        "sample_songs": [
+            {
+                "artist": "Future \/ Juice WRLD",
+                "taste_status": 0,
+                "title": "Fine China",
+                "like": 0,
+                "sid": "3071772"
+            },
+            {
+                "artist": "Future \/ Juice WRLD",
+                "taste_status": 0,
+                "title": "7 AM Freestyle",
+                "like": 0,
+                "sid": "3071776"
+            },
+            {
+                "artist": "Future \/ Juice WRLD",
+                "taste_status": 0,
+                "title": "Shorty",
+                "like": 0,
+                "sid": "3071778"
+            }
+        ],
+        "cover_color": "#E7992C",
+        "rec_reason": "",
+        "is_public": true,
+        "songs_count": 7,
+        "can_edit": null,
+        "cover": "https://img3.doubanio.com\/img\/songlist\/large\/41369424-1.png",
+        "updated_time": "2019-12-09 14:20:16",
+        "detailed_intro": "(1998.12.2~2019.12.8)"
+    },
+    {
+        "creator": {
+            "picture": "https://img2.doubanio.com\/icon\/ul194298822-3.jpg",
+            "songlists_count": 356,
+            "url": "https:\/\/www.douban.com\/people\/194298822\/",
+            "create_time": "2019.04.01",
+            "type": "user",
+            "id": "194298822",
+            "name": "锅炉不是锅"
+        },
+        "covers": {
+            "large": "https://img3.doubanio.com\/img\/songlist\/large\/37524550-1.png",
+            "raw": "https://img3.doubanio.com\/img\/songlist\/raw\/37524550-1.png",
+            "auto": "https://img3.doubanio.com\/img\/songlist\/large\/37524550-1.png"
+        },
+        "duration": 1993,
+        "intro": "貝斯手の大逆襲",
+        "cover_type": 1,
+        "created_time": "2019-07-07 06:00:00",
+        "id": 37524550,
+        "show_not_playable": null,
+        "title_color": "#FFFFFF",
+        "dark_cover": "https://img3.doubanio.com\/img\/songlist\/large\/37524550-1.png",
+        "title": "听说你们不知道贝斯出啥动静？",
+        "type": 6,
+        "description": "貝斯手の大逆襲",
+        "collected_count": 590,
+        "sample_songs": [
+            {
+                "artist": "Michael Jackson",
+                "taste_status": 0,
+                "title": "Billie Jean",
+                "like": 0,
+                "sid": "431314"
+            },
+            {
+                "artist": "Red Hot Chili Peppers",
+                "taste_status": 0,
+                "title": "Go Robot",
+                "like": 0,
+                "sid": "2633869"
+            },
+            {
+                "artist": "Gorillaz",
+                "taste_status": 0,
+                "title": "Feel Good Inc.",
+                "like": 0,
+                "sid": "2545127"
+            }
+        ],
+        "cover_color": "#F1A529",
+        "rec_reason": "",
+        "is_public": true,
+        "songs_count": 7,
+        "can_edit": null,
+        "cover": "https://img3.doubanio.com\/img\/songlist\/large\/37524550-1.png",
+        "updated_time": "2019-07-01 16:57:51",
+        "detailed_intro": "“那个人在台上是干嘛的？”“他弹的那个是……四根弦的吉他？”“四根弦的不是尤克里里吗？”\n别闹了，今天就让贝斯手好好刷一刷存在感。"
+    },
+    {
+        "creator": {
+            "picture": "https://img2.doubanio.com\/icon\/ul188236445-3.jpg",
+            "songlists_count": 126,
+            "url": "https:\/\/www.douban.com\/people\/188236445\/",
+            "create_time": "2018.12.04",
+            "type": "user",
+            "id": "188236445",
+            "name": "豆瓣FM官方"
+        },
+        "covers": {
+            "large": "https://img3.doubanio.com\/img\/songlist\/large\/46944208-1.png",
+            "raw": "https://img3.doubanio.com\/img\/songlist\/raw\/46944208-1.png",
+            "auto": "https://img3.doubanio.com\/img\/songlist\/large\/46944208-1.png"
+        },
+        "duration": 2281,
+        "intro": "",
+        "created_time": "2020-10-01 06:00:00",
+        "id": 46944208,
+        "show_not_playable": null,
+        "title_color": "#FFFFFF",
+        "dark_cover": "https://img3.doubanio.com\/img\/songlist\/large\/46944208-1.png",
+        "title": "那些音乐里的中国风",
+        "collected_count": 0,
+        "type": 6,
+        "description": "",
+        "cover_type": 1,
+        "sample_songs": [
+            {
+                "artist": "陶喆",
+                "taste_status": 0,
+                "title": "Susan说",
+                "like": 0,
+                "sid": "98617"
+            },
+            {
+                "artist": "王力宏",
+                "taste_status": 0,
+                "title": "在梅边",
+                "like": 0,
+                "sid": "3106320"
+            },
+            {
+                "artist": "飞儿乐团",
+                "taste_status": 0,
+                "title": "月牙湾",
+                "like": 0,
+                "sid": "3124392"
+            }
+        ],
+        "cover_color": "#706454",
+        "rec_reason": "",
+        "is_public": true,
+        "songs_count": 9,
+        "can_edit": null,
+        "cover": "https://img3.doubanio.com\/img\/songlist\/large\/46944208-1.png",
+        "updated_time": "2020-09-29 16:51:49",
+        "detailed_intro": ""
+    }
+]
