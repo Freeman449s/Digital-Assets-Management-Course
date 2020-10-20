@@ -48,16 +48,15 @@
 </h1>
 <hr/>
 <div id="list1">
-    <h2 class="columnHead">Library 1</h2>
     {# 这条语句装载一条注释 #}
     {# 使用花括号和百分号装载控制语句 #}
     {% for id in dict1 %}
         {% with idDir=dict1[id]["idDir"], textContent=dict1[id]["textContent"] %}
             {# ~用于拼接字符串 #}
-            {% with picDir=idDir~".png", musicDir=idDir~".mp3" %}
+            {% with picDir=idDir~".jpg", musicDir=idDir~".mp3" %}
                 {# 使用两个花括号装载变量 #}
                 <pre class="musicInfo">{{ textContent }}</pre>
-                <img src="{{ picDir }}" width="100" height="100"
+                <img src="{{ picDir }}" width="150" height="150"
                      alt="There seems to be some problems with the image."/>
                 <pre></pre> {# 使用空白的<pre>元素人为插入两个空行 #}
                 <audio src="{{ musicDir }}" controls="controls">
@@ -68,14 +67,13 @@
     {% endfor %}
 </div>
 <div id="list2">
-    <h2 class="columnHead">Library 2</h2>
     {% for id in dict2 %}
         {% with idDir=dict2[id]["idDir"], textContent=dict2[id]["textContent"] %}
             {# ~用于拼接字符串 #}
-            {% with picDir=idDir~".png", musicDir=idDir~".mp3" %}
+            {% with picDir=idDir~".jpg", musicDir=idDir~".mp3" %}
                 {# 使用两个花括号装载变量 #}
                 <pre class="musicInfo">{{ textContent }}</pre>
-                <img src="{{ picDir }}" width="100" height="100"
+                <img src="{{ picDir }}" width="150" height="150"
                      alt="There seems to be some problems with the image."/>
                 <pre></pre>
                 <audio src="{{ musicDir }}" controls="controls">
