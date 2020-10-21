@@ -1,6 +1,6 @@
 from flask import Flask, render_template
 import os
-import math
+import json
 
 app = Flask(__name__)
 
@@ -22,7 +22,8 @@ def scan():
     # file 根目录下文件的文件名（列表）
     for root, dirs, files in os.walk(r".\static\Library 1"):
         for file in files:
-            id = file[:-4]
+            dotIndex=file.find(".")
+            id = file[:dotIndex]
             if id not in dict1:
                 info = {}
                 idDir = os.path.join(root, id)  # os.path.join合并路径
@@ -31,7 +32,8 @@ def scan():
                 dict1[id] = info
     for root, dirs, files in os.walk(r".\static\Library 2"):
         for file in files:
-            id = file[:-4]
+            dotIndex = file.find(".")
+            id = file[:dotIndex]
             if id not in dict2:
                 info = {}
                 idDir = os.path.join(root, id)  # os.path.join合并路径
@@ -43,12 +45,16 @@ def scan():
     return dict
 
 
-# todo
 def readJSON(idDir):
     jsonDir = idDir + ".json"
     file = open(jsonDir, encoding="UTF-8")
-    content = file.read().strip(" \n")  # read方法一次性读取全部内容
-    return content
+    jsonContent = file.read()
+    dict = json.loads(jsonContent)
+    text = "曲名：" + dict["title"] + "\n"
+    text += "艺术家：" + dict["artist"] + "\n"
+    text += "专辑：" + dict["albumTitle"] + "\n"
+    text += "时长：" + dict["length"]
+    return text
 
 
 if __name__ == "__main__":

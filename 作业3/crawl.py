@@ -58,11 +58,11 @@ def downloadSong(dict, id, libDir):
     downloadBinary(songURL, libDir + "\\" + id + ".mp3")
     downloadBinary(pictureURL, libDir + "\\" + id + ".jpg")
     jsonDict = {}
-    jsonDict["artist"] = dict["artist"]
-    jsonDict["kbps"] = dict["kbps"]
     jsonDict["title"] = dict["title"]
+    jsonDict["artist"] = dict["artist"]
     jsonDict["albumTitle"] = dict["albumtitle"]
     jsonDict["length"] = formatTime(dict["length"])
+    jsonDict["kbps"] = dict["kbps"]
     writeJSON(jsonDict, libDir + "\\" + id + ".json")
 
 
