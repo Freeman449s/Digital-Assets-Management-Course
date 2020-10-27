@@ -13,3 +13,7 @@
 作业3/venv/*
 作业4：图像数字水印/.idea/*
 作业4：图像数字水印/venv/*
+
+# 测试用图片
+作业4：图像数字水印/Image with Watermark.bmp
+作业4：图像数字水印/Extracted Watermark.bmp
