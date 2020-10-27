@@ -5,17 +5,58 @@
     <meta name="author" content="Gordon Freeman"/>
     <title>Watermark Adder</title>
     <style>
-        .button{
-            width:200px;
-            height:50px;
-            border-radius: 25px;
-            background-color: coral;
+        .button {
+        {# 按钮内字符与按钮边框的内边距，两个参数代表上下内边距和左右内边距 #} padding: 8px 16px;
+            background-color: white;
+        {# 为白色按钮设置有色边框 #} border: 2px solid coral;
+        {# 设置圆角 #} border-radius: 4px;
             font-family: Arial;
-            
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+            color: black;
+            width: 30%;
+            margin-left: 35%;
+
+        {# 设置悬停过渡动画时间 #} transition-duration: 0.4s;
+        {# 适配safari #} -webkit-transition-duration: 0.4s;
+        }
+
+        {# 设置悬停效果 #}
+        .button:hover {
+            background-color: coral;
+            color: azure;
         }
     </style>
 </head>
 <body>
-<a class = "button">Upload Source Image</a>
+{# form标签为用户输入创建表单 #}
+{# method属性规定发送表单数据的方法，action规定向何处发送表单数据 #}
+{# enctype规定在发送数据前如何进行编码，设置为multipart/form-data，不对数据进行编码 #}
+<form method="post" action="http://localhost:5000/src" enctype="multipart/form-data">
+    {# input元素为用户上传信息提供入口 #}
+    {# name属性对提交的表单数据进行标识 #}
+    {# todo: 设置允许上传的文件类型 #}
+    Upload Source Image:
+    <input type="file" name="srcImage"/>
+    <br/>
+    Upload Watermark:
+    <input type="file" name="watermark"/>
+    <br/>
+    <input type="submit" value="Fuse!"/>
+</form>
+<!--
+<div class="button">
+    <a>Upload Source Image</a>
+</div>
+<br/>
+<div class="button">
+    <a>Upload Watermark</a>
+</div>
+<br/>
+<div class="button">
+    <a>Infuse!</a>
+</div>
+-->
 </body>
 </html>

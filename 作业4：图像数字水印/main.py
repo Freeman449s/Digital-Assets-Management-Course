@@ -1,8 +1,15 @@
 from PIL import Image
 from PIL.Image import ANTIALIAS
 import numpy as np
+from flask import Flask, render_template
 
+app = Flask(__name__)
 originalSize = (3072, 2048)  # 水印图的原始尺寸
+
+
+@app.route("/")
+def main():
+    return render_template("home.html")
 
 
 def addWatermark(srcPath, markPath):
@@ -44,5 +51,8 @@ def extractWatermark(markedImgPath):
     extractedImg.save("Extracted Watermark.bmp")
 
 
-addWatermark("Source.bmp", "Watermark.bmp")
-extractWatermark("Image with Watermark.bmp")
+# addWatermark("Source.bmp", "Watermark.bmp")
+# extractWatermark("Image with Watermark.bmp")
+
+if __name__ == "__main__":
+    app.run()
