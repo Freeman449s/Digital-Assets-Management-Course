@@ -8,7 +8,12 @@ originalSize = (3072, 2048)  # 水印图的原始尺寸
 
 
 @app.route("/")
-def main():
+def home():
+    return render_template("home.html")
+
+
+@app.route("/fuse", methods=["post"])
+def fuse():
     return render_template("home.html")
 
 
