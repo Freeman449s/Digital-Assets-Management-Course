@@ -5,11 +5,15 @@
     <title>Watermark Extractor</title>
 </head>
 <body>
-{# todo: 设置路由 #}
-<form method="post" action="http://localhost:5000/fuse" enctype="multipart/form-data">
-    <input type="file" name="markedImage" accept="image/bmp"/>
+<form method="post" action="http://localhost:5000/extractResult" enctype="multipart/form-data">
+    Input the size of watermark image (this will improve the effect):
+    <p>Width: <input type="text" name="width" maxlength="4" size="10"/></p>
+    <p>Height: <input type="text" name="height" maxlength="4" size="10"/></p>
+    <input type="file" name="markedImg" accept="image/bmp"/>
     <br/>
     <input type="submit" value="Extract!"/>
+    This might take a while, depending on the size of the image.
 </form>
+<a href="http://localhost:5000">Need to infuse a watermark?</a>
 </body>
 </html>

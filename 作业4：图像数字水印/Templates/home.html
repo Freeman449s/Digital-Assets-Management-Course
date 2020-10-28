@@ -33,17 +33,17 @@
 {# form标签为用户输入创建表单 #}
 {# method属性规定发送表单数据的方法，action规定向何处发送表单数据 #}
 {# enctype规定在发送数据前如何进行编码，设置为multipart/form-data，不对数据进行编码 #}
-{# todo: 设置路由 #}
-<form method="post" action="http://localhost:5000/fuse" enctype="multipart/form-data">
+<form method="post" action="http://localhost:5000/fuseResult" enctype="multipart/form-data">
     {# input元素为用户上传信息提供入口 #}
     {# name属性对提交的表单数据进行标识 #}
-    Upload Source Image:
-    <input type="file" name="srcImage" accept="image/bmp,image/jpeg,image/png"/>
+    Upload source image:
+    <input type="file" name="srcImg" accept="image/bmp,image/jpeg,image/png"/>
     <br/>
-    Upload Watermark:
+    Upload watermark:
     <input type="file" name="watermark" accept="image/bmp,image/jpeg,image/png"/>
     <br/>
     <input type="submit" value="Fuse!"/>
+    This might take a while, depending on the size of the image.
 </form>
 <a href="http://localhost:5000/extract">Need to extract a watermark?</a>
 <!--

@@ -1,9 +1,14 @@
 from PIL import Image
 from PIL.Image import ANTIALIAS
 import numpy as np
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, send_from_directory
 
 app = Flask(__name__)
+srcPath = "Source.bmp"
+markPath = "Watermark.bmp"
+markedPath = "Image with Watermark.bmp"
+extractedPath = "Extracted Watermark.bmp"
+
 originalSize = (3072, 2048)  # 水印图的原始尺寸
 
 
@@ -13,23 +18,38 @@ def home():
 
 
 # localhost:5000/fuse只接受post方法
-@app.route("/fuse", methods=["post"])
+@app.route("/fuseResult", methods=["post"])
 def fuse():
-    srcImg = request.files.get("srcImg")
-    watermark = request.file.get("watermark")
-    return render_template("home.html")
+    srcImg = request.files["srcImg"]
+    srcImg.save(srcPath)
+    watermark = request.files["watermark"]
+    watermark.save(markPath)
+    print("来自用户的图片已经保存到本地")
+    addWatermark(srcPath, markPath)
+    return send_from_directory("./", markedPath, as_attachment=True)  # as_attachment设为True时，文件将作为下载项返回
 
 
 @app.route("/extract")
-def extract():
+def extract_home():
     return render_template("extract.html")
 
 
-def addWatermark(srcImg, watermark):
+@app.route("/extractResult", methods=["post"])
+def extract():
     global originalSize
+    originalSize = (int(request.form["width"]), int(request.form["height"]))
+    markedImg = request.files["markedImg"]
+    markedImg.save(markedPath)
+    extractWatermark(markedPath)
+    return send_from_directory("./", extractedPath, as_attachment=True)
+
+
+def addWatermark(srcPath, markPath):
+    srcImg = Image.open(srcPath)
     srcM = np.array(srcImg)  # 尺寸为height * width * channels
     srcM.flags.writeable = True
-    originalSize = watermark.size
+    watermark = Image.open(markPath)
+    # originalSize = watermark.size
     watermark = watermark.resize(srcImg.size, ANTIALIAS)  # 将水印图尺寸调整到与原图一致
     markM = np.array(watermark)
     markM.flags.writeable = True
@@ -43,7 +63,7 @@ def addWatermark(srcImg, watermark):
                 srcM[i][j][k] = srcM[i][j][k] << 2
                 srcM[i][j][k] += markM[i][j][k]
     markedImg = Image.fromarray(srcM)
-    markedImg.save("Image with Watermark.bmp")
+    markedImg.save(markedPath)
 
 
 def extractWatermark(markedImgPath):
@@ -59,7 +79,7 @@ def extractWatermark(markedImgPath):
                 markedM[i][j][k] = (markedM[i][j][k] - tmp) * 85
     extractedImg = Image.fromarray(markedM)
     extractedImg.resize(originalSize, ANTIALIAS)
-    extractedImg.save("Extracted Watermark.bmp")
+    extractedImg.save(extractedPath)
 
 
 # addWatermark("Source.bmp", "Watermark.bmp")
