@@ -1,7 +1,7 @@
 from PIL import Image
 from PIL.Image import ANTIALIAS
 import numpy as np
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 
 app = Flask(__name__)
 originalSize = (3072, 2048)  # 水印图的原始尺寸
@@ -14,18 +14,23 @@ def home():
 
 @app.route("/fuse", methods=["post"])
 def fuse():
+    srcImg = request.files.get("srcImg")
+    watermark = request.file.get("watermark")
     return render_template("home.html")
 
 
-def addWatermark(srcPath, markPath):
+@app.route("/extract")
+def extract():
+    return render_template("extract.html")
+
+
+def addWatermark(srcImg, watermark):
     global originalSize
-    srcImg = Image.open(srcPath)
     srcM = np.array(srcImg)  # 尺寸为height * width * channels
     srcM.flags.writeable = True
-    markImg = Image.open(markPath)
-    originalSize = markImg.size
-    markImg = markImg.resize(srcImg.size, ANTIALIAS)  # 将水印图尺寸调整到与原图一致
-    markM = np.array(markImg)
+    originalSize = watermark.size
+    watermark = watermark.resize(srcImg.size, ANTIALIAS)  # 将水印图尺寸调整到与原图一致
+    markM = np.array(watermark)
     markM.flags.writeable = True
     # 水印图像素值除以85
     # 原图像素值右移位后与归一化后的水印图像素值相加
