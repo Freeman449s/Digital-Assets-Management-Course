@@ -12,6 +12,7 @@ def home():
     return render_template("home.html")
 
 
+# localhost:5000/fuse只接受post方法
 @app.route("/fuse", methods=["post"])
 def fuse():
     srcImg = request.files.get("srcImg")
