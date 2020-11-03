@@ -2,6 +2,7 @@ import os
 import numpy as np
 from PIL import Image
 import math
+import time
 
 libPath = "测试用图库"
 
@@ -26,10 +27,32 @@ class ImageFeature():
         self.img = Image.open(imgPath)
         self.w = self.img.width
         self.h = self.img.height
+        print("开始分析图像 " + imgPath + "。")
+        print("分析颜色矩...")
+        startTime = time.time()
         self.colorMomentVec = self.__colorMoments()
-        self.coarseness = self.__coarseness()
+        endTime = time.time()
+        duration = round(endTime - startTime, 2)
+        print("已完成颜色矩分析，耗时" + str(duration) + "秒。颜色矩向量：" + str(self.colorMomentVec))
+        print("分析对比度...")
+        startTime = time.time()
         self.contrast = self.__contrast()
+        endTime = time.time()
+        duration = round(endTime - startTime, 2)
+        print("已完成对比度分析，耗时" + str(duration) + "秒。对比度：" + str(self.contrast))
+        print("分析朝向...")
+        startTime = time.time()
         self.orientation = self.__orientation()
+        endTime = time.time()
+        duration = round(endTime - startTime, 2)
+        print("已完成朝向分析，耗时" + str(duration) + "秒。朝向：" + str(self.orientation))
+        print("开始分析粗糙度，这一步可能需要较长时间。")
+        startTime = time.time()
+        self.coarseness = self.__coarseness()
+        endTime = time.time()
+        duration = round(endTime - startTime, 2)
+        print("已完成粗糙度分析，耗时" + str(duration) + "秒。粗糙度：" + str(self.coarseness))
+        print("图像 " + imgPath + " 分析完毕。")
 
     def __colorMoments(self) -> np.array:
         """
@@ -37,7 +60,7 @@ class ImageFeature():
         :return: 包含图像颜色矩信息的9维特征向量
         """
         pixels = np.array(self.img)  # 高*宽*通道数
-        nPixels = np.size()
+        nPixels = np.size(pixels)
         # 计算一阶矩
         RSum = 0
         GSum = 0
@@ -56,9 +79,9 @@ class ImageFeature():
         BSum = 0
         for i in range(0, pixels.shape[0]):
             for j in range(0, pixels.shape[1]):
-                RSum += power(pixels[i][j][0] - RMean, 2)
-                GSum += power(pixels[i][j][1] - GMean, 2)
-                BSum += power(pixels[i][j][2] - BMean, 2)
+                RSum += math.pow(pixels[i][j][0] - RMean, 2)
+                GSum += math.pow(pixels[i][j][1] - GMean, 2)
+                BSum += math.pow(pixels[i][j][2] - BMean, 2)
         RVar = RSum / nPixels
         GVar = GSum / nPixels
         BVar = BSum / nPixels
@@ -68,9 +91,9 @@ class ImageFeature():
         BSum = 0
         for i in range(0, pixels.shape[0]):
             for j in range(0, pixels.shape[1]):
-                RSum += power(pixels[i][j][0] - RMean, 3)
-                GSum += power(pixels[i][j][1] - GMean, 3)
-                BSum += power(pixels[i][j][2] - BMean, 3)
+                RSum += math.pow(pixels[i][j][0] - RMean, 3)
+                GSum += math.pow(pixels[i][j][1] - GMean, 3)
+                BSum += math.pow(pixels[i][j][2] - BMean, 3)
         RSkew = RSum / nPixels
         GSkew = GSum / nPixels
         BSkew = BSum / nPixels
@@ -82,29 +105,39 @@ class ImageFeature():
         :return: float 图像的平均粗糙度
         """
         # 求全局的k最大值
-        globalMaxK = min(floor((math.log(self.w - 1), 2) - 1), floor((math.log(self.h - 1), 2) - 1))
+        globalMaxK = min(math.floor(math.log(self.w - 1, 2) - 1), math.floor(math.log(self.h - 1, 2) - 1))
         means = np.zeros((self.h, self.w, globalMaxK), np.float64)
         grayscale = self.img.convert("L")
         gsArr = np.array(grayscale)
         # 计算各不同中心、不同尺寸的窗口的均值
         # np.array()返回的矩阵尺寸为height*width
         # 边界像素不考虑
+        startTime = time.time()
         for i in range(2, self.h - 2):
             for j in range(2, self.w - 2):
-                for k in range(0, self.__maxK(j, i)):
-                    means[i][j][k] = self.__calcWindowMean(j, i, k, gsArr)
+                localMaxK = self.__maxK(j, i)
+                for k in range(0, localMaxK):
+                    means[i][j][k] = self.__calcWindowMean(j, i, k + 1, gsArr)
+        endTime = time.time()
+        duration = round(endTime - startTime, 2)
+        print(" \t窗口均值计算完成，该过程耗时" + str(duration) + "秒。")
         bestKs = np.zeros((self.h, self.w), np.int32)
         # 为每个像素计算精细度
+        startTime = time.time()
         for i in range(2, self.h - 2):
             for j in range(2, self.w - 2):
                 bestK = 1
-                max = -1
-                for k in range(0, self.__maxK(j, i)):
+                Max = -1
+                localMaxK = self.__maxK(j, i)
+                for k in range(0, localMaxK):
                     sumA = abs(means[i - 2 ** k][j + 2 ** k][k] - means[i + 2 ** k][j - 2 ** k][k])
                     sumB = abs(means[i - 2 ** k][j - 2 ** k][k] - means[i + 2 ** k][j + 2 ** k][k])
-                    if (max(sumA, sumB) > max):
+                    if max(sumA, sumB) > Max:
                         bestK = k + 1
                 bestKs[i][j] = bestK
+        endTime = time.time()
+        duration = round(endTime - startTime, 2)
+        print(" \t各像素精细度计算完成，该过程耗时" + str(duration) + "秒。")
         # 计算全局精细度
         sum = 0
         for i in range(2, self.h - 2):
@@ -119,10 +152,10 @@ class ImageFeature():
         :param y: 像素的总坐标（以0起始）
         :return: int 需要考虑的窗口大小等级k的最大值
         """
-        candiA = floor(math.log(x, 2))
-        candiB = floor(math.log(self.w - x - 1, 2))
-        candiC = floor(math.log(y, 2))
-        candiD = floor(math.log(self.h - y - 1, 2))
+        candiA = math.floor(math.log(x, 2))
+        candiB = math.floor(math.log(self.w - x - 1, 2))
+        candiC = math.floor(math.log(y, 2))
+        candiD = math.floor(math.log(self.h - y - 1, 2))
         return min(candiA, candiB, candiC, candiD)
 
     def __calcWindowMean(self, x: int, y: int, k: int, gsArr: np.array) -> float:
@@ -134,10 +167,10 @@ class ImageFeature():
         :param gsArr: 灰度图像矩阵
         :return: float 窗口像素值的均值
         """
-        xMin = x - math.pow(2, k - 1)
-        xMax = x + math.pow(2, k - 1)
-        yMin = y - math.pow(2, k - 1)
-        yMax = y + math.pow(2, k - 1)
+        xMin = int(x - math.pow(2, k - 1))
+        xMax = int(x + math.pow(2, k - 1))
+        yMin = int(y - math.pow(2, k - 1))
+        yMax = int(y + math.pow(2, k - 1))
         sum = 0
         # np.array()返回的矩阵尺寸为height*width
         for i in range(yMin, yMax + 1):
@@ -145,6 +178,7 @@ class ImageFeature():
                 sum += gsArr[i][j]
         return sum / math.pow(2 ** k + 1, 2)
 
+    # todo nan问题
     def __contrast(self) -> float:
         """
         计算图像的对比度\n
@@ -184,12 +218,12 @@ class ImageFeature():
             for j in range(1, self.w - 1):
                 xGradient = gsArr[i - 1][j + 1] + gsArr[i][j + 1] + gsArr[i + 1][j + 1] - \
                             gsArr[i - 1][j - 1] - gsArr[i][j - 1] - gsArr[i + 1][j - 1]
-                yGradient = gsArr[i + 1][j - 1] + gsArr[i + 1][j] + gsArr[i + 1][j + 2] - \
+                yGradient = gsArr[i + 1][j - 1] + gsArr[i + 1][j] + gsArr[i + 1][j + 1] - \
                             gsArr[i - 1][j - 1] - gsArr[i - 1][j] - gsArr[i - 1][j + 1]
                 gradient = (abs(xGradient) + abs(yGradient)) / 2
                 if (gradient < threshold): continue
                 rad = self.__calcNormalizeRad(xGradient, yGradient)
-                nPixelVec[floor(rad / (math.pi / 4))] += 1
+                nPixelVec[math.floor(rad / (math.pi / 4))] += 1
         sum = 0
         for i in range(0, 8):
             sum += nPixelVec[i]
@@ -206,7 +240,7 @@ class ImageFeature():
         for i in range(0, len(peakIndices)):
             sumB = 0
             peakIndex = peakIndices[i]
-            (leftBound, rightBound) = self.__findTrough()
+            (leftBound, rightBound) = self.__findTrough(peakIndex, HDVec)
             for j in range(leftBound, rightBound + 1):
                 phi = math.pi / 4 * j + math.pi / 8
                 phi_p = math.pi / 4 * peakIndex + math.pi / 8
@@ -251,7 +285,7 @@ class ImageFeature():
         :return: tuple 两侧波谷的横坐标
         """
         leftIndex = 0
-        RightIndex = 7
+        rightIndex = 7
         for i in range(i - 1, 0, -1):
             if HDVec[i - 1] > HDVec[i] and HDVec[i + 1] > HDVec[i]:
                 leftIndex = i
@@ -264,7 +298,47 @@ class ImageFeature():
 
 
 def compare(imgA: ImageFeature, imgB: ImageFeature) -> float:
-    colorFactor = np.multiply(imgA.colorMomentVec, imgB.colorMomentVec) / \
-                  np.linalg.norm(mgA.colorMomentVec) / np.linalg.norm(imgB.colorMomentVec)
-    # todo
-    pass
+    """
+    基于图像的色彩、粗糙度、对比度和朝向，给出两幅图像的相似度的综合评分\n
+    :param imgA: 图像A的ImageFeature对象
+    :param imgB: 图像B的ImageFeature对象
+    :return: float 两幅图像的相似度评分，在范围[0,1]内
+    """
+    eps = 0.000001
+    if abs(np.linalg.norm(imgA.colorMomentVec)) < eps:
+        # 纯黑图片
+        if abs(np.linalg.norm(imgB.colorMomentVec)) < eps:
+            colorFactor = 1
+        else:
+            colorFactor = 0
+    else:
+        # todo 内积
+        colorFactor = np.dot(imgA.colorMomentVec, imgB.colorMomentVec) / \
+                      np.linalg.norm(imgA.colorMomentVec) / np.linalg.norm(imgB.colorMomentVec)
+    coarsenessA = imgA.coarseness
+    coarsenessB = imgB.coarseness
+    # 高精细度
+    if abs(max(coarsenessA, coarsenessB)) < eps:
+        coarsenessFactor = 1
+    else:
+        coarsenessFactor = min(coarsenessA, coarsenessB) / max(coarsenessA, coarsenessB)
+    contrastA = imgA.contrast
+    contrastB = imgB.contrast
+    # 纯色图像
+    if abs(max(contrastA, contrastB)) < eps:
+        contrastFactor = 1
+    else:
+        contrastFactor = min(contrastA, contrastB) / max(contrastA, contrastB)
+    orientationA = imgA.orientation
+    orientationB = imgB.orientation
+    if abs(max(orientationA, orientationB)) < eps:
+        orientationFactor = 1
+    else:
+        orientationFactor = min(orientationA, orientationB) / max(orientationA, orientationB)
+    return colorFactor * 0.25 + coarsenessFactor * 0.25 + contrastFactor * 0.25 + orientationFactor * 0.25
+
+
+imgFeatA = ImageFeature(libPath + "\\1.jpg")
+imgFeatB = ImageFeature(libPath + "\\2.jpg")
+similarity = compare(imgFeatA, imgFeatB)
+print("相似度：" + str(similarity))
