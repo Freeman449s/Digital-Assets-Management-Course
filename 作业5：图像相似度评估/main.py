@@ -25,34 +25,40 @@ class ImageFeature():
         :param imgPath: 图片的路径
         """
         self.img = Image.open(imgPath)
+        self.path = imgPath
         self.w = self.img.width
         self.h = self.img.height
-        print("开始分析图像 " + imgPath + "。")
-        print("分析颜色矩...")
-        startTime = time.time()
-        self.colorMomentVec = self.__colorMoments()
-        endTime = time.time()
-        duration = round(endTime - startTime, 2)
-        print("已完成颜色矩分析，耗时" + str(duration) + "秒。颜色矩向量：" + str(self.colorMomentVec))
+
+    def analyze(self):
+        """
+        分析图像的颜色矩、对比度、朝向和粗糙度特征，结果保存为自身的成员
+        """
+        print("开始分析图像 " + self.path + "。")
+        # print("分析颜色矩...")
+        # startTime = time.time()
+        # self.colorMomentVec = self.__colorMoments()
+        # endTime = time.time()
+        # duration = round(endTime - startTime, 2)
+        # print("已完成颜色矩分析，耗时" + str(duration) + "秒。颜色矩向量：" + str(self.colorMomentVec))
         print("分析对比度...")
         startTime = time.time()
         self.contrast = self.__contrast()
         endTime = time.time()
         duration = round(endTime - startTime, 2)
         print("已完成对比度分析，耗时" + str(duration) + "秒。对比度：" + str(self.contrast))
-        print("分析朝向...")
-        startTime = time.time()
-        self.orientation = self.__orientation()
-        endTime = time.time()
-        duration = round(endTime - startTime, 2)
-        print("已完成朝向分析，耗时" + str(duration) + "秒。朝向：" + str(self.orientation))
-        print("开始分析粗糙度，这一步可能需要较长时间。")
-        startTime = time.time()
-        self.coarseness = self.__coarseness()
-        endTime = time.time()
-        duration = round(endTime - startTime, 2)
-        print("已完成粗糙度分析，耗时" + str(duration) + "秒。粗糙度：" + str(self.coarseness))
-        print("图像 " + imgPath + " 分析完毕。")
+        # print("分析朝向...")
+        # startTime = time.time()
+        # self.orientation = self.__orientation()
+        # endTime = time.time()
+        # duration = round(endTime - startTime, 2)
+        # print("已完成朝向分析，耗时" + str(duration) + "秒。朝向：" + str(self.orientation))
+        # print("开始分析粗糙度，这一步可能需要较长时间。")
+        # startTime = time.time()
+        # self.coarseness = self.__coarseness()
+        # endTime = time.time()
+        # duration = round(endTime - startTime, 2)
+        # print("已完成粗糙度分析，耗时" + str(duration) + "秒。粗糙度：" + str(self.coarseness))
+        print("图像 " + self.path + " 分析完毕。")
 
     def __colorMoments(self) -> np.array:
         """
@@ -105,31 +111,36 @@ class ImageFeature():
         :return: float 图像的平均粗糙度
         """
         # 求全局的k最大值
-        globalMaxK = min(math.floor(math.log(self.w - 1, 2) - 1), math.floor(math.log(self.h - 1, 2) - 1))
+        globalMaxK = min(math.floor(math.log(self.w - 1, 2)), math.floor(math.log(self.h - 1, 2)))
         means = np.zeros((self.h, self.w, globalMaxK), np.float64)
         grayscale = self.img.convert("L")
         gsArr = np.array(grayscale)
-        # 计算各不同中心、不同尺寸的窗口的均值
+        # 为每个像素计算最大的k
+        maxKs = np.zeros((self.w, self.h), np.int32)
+        for i in range(2, self.h - 2):
+            for j in range(2, self.w - 2):
+                maxKs[j][i] = self.__maxK(j, i)
+        # Step 1：计算各不同中心、不同尺寸的窗口的均值
         # np.array()返回的矩阵尺寸为height*width
         # 边界像素不考虑
         startTime = time.time()
         for i in range(2, self.h - 2):
             for j in range(2, self.w - 2):
-                localMaxK = self.__maxK(j, i)
+                localMaxK = maxKs[j][i]
                 for k in range(0, localMaxK):
                     means[i][j][k] = self.__calcWindowMean(j, i, k + 1, gsArr)
         endTime = time.time()
         duration = round(endTime - startTime, 2)
         print(" \t窗口均值计算完成，该过程耗时" + str(duration) + "秒。")
         bestKs = np.zeros((self.h, self.w), np.int32)
-        # 为每个像素计算精细度
+        # Step2：为每个像素计算精细度
         startTime = time.time()
         for i in range(2, self.h - 2):
             for j in range(2, self.w - 2):
                 bestK = 1
                 Max = -1
-                localMaxK = self.__maxK(j, i)
-                for k in range(0, localMaxK):
+                maxCoordinatedK = self.__maxCoordinatedK(j, i, maxKs)
+                for k in range(0, maxCoordinatedK):
                     sumA = abs(means[i - 2 ** k][j + 2 ** k][k] - means[i + 2 ** k][j - 2 ** k][k])
                     sumB = abs(means[i - 2 ** k][j - 2 ** k][k] - means[i + 2 ** k][j + 2 ** k][k])
                     if max(sumA, sumB) > Max:
@@ -138,25 +149,47 @@ class ImageFeature():
         endTime = time.time()
         duration = round(endTime - startTime, 2)
         print(" \t各像素精细度计算完成，该过程耗时" + str(duration) + "秒。")
-        # 计算全局精细度
+        # Step 3：计算全局精细度
         sum = 0
         for i in range(2, self.h - 2):
             for j in range(2, self.w - 2):
-                sum += bestKs[i][j]
+                sum += 2 ** bestKs[i][j]
         return sum / (self.w - 2) / (self.h - 2)
 
     def __maxK(self, x: int, y: int) -> int:
         """
-        求对一个像素(x,y)而言，需要考虑的窗口大小等级k的最大值\n
-        :param x: 像素的横坐标（以0起始）
-        :param y: 像素的总坐标（以0起始）
-        :return: int 需要考虑的窗口大小等级k的最大值
+        求对一个像素(x,y)而言，在Step1中需要考虑的窗口等级k的最大值\n
+        :param x: 像素的横坐标（以2起始）
+        :param y: 像素的纵坐标（以2起始）
+        :return: int 在Step1需要考虑的窗口等级k的最大值
         """
         candiA = math.floor(math.log(x, 2))
         candiB = math.floor(math.log(self.w - x - 1, 2))
         candiC = math.floor(math.log(y, 2))
         candiD = math.floor(math.log(self.h - y - 1, 2))
-        return min(candiA, candiB, candiC, candiD)
+        return min(candiA, candiB, candiC, candiD) + 1
+
+    def __maxCoordinatedK(self, x: int, y: int, maxKs: np.array) -> int:
+        """
+        求对一个像素(x,y)而言，在Step2中需要考虑的窗口等级k的最大值。\n
+        请注意：该函数的返回值不同于__maxK()返回的值，该函数返回的值考虑了在窗口等级k0下，位于顶点的像素的最大k值。\n
+        :param x: 像素的横坐标（以2起始）
+        :param y: 像素的纵坐标（以2起始）
+        :param maxKs: 存储了以各个像素为中心的窗口最大等级的矩阵
+        :return: 在Step2中，此像素需要考虑的最大k值
+        """
+        maxKOfThis = maxKs[x][y]
+        maxKCoordinated = 1
+        # 对不同的k0，检查该尺度下窗口顶点的最大k值能否达到k0，从而确定在Step2下每个像素所需要考虑的最大k
+        for i in range(1, maxKOfThis + 1):
+            if maxKs[x - 2 ** (i - 1)][y - 2 ** (i - 1)] >= i \
+                    and maxKs[x - 2 ** (i - 1)][y + 2 ** (i - 1)] >= i \
+                    and maxKs[x + 2 ** (i - 1)][y - 2 ** (i - 1)] >= i \
+                    and maxKs[x + 2 ** (i - 1)][y + 2 ** (i - 1)] >= i:
+                maxKCoordinated = i
+            else:
+                break
+        return maxKCoordinated
 
     def __calcWindowMean(self, x: int, y: int, k: int, gsArr: np.array) -> float:
         """
@@ -195,6 +228,7 @@ class ImageFeature():
         for i in range(0, gsArr.shape[0]):
             for j in range(0, gsArr.shape[1]):
                 sum += gsArr[i][j] ** 4
+        # todo
         mean_quad = sum / gsArr.size
         sum = 0
         for i in range(0, gsArr.shape[0]):
@@ -340,5 +374,6 @@ def compare(imgA: ImageFeature, imgB: ImageFeature) -> float:
 
 imgFeatA = ImageFeature(libPath + "\\1.jpg")
 imgFeatB = ImageFeature(libPath + "\\2.jpg")
-similarity = compare(imgFeatA, imgFeatB)
-print("相似度：" + str(similarity))
+imgFeatA.analyze()
+# similarity = compare(imgFeatA, imgFeatB)
+# print("相似度：" + str(similarity))
