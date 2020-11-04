@@ -34,24 +34,24 @@ class ImageFeature():
         分析图像的颜色矩、对比度、朝向和粗糙度特征，结果保存为自身的成员
         """
         print("开始分析图像 " + self.path + "。")
-        # print("分析颜色矩...")
-        # startTime = time.time()
-        # self.colorMomentVec = self.__colorMoments()
-        # endTime = time.time()
-        # duration = round(endTime - startTime, 2)
-        # print("已完成颜色矩分析，耗时" + str(duration) + "秒。颜色矩向量：" + str(self.colorMomentVec))
+        print("分析颜色矩...")
+        startTime = time.time()
+        self.colorMomentVec = self.__colorMoments()
+        endTime = time.time()
+        duration = round(endTime - startTime, 2)
+        print("已完成颜色矩分析，耗时" + str(duration) + "秒。颜色矩向量：" + str(self.colorMomentVec))
         print("分析对比度...")
         startTime = time.time()
         self.contrast = self.__contrast()
         endTime = time.time()
         duration = round(endTime - startTime, 2)
         print("已完成对比度分析，耗时" + str(duration) + "秒。对比度：" + str(self.contrast))
-        # print("分析朝向...")
-        # startTime = time.time()
-        # self.orientation = self.__orientation()
-        # endTime = time.time()
-        # duration = round(endTime - startTime, 2)
-        # print("已完成朝向分析，耗时" + str(duration) + "秒。朝向：" + str(self.orientation))
+        print("分析朝向...")
+        startTime = time.time()
+        self.orientation = self.__orientation()
+        endTime = time.time()
+        duration = round(endTime - startTime, 2)
+        print("已完成朝向分析，耗时" + str(duration) + "秒。朝向：" + str(self.orientation))
         # print("开始分析粗糙度，这一步可能需要较长时间。")
         # startTime = time.time()
         # self.coarseness = self.__coarseness()
@@ -211,7 +211,6 @@ class ImageFeature():
                 sum += gsArr[i][j]
         return sum / math.pow(2 ** k + 1, 2)
 
-    # todo nan问题
     def __contrast(self) -> float:
         """
         计算图像的对比度\n
@@ -249,10 +248,10 @@ class ImageFeature():
         nPixelVec = np.zeros(16, np.int32)  # 将朝向分为8个分区，nPixelVec记录了朝向在分区内的像素的个数
         for i in range(1, self.h - 1):
             for j in range(1, self.w - 1):
-                xGradient = gsArr[i - 1][j + 1] + gsArr[i][j + 1] + gsArr[i + 1][j + 1] - \
-                            gsArr[i - 1][j - 1] - gsArr[i][j - 1] - gsArr[i + 1][j - 1]
-                yGradient = gsArr[i + 1][j - 1] + gsArr[i + 1][j] + gsArr[i + 1][j + 1] - \
-                            gsArr[i - 1][j - 1] - gsArr[i - 1][j] - gsArr[i - 1][j + 1]
+                xGradient = int(gsArr[i - 1][j + 1]) + int(gsArr[i][j + 1]) + int(gsArr[i + 1][j + 1]) - \
+                            int(gsArr[i - 1][j - 1]) - int(gsArr[i][j - 1]) - int(gsArr[i + 1][j - 1])
+                yGradient = int(gsArr[i + 1][j - 1]) + int(gsArr[i + 1][j]) + int(gsArr[i + 1][j + 1]) - \
+                            int(gsArr[i - 1][j - 1]) - int(gsArr[i - 1][j]) - int(gsArr[i - 1][j + 1])
                 gradient = (abs(xGradient) + abs(yGradient)) / 2
                 if (gradient < threshold): continue
                 rad = self.__calcNormalizeRad(xGradient, yGradient)
@@ -373,5 +372,6 @@ def compare(imgA: ImageFeature, imgB: ImageFeature) -> float:
 imgFeatA = ImageFeature(libPath + "\\1.jpg")
 imgFeatB = ImageFeature(libPath + "\\2.jpg")
 imgFeatA.analyze()
+imgFeatB.analyze()
 # similarity = compare(imgFeatA, imgFeatB)
 # print("相似度：" + str(similarity))
