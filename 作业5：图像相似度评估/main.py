@@ -34,31 +34,31 @@ class ImageFeature():
         分析图像的颜色矩、对比度、朝向和粗糙度特征，结果保存为自身的成员
         """
         print("开始分析图像 " + self.path + "。")
-        print("分析颜色矩...")
+        print("\t分析颜色矩...")
         startTime = time.time()
         self.colorMomentVec = self.__colorMoments()
         endTime = time.time()
         duration = round(endTime - startTime, 2)
-        print("已完成颜色矩分析，耗时" + str(duration) + "秒。颜色矩向量：" + str(self.colorMomentVec))
-        print("分析对比度...")
+        print("\t已完成颜色矩分析，耗时" + str(duration) + "秒。颜色矩向量：" + str(self.colorMomentVec))
+        print("\t分析对比度...")
         startTime = time.time()
         self.contrast = self.__contrast()
         endTime = time.time()
         duration = round(endTime - startTime, 2)
-        print("已完成对比度分析，耗时" + str(duration) + "秒。对比度：" + str(self.contrast))
-        print("分析朝向...")
+        print("\t已完成对比度分析，耗时" + str(duration) + "秒。对比度：" + str(self.contrast))
+        print("\t分析朝向...")
         startTime = time.time()
         self.orientation = self.__orientation()
         endTime = time.time()
         duration = round(endTime - startTime, 2)
-        print("已完成朝向分析，耗时" + str(duration) + "秒。朝向：" + str(self.orientation))
-        # print("开始分析粗糙度，这一步可能需要较长时间。")
-        # startTime = time.time()
-        # self.coarseness = self.__coarseness()
-        # endTime = time.time()
-        # duration = round(endTime - startTime, 2)
-        # print("已完成粗糙度分析，耗时" + str(duration) + "秒。粗糙度：" + str(self.coarseness))
-        print("图像 " + self.path + " 分析完毕。")
+        print("\t已完成朝向分析，耗时" + str(duration) + "秒。朝向：" + str(self.orientation))
+        print("\t开始分析粗糙度，这一步可能需要较长时间。")
+        startTime = time.time()
+        self.coarseness = self.__coarseness()
+        endTime = time.time()
+        duration = round(endTime - startTime, 2)
+        print("\t已完成粗糙度分析，耗时" + str(duration) + "秒。粗糙度：" + str(self.coarseness))
+        print("\t图像 " + self.path + " 分析完毕。")
 
     def __colorMoments(self) -> np.array:
         """
@@ -131,7 +131,7 @@ class ImageFeature():
                     means[i][j][k] = self.__calcWindowMean(j, i, k + 1, gsArr)
         endTime = time.time()
         duration = round(endTime - startTime, 2)
-        print(" \t窗口均值计算完成，该过程耗时" + str(duration) + "秒。")
+        print(" \t\t窗口均值计算完成，该过程耗时" + str(duration) + "秒。")
         bestKs = np.zeros((self.h, self.w), np.int32)
         # Step2：为每个像素计算精细度
         startTime = time.time()
@@ -148,7 +148,7 @@ class ImageFeature():
                 bestKs[i][j] = bestK
         endTime = time.time()
         duration = round(endTime - startTime, 2)
-        print(" \t各像素精细度计算完成，该过程耗时" + str(duration) + "秒。")
+        print(" \t\t各像素精细度计算完成，该过程耗时" + str(duration) + "秒。")
         # Step 3：计算全局精细度
         sum = 0.0
         for i in range(2, self.h - 2):
@@ -211,6 +211,7 @@ class ImageFeature():
                 sum += gsArr[i][j]
         return sum / math.pow(2 ** k + 1, 2)
 
+    # todo
     def __contrast(self) -> float:
         """
         计算图像的对比度\n
@@ -369,9 +370,29 @@ def compare(imgA: ImageFeature, imgB: ImageFeature) -> float:
     return colorFactor * 0.25 + coarsenessFactor * 0.25 + contrastFactor * 0.25 + orientationFactor * 0.25
 
 
-imgFeatA = ImageFeature(libPath + "\\1.jpg")
-imgFeatB = ImageFeature(libPath + "\\2.jpg")
-imgFeatA.analyze()
-imgFeatB.analyze()
-# similarity = compare(imgFeatA, imgFeatB)
-# print("相似度：" + str(similarity))
+def main():
+    for root, dirs, files in os.walk(libPath):
+        benchmark = ImageFeature(os.path.join(root, files[0]))
+        print("已选择 " + benchmark.path + " 作为基准。")
+        imgList = []
+        similarities = []
+        files.sort()
+        for i in range(1, len(files)):
+            filename = files[i]
+            imgList.append(ImageFeature(os.path.join(root, filename)))
+        benchmark.analyze()
+        for img in imgList:
+            img.analyze()
+        print("开始分析相似度。")
+        mostSimilar = imgList[0]
+        maxSimilarity = -1
+        for img in imgList:
+            similarity = compare(benchmark, img)
+            if similarity > maxSimilarity:
+                maxSimilarity = similarity
+                mostSimilar = img
+            print("基准 " + benchmark.path + " 与图像 " + img.path + " 的相似度为" + str(similarity))
+        print("全部分析已结束，与基准 " + benchmark.path + " 最为相似的图片为 " + mostSimilar.path + "。")
+
+
+main()
