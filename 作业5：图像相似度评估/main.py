@@ -150,7 +150,7 @@ class ImageFeature():
         duration = round(endTime - startTime, 2)
         print(" \t各像素精细度计算完成，该过程耗时" + str(duration) + "秒。")
         # Step 3：计算全局精细度
-        sum = 0
+        sum = 0.0
         for i in range(2, self.h - 2):
             for j in range(2, self.w - 2):
                 sum += 2 ** bestKs[i][j]
@@ -204,7 +204,7 @@ class ImageFeature():
         xMax = int(x + math.pow(2, k - 1))
         yMin = int(y - math.pow(2, k - 1))
         yMax = int(y + math.pow(2, k - 1))
-        sum = 0
+        sum = 0.0
         # np.array()返回的矩阵尺寸为height*width
         for i in range(yMin, yMax + 1):
             for j in range(xMin, xMax + 1):
@@ -219,18 +219,17 @@ class ImageFeature():
         """
         grayscale = self.img.convert("L")
         gsArr = np.array(grayscale)
-        sum = 0
+        sum = 0.0
         for i in range(0, gsArr.shape[0]):
             for j in range(0, gsArr.shape[1]):
                 sum += gsArr[i][j]
         mean = sum / gsArr.size
-        sum = 0
+        sum = 0.0
         for i in range(0, gsArr.shape[0]):
             for j in range(0, gsArr.shape[1]):
                 sum += gsArr[i][j] ** 4
-        # todo
         mean_quad = sum / gsArr.size
-        sum = 0
+        sum = 0.0
         for i in range(0, gsArr.shape[0]):
             for j in range(0, gsArr.shape[1]):
                 sum += (gsArr[i][j] - mean) ** 4
@@ -246,8 +245,8 @@ class ImageFeature():
         grayscale = self.img.convert("L")
         gsArr = np.array(grayscale)
         threshold = 12  # 梯度阈值。梯度过小代表方向性不明显，不予考虑
-        HDVec = np.zeros(8, np.float64)
-        nPixelVec = np.zeros(8, np.int32)  # 将朝向分为8个分区，nPixelVec记录了朝向在分区内的像素的个数
+        HDVec = np.zeros(16, np.float64)
+        nPixelVec = np.zeros(16, np.int32)  # 将朝向分为8个分区，nPixelVec记录了朝向在分区内的像素的个数
         for i in range(1, self.h - 1):
             for j in range(1, self.w - 1):
                 xGradient = gsArr[i - 1][j + 1] + gsArr[i][j + 1] + gsArr[i + 1][j + 1] - \
@@ -257,27 +256,27 @@ class ImageFeature():
                 gradient = (abs(xGradient) + abs(yGradient)) / 2
                 if (gradient < threshold): continue
                 rad = self.__calcNormalizeRad(xGradient, yGradient)
-                nPixelVec[math.floor(rad / (math.pi / 4))] += 1
+                nPixelVec[math.floor(rad / (math.pi / 8))] += 1
         sum = 0
-        for i in range(0, 8):
+        for i in range(0, 16):
             sum += nPixelVec[i]
         # 图像没有明显方向性
         if sum == 0:
             return math.inf
-        for i in range(0, 8):
+        for i in range(0, 16):
             HDVec[i] = nPixelVec[i] / sum
         peakIndices = []  # 记录HD极值点的横坐标
-        for i in range(1, 7):
+        for i in range(1, 15):
             if HDVec[i - 1] < HDVec[i] and HDVec[i + 1] < HDVec[i]:
                 peakIndices.append(i)
-        sumA = 0
+        sumA = 0.0
         for i in range(0, len(peakIndices)):
-            sumB = 0
+            sumB = 0.0
             peakIndex = peakIndices[i]
             (leftBound, rightBound) = self.__findTrough(peakIndex, HDVec)
             for j in range(leftBound, rightBound + 1):
-                phi = math.pi / 4 * j + math.pi / 8
-                phi_p = math.pi / 4 * peakIndex + math.pi / 8
+                phi = math.pi / 8 * j + math.pi / 16
+                phi_p = math.pi / 8 * peakIndex + math.pi / 16
                 sumB += ((phi - phi_p) ** 2) * HDVec[j]
             sumA += sumB
         return sumA * len(peakIndices)
@@ -319,12 +318,12 @@ class ImageFeature():
         :return: tuple 两侧波谷的横坐标
         """
         leftIndex = 0
-        rightIndex = 7
+        rightIndex = 15
         for i in range(i - 1, 0, -1):
             if HDVec[i - 1] > HDVec[i] and HDVec[i + 1] > HDVec[i]:
                 leftIndex = i
                 break
-        for i in range(i + 1, 7):
+        for i in range(i + 1, 15):
             if HDVec[i - 1] > HDVec[i] and HDVec[i + 1] > HDVec[i]:
                 rightIndex = i
                 break
@@ -346,7 +345,6 @@ def compare(imgA: ImageFeature, imgB: ImageFeature) -> float:
         else:
             colorFactor = 0
     else:
-        # todo 内积
         colorFactor = np.dot(imgA.colorMomentVec, imgB.colorMomentVec) / \
                       np.linalg.norm(imgA.colorMomentVec) / np.linalg.norm(imgB.colorMomentVec)
     coarsenessA = imgA.coarseness
