@@ -52,12 +52,12 @@ class ImageFeature():
         endTime = time.time()
         duration = round(endTime - startTime, 2)
         print("\t已完成朝向分析，耗时" + str(duration) + "秒。朝向：" + str(self.orientation))
-        # print("\t开始分析粗糙度，这一步可能需要较长时间。")
-        # startTime = time.time()
-        # self.coarseness = self.__coarseness()
-        # endTime = time.time()
-        # duration = round(endTime - startTime, 2)
-        # print("\t已完成粗糙度分析，耗时" + str(duration) + "秒。粗糙度：" + str(self.coarseness))
+        print("\t开始分析粗糙度，这一步可能需要较长时间。")
+        startTime = time.time()
+        self.coarseness = self.__coarseness()
+        endTime = time.time()
+        duration = round(endTime - startTime, 2)
+        print("\t已完成粗糙度分析，耗时" + str(duration) + "秒。粗糙度：" + str(self.coarseness))
         print("\t图像 " + self.path + " 分析完毕。")
 
     def __colorMoments(self) -> np.array:
@@ -367,7 +367,7 @@ def compare(imgA: ImageFeature, imgB: ImageFeature) -> float:
         orientationFactor = 1
     else:
         orientationFactor = min(orientationA, orientationB) / max(orientationA, orientationB)
-    return colorFactor * 0.25 + coarsenessFactor * 0.25 + contrastFactor * 0.25 + orientationFactor * 0.25
+    return colorFactor * 0.4 + coarsenessFactor * 0.2 + contrastFactor * 0.2 + orientationFactor * 0.2
 
 
 def main():
