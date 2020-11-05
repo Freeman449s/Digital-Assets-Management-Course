@@ -52,12 +52,12 @@ class ImageFeature():
         endTime = time.time()
         duration = round(endTime - startTime, 2)
         print("\t已完成朝向分析，耗时" + str(duration) + "秒。朝向：" + str(self.orientation))
-        print("\t开始分析粗糙度，这一步可能需要较长时间。")
-        startTime = time.time()
-        self.coarseness = self.__coarseness()
-        endTime = time.time()
-        duration = round(endTime - startTime, 2)
-        print("\t已完成粗糙度分析，耗时" + str(duration) + "秒。粗糙度：" + str(self.coarseness))
+        # print("\t开始分析粗糙度，这一步可能需要较长时间。")
+        # startTime = time.time()
+        # self.coarseness = self.__coarseness()
+        # endTime = time.time()
+        # duration = round(endTime - startTime, 2)
+        # print("\t已完成粗糙度分析，耗时" + str(duration) + "秒。粗糙度：" + str(self.coarseness))
         print("\t图像 " + self.path + " 分析完毕。")
 
     def __colorMoments(self) -> np.array:
@@ -153,7 +153,8 @@ class ImageFeature():
         sum = 0.0
         for i in range(2, self.h - 2):
             for j in range(2, self.w - 2):
-                sum += 2 ** bestKs[i][j]
+                # 当**两边的运算数中的某个属于numpy中的类型时，返回的结果可能为numpy类型，而非内置类型。这可能导致越界。
+                sum += math.pow(2, bestKs[i][j])
         return sum / (self.w - 2) / (self.h - 2)
 
     def __maxK(self, x: int, y: int) -> int:
@@ -211,7 +212,6 @@ class ImageFeature():
                 sum += gsArr[i][j]
         return sum / math.pow(2 ** k + 1, 2)
 
-    # todo
     def __contrast(self) -> float:
         """
         计算图像的对比度\n
@@ -227,7 +227,7 @@ class ImageFeature():
         sum = 0.0
         for i in range(0, gsArr.shape[0]):
             for j in range(0, gsArr.shape[1]):
-                sum += gsArr[i][j] ** 4
+                sum += math.pow(gsArr[i][j], 4)
         mean_quad = sum / gsArr.size
         sum = 0.0
         for i in range(0, gsArr.shape[0]):
