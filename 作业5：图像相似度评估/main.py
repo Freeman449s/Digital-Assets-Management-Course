@@ -58,7 +58,7 @@ class ImageFeature():
         endTime = time.time()
         duration = round(endTime - startTime, 2)
         print("\t已完成粗糙度分析，耗时" + str(duration) + "秒。粗糙度：" + str(self.coarseness))
-        print("\t图像 " + self.path + " 分析完毕。")
+        print("图像 " + self.path + " 分析完毕。")
 
     def __colorMoments(self) -> np.array:
         """
@@ -124,11 +124,12 @@ class ImageFeature():
         # np.array()返回的矩阵尺寸为height*width
         # 边界像素不考虑
         startTime = time.time()
-        for i in range(2, self.h - 2):
-            for j in range(2, self.w - 2):
-                localMaxK = maxKs[j][i]
-                for k in range(0, localMaxK):
-                    means[i][j][k] = self.__calcWindowMean(j, i, k + 1, gsArr)
+        # for i in range(2, self.h - 2):
+        #     for j in range(2, self.w - 2):
+        #         localMaxK = maxKs[j][i]
+        #         for k in range(0, localMaxK):
+        #             means[i][j][k] = self.__calcWindowMean(j, i, k + 1, gsArr)
+        means = self.__calcWindowMeans(gsArr, globalMaxK, maxKs)
         endTime = time.time()
         duration = round(endTime - startTime, 2)
         print(" \t\t窗口均值计算完成，该过程耗时" + str(duration) + "秒。")
@@ -140,11 +141,14 @@ class ImageFeature():
                 bestK = 1
                 Max = -1
                 maxCoordinatedK = self.__maxCoordinatedK(j, i, maxKs)
-                for k in range(0, maxCoordinatedK):
-                    sumA = abs(means[i - 2 ** k][j + 2 ** k][k] - means[i + 2 ** k][j - 2 ** k][k])
-                    sumB = abs(means[i - 2 ** k][j - 2 ** k][k] - means[i + 2 ** k][j + 2 ** k][k])
+                for k in range(1, maxCoordinatedK + 1):
+                    sumA = abs(
+                        means[i - 2 ** (k - 1)][j + 2 ** (k - 1)][k] - means[i + 2 ** (k - 1)][j - 2 ** (k - 1)][k])
+                    sumB = abs(
+                        means[i - 2 ** (k - 1)][j - 2 ** (k - 1)][k] - means[i + 2 ** (k - 1)][j + 2 ** (k - 1)][k])
                     if max(sumA, sumB) > Max:
-                        bestK = k + 1
+                        Max = max(sumA, sumB)
+                        bestK = k
                 bestKs[i][j] = bestK
         endTime = time.time()
         duration = round(endTime - startTime, 2)
@@ -192,25 +196,63 @@ class ImageFeature():
                 break
         return maxKCoordinated
 
-    def __calcWindowMean(self, x: int, y: int, k: int, gsArr: np.array) -> float:
+    # 因效率过低而弃用
+    # def __calcWindowMean(self, x: int, y: int, k: int, gsArr: np.array) -> float:
+    #     """
+    #     计算以(x,y)为中心，2^k+1窗口内像素的平均值\n
+    #     :param x: 窗口中心点的横坐标
+    #     :param y: 窗口中心点的纵坐标
+    #     :param k: 窗口大小等级
+    #     :param gsArr: 灰度图像矩阵
+    #     :return: float 窗口像素值的均值
+    #     """
+    #     xMin = int(x - math.pow(2, k - 1))
+    #     xMax = int(x + math.pow(2, k - 1))
+    #     yMin = int(y - math.pow(2, k - 1))
+    #     yMax = int(y + math.pow(2, k - 1))
+    #     sum = 0.0
+    #     # np.array()返回的矩阵尺寸为height*width
+    #     for i in range(yMin, yMax + 1):
+    #         for j in range(xMin, xMax + 1):
+    #             sum += gsArr[i][j]
+    #     return sum / math.pow(2 ** k + 1, 2)
+
+    def __calcWindowMeans(self, gsArr: np.array, globalMaxK: int, maxKs: np.array):
         """
-        计算以(x,y)为中心，2^k+1窗口内像素的平均值\n
-        :param x: 窗口中心点的横坐标
-        :param y: 窗口中心点的纵坐标
-        :param k: 窗口大小等级
-        :param gsArr: 灰度图像矩阵
-        :return: float 窗口像素值的均值
+        为各个像素，计算各尺寸窗口的均值\n
+        :param gsArr: 灰度矩阵
+        :param globalMaxK: k的全局最大值
+        :param maxKs: 每个像素k的最大值
+        :return: 存储了各个像素各尺寸窗口均值的矩阵
         """
-        xMin = int(x - math.pow(2, k - 1))
-        xMax = int(x + math.pow(2, k - 1))
-        yMin = int(y - math.pow(2, k - 1))
-        yMax = int(y + math.pow(2, k - 1))
-        sum = 0.0
-        # np.array()返回的矩阵尺寸为height*width
-        for i in range(yMin, yMax + 1):
-            for j in range(xMin, xMax + 1):
-                sum += gsArr[i][j]
-        return sum / math.pow(2 ** k + 1, 2)
+        means = np.zeros((self.h, self.w, globalMaxK + 1), np.float64)
+        # 0阶窗口均值等于自身像素值
+        for i in range(0, self.h):
+            for j in range(0, self.w):
+                means[i][j][0] = gsArr[i][j]
+        for k in range(1, globalMaxK + 1):
+            for i in range(2, self.h - 2):
+                for j in range(2, self.w - 2):
+                    if k > maxKs[j][i]:
+                        continue
+                    if k == 1:
+                        sum = means[i][j][0]
+                    else:
+                        # 读取k-1阶均值乘以(2^(k-1)+1)^2，作为中心k-1阶窗口值之和
+                        sum = means[i][j][k - 1] * math.pow(math.pow(2, k - 1) + 1, 2)
+                    minX = int(j - math.pow(2, k - 1))
+                    maxX = int(j + math.pow(2, k - 1))
+                    minY = int(i - math.pow(2, k - 1))
+                    maxY = int(i + math.pow(2, k - 1))
+                    # 考虑外围像素
+                    for x in range(minX, maxX + 1):
+                        sum += gsArr[minY][x]
+                        sum += gsArr[maxY][x]
+                    for y in range(minY + 1, maxY):
+                        sum += gsArr[y][minX]
+                        sum += gsArr[y][maxX]
+                    means[i][j][k] = sum / math.pow(math.pow(2, k) + 1, 2)
+        return means
 
     def __contrast(self) -> float:
         """
