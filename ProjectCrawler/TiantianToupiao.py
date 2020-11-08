@@ -4,12 +4,11 @@ import traceback
 
 headers = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36'}
-
+urlTemplate = "http://www.ttpaihang.com/vote/rank.php?voteid=1436&page={}"
 
 def crawlTiantianToupiao():
-    with open("外国文学家列表-天天投票网.txt", "a+", 8192, encoding="gb2312") as file:
+    with open("人物列表\\外国文学家列表-天天投票网.txt", "a+", 8192, encoding="gb2312") as file:
         try:
-            urlTemplate = "http://www.ttpaihang.com/vote/rank.php?voteid=1436&page={}"
             for i in range(1, 4):
                 url = urlTemplate.format(str(i))
                 response = requests.get(url, headers=headers)

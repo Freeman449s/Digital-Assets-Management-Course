@@ -7,7 +7,7 @@ headers = {
 
 
 def crawlYouhuaDaquan():
-    with open("画家名单.txt", "a+", 8192) as file:
+    with open("人物列表\\画家名单.txt", "a+", 8192) as file:
         try:
             url = "http://www.youhuadaquan.org/top-artist.html"
             response = requests.get(url, headers=headers)

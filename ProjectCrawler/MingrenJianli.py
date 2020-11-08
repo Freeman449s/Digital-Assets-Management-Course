@@ -8,7 +8,7 @@ headers = {
 
 
 def crawlMinrenJianli():
-    with open("外国文学家列表-名人简历网.txt", "a+", 8192, encoding="gb2312") as file:
+    with open("人物列表\\外国文学家列表-名人简历网.txt", "a+", 8192, encoding="gb2312") as file:
         try:
             url = "http://www.gerenjianli.com/Mingren/Tags/577/"
             response = requests.get(url, headers=headers)
