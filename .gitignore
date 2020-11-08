@@ -9,6 +9,7 @@
 # IDE文件
 */.idea/*
 */venv/*
+*/__pycache__/*
 # 作业3/.idea/*
 # 作业3/venv/*
 # 作业4：图像数字水印/.idea/*
@@ -27,3 +28,4 @@
 ProjectCrawler/样例文档/*
 ProjectCrawler/表定义.docx
 ProjectCrawler/$表定义.docx
+ProjectCrawler/人物列表/*
