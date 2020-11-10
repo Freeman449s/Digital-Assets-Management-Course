@@ -2,6 +2,8 @@ import requests
 import json
 
 APIKEY = "VNUBZ-K252F-2U4JO-NSF35-SKNJO-UEB37"
+headers = {
+    'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36'}
 
 
 def parsePos(pos: str) -> list:
@@ -17,3 +19,11 @@ def parsePos(pos: str) -> list:
         return [-1, jsonData["message"]]
     else:
         return [0, jsonData["result"]]
+
+
+def downloadBinary(url: str, path: str) -> None:
+    # Response.content存储Response对象的二进制形式
+    content = requests.get(url, headers=headers).content
+    file = open(path, "wb")
+    file.write(content)
+    file.close()

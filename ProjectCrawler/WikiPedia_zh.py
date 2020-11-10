@@ -90,13 +90,13 @@ def crawlPeopleInfo(peopleInfo: PeopleInfo, logPath: str) -> None:
             if headImgTag != None:
                 headImgURL = headImgTag["src"]
                 postfix = "." + headImgURL.split(".")[-1]
-                imgName = peopleInfo.infoDict["name"] + postfix
+                imgName = peopleInfo.name + postfix
                 peopleInfo.infoDict["headimage"] = "people\\images\\" + imgName
                 imgPath = headImgLibPath + "\\" + imgName
                 headImgURL = insertHead(headImgURL)
-                downloadBinary(headImgURL, imgPath)
+                Util.downloadBinary(headImgURL, imgPath)
             # 为每部作品下载图片
-            peopleInfo.workInfoList = crawlPeopleWorks(worksDict, peopleInfo.infoDict["name"])
+            peopleInfo.workInfoList = crawlWorks(worksDict, peopleInfo.infoDict["name"])
             print("\t完成")
             logFile.write("\t完成\n")
         except Exception as ex:
@@ -107,15 +107,7 @@ def crawlPeopleInfo(peopleInfo: PeopleInfo, logPath: str) -> None:
             logFile.write("\n")
 
 
-def downloadBinary(url: str, path: str) -> None:
-    # Response.content存储Response对象的二进制形式
-    content = requests.get(url, headers=headers).content
-    file = open(path, "wb")
-    file.write(content)
-    file.close()
-
-
-def crawlPeopleWorks(worksDict: dict, authorName: str) -> list:
+def crawlWorks(worksDict: dict, authorName: str) -> list:
     workInfoList = []
     for workName, url in worksDict.items():
         # 不尝试在英文维基上爬取
@@ -139,7 +131,7 @@ def crawlPeopleWorks(worksDict: dict, authorName: str) -> list:
         workDict["image"] = "peopleworks\\images\\" + imgName
         workInfoList.append(workDict)
         imgURL = insertHead(imgURL)
-        downloadBinary(imgURL, workImgLibPath + "\\" + imgName)
+        Util.downloadBinary(imgURL, workImgLibPath + "\\" + imgName)
     return workInfoList
 
 

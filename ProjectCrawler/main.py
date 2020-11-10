@@ -2,11 +2,12 @@ from YouhuaDaquan import crawlYouhuaDaquan
 from MingrenJianli import crawlMinrenJianli
 from TiantianToupiao import crawlTiantianToupiao
 import GuShiwen
-import BaiduBaike_Deprecated
+import BaiduBaike
 import WikiPedia_zh
 import json
 import requests
 from bs4 import BeautifulSoup
+from PeopleInfo import PeopleInfo
 
 headers = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36'}
@@ -15,7 +16,7 @@ APIKEY = "VNUBZ-K252F-2U4JO-NSF35-SKNJO-UEB37"
 
 
 def main():
-    WikiPedia_zh.crawlPeopleInfo("梵高")
+    BaiduBaike.crawlSuppleInfo(PeopleInfo("鲁迅"), "log.txt")
 
 
 def check(soup: BeautifulSoup) -> bool:
