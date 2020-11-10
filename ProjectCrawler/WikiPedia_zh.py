@@ -44,12 +44,18 @@ def crawlPeopleInfo(peopleInfo: PeopleInfo, logPath: str) -> None:
                 if posInfo[0] == 0:
                     peopleInfo.infoDict["longitude"] = posInfo[1]["location"]["lng"]
                     peopleInfo.infoDict["latitude"] = posInfo[1]["location"]["lat"]
-                # 解析失败，尝试利用地点词条解析
-                # todo
-                aTag = tag.find_all("a")[-1]
-                coordinate = crawlCoordinate(insertHead(aTag["href"]))
-                peopleInfo.infoDict["longitude"] = coordinate[0]
-                peopleInfo.infoDict["latitude"] = coordinate[1]
+                else:
+                    # 解析失败，尝试利用地点词条解析
+                    posInfo = Util.parseCoordinate_foreign(peopleInfo.infoDict["birthplace"])
+                    if posInfo[0] == 0:
+                        peopleInfo.infoDict["longitude"] = posInfo[1]["location"]["lng"]
+                        peopleInfo.infoDict["latitude"] = posInfo[1]["location"]["lat"]
+                    else:
+                        # 尝试利用地点词条爬取经纬度信息
+                        aTag = tag.find_all("a")[-1]
+                        coordinate = crawlCoordinate(insertHead(aTag["href"]))
+                        peopleInfo.infoDict["longitude"] = coordinate[0]
+                        peopleInfo.infoDict["latitude"] = coordinate[1]
             # 逝世日期
             tag = soup.find(class_="dday")
             if tag != None:

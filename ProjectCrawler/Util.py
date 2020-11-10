@@ -21,6 +21,18 @@ def parseCoordinate(pos: str) -> list:
         return [0, jsonData["result"]]
 
 
+def parseCoordinate_foreign(pos):
+    try:
+        url =  "https://api.pickpoint.io/v1//forward?q=" + pos + "&key=VAYNFrz3NsN9sYAFpFUr"
+        reply = requests.get(url)
+        a = json.loads(reply.text)
+        lat = a[0]["lat"]
+        long = a[0]["lon"]
+        print(lat,long)
+        return [0,{"location":{"lng":long,"lat":lat}}]
+    except Exception as e:
+        return [-1,e]
+
 def downloadBinary(url: str, path: str) -> None:
     # Response.content存储Response对象的二进制形式
     content = requests.get(url, headers=headers).content
