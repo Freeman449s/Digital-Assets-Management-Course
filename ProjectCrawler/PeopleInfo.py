@@ -1,3 +1,11 @@
+import BaiduBaike
+import WikiPedia_zh
+
+peopleFilePath = "PeopleInfo.json"
+workFilePath = "WorkInfo.json"
+encoding = "UTF-8"
+
+
 class PeopleInfo():
     def __init__(self, name: str):
         self.name = name
@@ -18,3 +26,16 @@ class PeopleInfo():
         self.infoDict["introduction"] = ""
         self.infoDict["headimage"] = ""
         self.workInfoList = []
+
+    def crawl(self):
+        WikiPedia_zh.crawlPeopleInfo(self, "log.txt")
+        BaiduBaike.crawlSuppleInfo(self, "log.txt")
+
+    def write(self):
+        with open(peopleFilePath, "a+", 8192, encoding=encoding) as peopleInfoFile, \
+                open(workFilePath, "a+", 8192, encoding=encoding) as workInfoFile:
+            peopleInfoFile.write(str(self.infoDict).replace("\'", "\""))
+            peopleInfoFile.write("\n")
+            for workInfoDict in self.workInfoList:
+                workInfoFile.write(str(workInfoDict).replace("\'", "\""))
+                workInfoFile.write("\n")

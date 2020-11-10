@@ -45,6 +45,7 @@ def crawlPeopleInfo(peopleInfo: PeopleInfo, logPath: str) -> None:
                     peopleInfo.infoDict["longitude"] = posInfo[1]["location"]["lng"]
                     peopleInfo.infoDict["latitude"] = posInfo[1]["location"]["lat"]
                 # 解析失败，尝试利用地点词条解析
+                # todo
                 aTag = tag.find_all("a")[-1]
                 coordinate = crawlCoordinate(insertHead(aTag["href"]))
                 peopleInfo.infoDict["longitude"] = coordinate[0]
