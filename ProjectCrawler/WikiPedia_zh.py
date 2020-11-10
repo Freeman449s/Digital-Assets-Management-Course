@@ -40,10 +40,15 @@ def crawlPeopleInfo(peopleInfo: PeopleInfo, logPath: str) -> None:
             if tag != None:
                 peopleInfo.infoDict["birthplace"] = tag.text
                 # 解析经纬度
-                posInfo = Util.parsePos(peopleInfo.infoDict["birthplace"])
+                posInfo = Util.parseCoordinate(peopleInfo.infoDict["birthplace"])
                 if posInfo[0] == 0:
                     peopleInfo.infoDict["longitude"] = posInfo[1]["location"]["lng"]
                     peopleInfo.infoDict["latitude"] = posInfo[1]["location"]["lat"]
+                # 解析失败，尝试利用地点词条解析
+                aTag = tag.find_all("a")[-1]
+                coordinate = crawlCoordinate(insertHead(aTag["href"]))
+                peopleInfo.infoDict["longitude"] = coordinate[0]
+                peopleInfo.infoDict["latitude"] = coordinate[1]
             # 逝世日期
             tag = soup.find(class_="dday")
             if tag != None:
@@ -105,6 +110,44 @@ def crawlPeopleInfo(peopleInfo: PeopleInfo, logPath: str) -> None:
             logFile.write("\t发生异常：\n")
             logFile.write(ex)
             logFile.write("\n")
+
+
+def crawlCoordinate(url: str) -> tuple:
+    """
+    根据地区词条的url，爬取词条上的经纬度信息\n
+    :param url: 地区词条的url
+    :return: 包含浮点型经度和纬度信息的元组
+    """
+    latitude = "0"
+    longitude = "0"
+    response = requests.get(url, headers=headers)
+    response.encoding = encoding
+    html = response.text
+    soup = BeautifulSoup(html, "lxml")
+    latitudeTag = soup.find(class_="latitude")
+    longitudeTag = soup.find(class_="longitude")
+    # 将字符串形式的经纬度转为浮点型
+    # 维度
+    if latitudeTag != None:
+        latitudeText = latitudeTag.text
+        if latitudeText[-1] == "N":
+            sign = 1
+        else:
+            sign = -1
+        latitude = float(latitudeText.split("°")[0])
+        latitude += float(latitudeText.split("°")[1][0:-2])
+        latitude *= sign
+    # 经度
+    if longitudeTag != None:
+        longitudeText = longitudeTag.text
+        if longitudeText[-1] == "E":
+            sign = 1
+        else:
+            sign = -1
+        longitude = float(longitudeText.split("°")[0])
+        longitude += float(longitudeText.split("°")[1][0:-2])
+        longitude *= sign
+    return (longitude, latitude)
 
 
 def crawlWorks(worksDict: dict, authorName: str) -> list:

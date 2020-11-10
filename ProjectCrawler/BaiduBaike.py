@@ -68,7 +68,7 @@ def crawlSuppleInfo(peopleInfo: PeopleInfo, logPath: str) -> None:
                 elif keyList[i] == "出生地" and infoDict["birthplace"] == "":
                     infoDict["birthplace"] = valueList[i]
                     # 解析经纬度
-                    posInfo = Util.parsePos(peopleInfo.infoDict["birthplace"])
+                    posInfo = Util.parseCoordinate(peopleInfo.infoDict["birthplace"])
                     if posInfo[0] == 0:
                         peopleInfo.infoDict["longitude"] = posInfo[1]["location"]["lng"]
                         peopleInfo.infoDict["latitude"] = posInfo[1]["location"]["lat"]

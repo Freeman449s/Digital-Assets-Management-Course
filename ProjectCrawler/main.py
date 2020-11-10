@@ -8,6 +8,7 @@ import json
 import requests
 from bs4 import BeautifulSoup
 from PeopleInfo import PeopleInfo
+import Util
 
 headers = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.186 Safari/537.36'}
@@ -16,7 +17,7 @@ APIKEY = "VNUBZ-K252F-2U4JO-NSF35-SKNJO-UEB37"
 
 
 def main():
-    BaiduBaike.crawlSuppleInfo(PeopleInfo("鲁迅"), "log.txt")
+    print("Hello"[0:-1])
 
 
 def check(soup: BeautifulSoup) -> bool:
@@ -28,20 +29,6 @@ def check(soup: BeautifulSoup) -> bool:
     for index, tag in enumerate(soup.find_all(class_="basic-info")):
         return True
     return False
-
-
-# 返回一个列表
-# 第一个值为状态码：-1为查询失败，0为查询成功
-# 第二个值为状态信息  若查询失败： 返回数据的提示信息
-#                  若查询成功   返回数据的result查询结果
-def interpret(pos):
-    reply = requests.get("https://apis.map.qq.com/ws/geocoder/v1/?address=" + pos + "&key=" + APIKEY)
-    jsondata = json.loads(reply.text)
-    print("请求发送成功！")
-    if (jsondata["status"] != 0):
-        return [-1, jsondata["message"]]
-    else:
-        return [0, jsondata["result"]]
 
 
 main()
