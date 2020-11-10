@@ -1,0 +1,5 @@
+scrapy为爬虫文件，爬取的为两个网站：
+1、豆瓣TOP250榜单歌曲信息（静态爬取，通过beautifulsoup解析html来获取），此为文件中的htmljx函数
+2、豆瓣FM电台歌曲爬取（动态网站，通过抓取分析网络请求url来下载歌曲以及信息），此为文件中的 dynamicpage函数
+
+默认调用的为dynamicpage函数，newresources文件夹内为通过2爬取的新的一些音乐资源。
