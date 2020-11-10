@@ -6,7 +6,7 @@ headers = {
 urlTemplate = "https://baike.baidu.com/item/{}"
 
 
-def crawlPeopleInfo(listFilePath: str):
+def crawlSuppleInfo(listFilePath: str):
     with open(listFilePath, "r", 8192, encoding="UTF-8") as file:
         for line in file:
             peopleName = line.strip()

@@ -15,6 +15,10 @@
 作业4：图像数字水印/Image with Watermark.bmp
 作业4：图像数字水印/Extracted Watermark.bmp
 
+# 人物图片和作品图片
+ProjectCrawler/头像/*
+ProjectCrawler/作品图片/*
+
 # 测试产生的文件
 # 作业5：图像相似度评估/性能测试/*
 # 作业5：图像相似度评估/运行日志/*

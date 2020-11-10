@@ -4,21 +4,24 @@ import shutil
 #########################################################################################################
 import requests
 import json
-#解析位置函数
+
+# 解析位置函数
 APIKEY = "VNUBZ-K252F-2U4JO-NSF35-SKNJO-UEB37"
 
-#返回一个列表
+
+# 返回一个列表
 # 第一个值为状态码：-1为查询失败，0为查询成功
 # 第二个值为状态信息  若查询失败： 返回数据的提示信息
-#                   若查询成功   返回数据的result查询结果
+#                  若查询成功   返回数据的result查询结果
 def interpret(pos):
-    reply = requests.get("https://apis.map.qq.com/ws/geocoder/v1/?address="+pos+"&key="+APIKEY)
+    reply = requests.get("https://apis.map.qq.com/ws/geocoder/v1/?address=" + pos + "&key=" + APIKEY)
     jsondata = json.loads(reply.text)
     print("请求发送成功！")
-    if(jsondata["status"] !=0):
-        return [-1,jsondata["message"]]
+    if (jsondata["status"] != 0):
+        return [-1, jsondata["message"]]
     else:
-        return [0,jsondata["result"]]
+        return [0, jsondata["result"]]
+
 
 #########################################################################################################
 
@@ -37,14 +40,14 @@ for folder in folderList:
         object = {}
         if file.endswith('.json'):
             if len(file.split('_')) == 3:
-                ff = open(folderPath + '/' + folder + '/' + file,'r+',encoding='UTF-8')
+                ff = open(folderPath + '/' + folder + '/' + file, 'r+', encoding='UTF-8')
                 a = ff.readline()
                 # 从一行文字中解析json信息
                 info = json.loads(a)
-                if("中文名" in info):
+                if ("中文名" in info):
                     object['name'] = info["中文名"]
                 else:
-                    if("姓名" in info):
+                    if ("姓名" in info):
                         object['name'] = info["姓名"]
                     else:
                         object['name'] = ""
@@ -100,18 +103,17 @@ for folder in folderList:
 
 length = len(infolist)
 
-
 for folder in folderList:
     filelist = os.listdir(folderPath + '\\' + folder)
     for file in filelist:
         if file.endswith('.json'):
             if len(file.split('_')) == 2:
                 k = 0
-                while(k<length):
+                while (k < length):
                     # print("原文件名",file)
                     # print("文件名",(file.split('_')[1]).split('.')[0])
                     # print("比较",infolist[k]['name'])
-                    if((file.split('_')[1]).split('.')[0] == infolist[k]['name']):
+                    if ((file.split('_')[1]).split('.')[0] == infolist[k]['name']):
                         ff = open(folderPath + '/' + folder + '/' + file, 'r+', encoding='UTF-8')
                         a = ff.readline()
                         info = json.loads(a)
