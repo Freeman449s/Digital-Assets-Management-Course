@@ -27,6 +27,8 @@ ProjectCrawler/PeopleInfo.json
 ProjectCrawler/WorkInfo.json
 ProjectCrawler/log.txt
 
-
 # 爬虫
 # ProjectCrawler/*
+
+# 爬取到的数据
+ProjectCrawler/爬取数据/*

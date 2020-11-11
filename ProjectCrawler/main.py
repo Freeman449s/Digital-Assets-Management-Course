@@ -6,7 +6,7 @@ headers = {
 APIKEY = "VNUBZ-K252F-2U4JO-NSF35-SKNJO-UEB37"
 encoding = "UTF-8"
 
-nameListPath = "人物列表\\画家名单.txt"
+nameListPath = "人物列表\\诗（词）人列表 - 后期处理.txt"
 peopleFilePath = "PeopleInfo.json"
 workFilePath = "WorkInfo.json"
 
