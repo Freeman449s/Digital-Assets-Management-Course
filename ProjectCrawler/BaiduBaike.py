@@ -21,42 +21,46 @@ def crawlSuppleInfo(peopleName: str, infoDict: dict, workInfoList: list, logPath
             response.encoding = encoding
             html = response.text
             soup = BeautifulSoup(html, "lxml")
-            if not checkPeople(soup): return
+            if not checkPeople(soup):
+                print("\t没有此人物的词条")
+                logFile.write("\t没有此人物的词条\n")
+                return
             # 检查是否已有人物头像
             if infoDict["headimage"] == "":
                 summaryPic = soup.find(class_="summary-pic")
-                imgTag = summaryPic.find("img")
-                if imgTag != None:
-                    imgURL = imgTag["src"]
-                    postfix = "." + imgURL.split("_")[-1]
-                    imgName = peopleName + postfix
-                    imgPath = headImgLibPath + "\\" + imgName
-                    Util.downloadBinary(imgURL, imgPath)
-                    infoDict["headimage"] = "people\\images\\" + imgName
+                if summaryPic != None:
+                    imgTag = summaryPic.find("img")
+                    if imgTag != None:
+                        imgURL = imgTag["src"]
+                        postfix = "." + imgURL.split("_")[-1]
+                        imgName = peopleName + postfix
+                        imgPath = headImgLibPath + "\\" + imgName
+                        Util.downloadBinary(imgURL, imgPath)
+                        infoDict["headimage"] = "people\\images\\" + imgName
             # 将人物信息中的条目名和条目内容分别存入两个列表
             keyList = []
             valueList = []
             basicInfo = soup.find(class_="basicInfo-left")
             for index, tag in enumerate(basicInfo.find_all("dt")):
                 key = tag.text
-                key.replace("\xa0", "")
-                key.replace("\n", "")
+                key = key.replace("\xa0", "")
+                key = key.replace("\n", "")
                 keyList.append(key)
             for index, tag in enumerate(basicInfo.find_all("dd")):
                 value = tag.text
-                value.replace("\xa0", "")
-                value.replace("\n", "")
+                value = value.replace("\xa0", "")
+                value = value.replace("\n", "")
                 valueList.append(value)
             basicInfo = soup.find(class_="basicInfo-right")
             for index, tag in enumerate(basicInfo.find_all("dt")):
                 key = tag.text
-                key.replace("\xa0", "")
-                key.replace("\n", "")
+                key = key.replace("\xa0", "")
+                key = key.replace("\n", "")
                 keyList.append(key)
             for index, tag in enumerate(basicInfo.find_all("dd")):
                 value = tag.text
-                value.replace("\xa0", "")
-                value.replace("\n", "")
+                value = value.replace("\xa0", "")
+                value = value.replace("\n", "")
                 valueList.append(value)
             # 遍历键值列表，填充信息
             for i in range(0, len(keyList)):
@@ -82,14 +86,14 @@ def crawlSuppleInfo(peopleName: str, infoDict: dict, workInfoList: list, logPath
                 elif keyList[i] == "性别" and infoDict["gender"] == "":
                     infoDict["gender"] = valueList[i]
                 elif keyList[i] == "主要作品" or keyList[i] == "代表作品":
-                    valueList[i].replace("等", "")
+                    valueList[i] = valueList[i].replace("等", "")
                     if infoDict["repwork"] == "":
                         infoDict["repwork"] = valueList[i]
                     if len(workInfoList) == 0:
                         workNameList = valueList[i].split("《")
                         # 格式化作品名
                         for j in range(0, len(workNameList)):
-                            workNameList[j].replace("》", "")
+                            workNameList[j] = workNameList[j].replace("》", "")
                         crawlWorks(workNameList, workInfoList, peopleName)
             print("\t完成")
             logFile.write("\t完成\n")
@@ -97,7 +101,7 @@ def crawlSuppleInfo(peopleName: str, infoDict: dict, workInfoList: list, logPath
             print("\t发生异常：")
             traceback.print_exc()
             logFile.write("\t发生异常：\n")
-            logFile.write(ex)
+            logFile.write(str(ex))
             logFile.write("\n")
 
 

@@ -28,8 +28,8 @@ class PeopleInfo():
         self.workInfoList = []
 
     def crawl(self):
-        WikiPedia_zh.crawlPeopleInfo(self, "log.txt")
-        BaiduBaike.crawlSuppleInfo(self, "log.txt")
+        WikiPedia_zh.crawlPeopleInfo(self.name, self.infoDict, self.workInfoList, "log.txt")
+        BaiduBaike.crawlSuppleInfo(self.name, self.infoDict, self.workInfoList, "log.txt")
 
     def write(self):
         with open(peopleFilePath, "a+", 8192, encoding=encoding) as peopleInfoFile, \

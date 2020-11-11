@@ -23,15 +23,15 @@ def parseCoordinate(pos: str) -> list:
 
 def parseCoordinate_foreign(pos):
     try:
-        url =  "https://api.pickpoint.io/v1//forward?q=" + pos + "&key=VAYNFrz3NsN9sYAFpFUr"
-        reply = requests.get(url)
-        a = json.loads(reply.text)
-        lat = a[0]["lat"]
-        long = a[0]["lon"]
-        print(lat,long)
-        return [0,{"location":{"lng":long,"lat":lat}}]
+        url = "https://api.pickpoint.io/v1//forward?q=" + pos + "&key=VAYNFrz3NsN9sYAFpFUr"
+        response = requests.get(url)
+        any = json.loads(response.text)
+        lat = any[0]["lat"]
+        lon = any[0]["lon"]
+        return [0, {"location": {"lng": lon, "lat": lat}}]
     except Exception as e:
-        return [-1,e]
+        return [-1, str(e)]
+
 
 def downloadBinary(url: str, path: str) -> None:
     # Response.content存储Response对象的二进制形式

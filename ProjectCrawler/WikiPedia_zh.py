@@ -22,68 +22,77 @@ def crawlPeopleInfo(peopleName: str, infoDict: dict, workInfoList: list, logPath
             response.encoding = encoding
             html = response.text
             soup = BeautifulSoup(html, "lxml")
-            if not checkPeople(soup): return
+            if not checkPeople(soup):
+                print("\t没有此人物的词条")
+                logFile.write("\t没有此人物的词条\n")
+                return
             workURLDict = {}
             # 爬取人物信息
             # 生日
             tag = soup.find(class_="bday")
             if tag != None:
                 # 生日样例：1853-03-30
-                infoDict["dateofbirth"] = tag.text.split("-")[0]
+                infoDict["dateofbirth"] = removeDisturbChars(tag.text).split("-")[0]
             # 出生地
             tag = soup.find(class_="birthplace")
             if tag != None:
-                infoDict["birthplace"] = tag.text
+                infoDict["birthplace"] = removeDisturbChars(tag.text)
                 # 解析经纬度
                 posInfo = Util.parseCoordinate(infoDict["birthplace"])
                 if posInfo[0] == 0:
                     infoDict["longitude"] = posInfo[1]["location"]["lng"]
                     infoDict["latitude"] = posInfo[1]["location"]["lat"]
                 else:
-                    # 解析失败，尝试利用备用API
-                    posInfo = Util.parseCoordinate_foreign(infoDict["birthplace"])
-                    if posInfo[0] == 0:
-                        infoDict["longitude"] = posInfo[1]["location"]["lng"]
-                        infoDict["latitude"] = posInfo[1]["location"]["lat"]
-                    else:
-                        # 尝试利用地点词条爬取经纬度信息
+                    # 主要API解析失败，尝试利用地点词条爬取经纬度信息
+                    if len(tag.find_all("a")) > 0:
                         aTag = tag.find_all("a")[-1]
                         coordinate = crawlCoordinate(insertHead(aTag["href"]))
                         infoDict["longitude"] = coordinate[0]
                         infoDict["latitude"] = coordinate[1]
+                    # 无法从词条解析，尝试利用备用API
+                    if infoDict["longitude"] == "0":
+                        posInfo = Util.parseCoordinate_foreign(infoDict["birthplace"])
+                        if posInfo[0] == 0:
+                            infoDict["longitude"] = posInfo[1]["location"]["lng"]
+                            infoDict["latitude"] = posInfo[1]["location"]["lat"]
             # 逝世日期
             tag = soup.find(class_="dday")
             if tag != None:
-                infoDict["dateofdeath"] = tag.text.split("－")[0]
+                infoDict["dateofdeath"] = removeDisturbChars(tag.text).split("－")[0]
             # 简介
             tag = soup.find(class_="mw-parser-output")
             if tag != None:
                 introduction = ""
                 for child in tag.children:
-                    if isinstance(child, bs4.NavigableString):
+                    if not isinstance(child, bs4.Tag):
                         continue
                     # 遇到词条目录，简介部分到此结束
                     if "id" in child.attrs and child["id"] == "toc":
                         break
                     if child.name == "p":
                         introduction += child.text
+                # 去除非json字符和引号，避免破坏json结构
+                introduction = introduction.replace("\xa0", "")
+                introduction = introduction.replace("\"", "")
+                introduction = introduction.replace("\'", "")
                 infoDict["introduction"] = introduction
             # 余下信息难以直接通过类解析，采用遍历方式进行解析
             vcard = soup.find(class_="vcard")
             tbody = vcard.find("tbody")
             # 遍历tbody的每个子节点
             for tr in tbody.children:
+                if not isinstance(tr, bs4.Tag): continue
                 th = tr.find("th")
                 if th == None:
                     continue
-                category = th.text
+                category = removeDisturbChars(th.text)
                 if category == "国籍":
-                    infoDict["nationality"] = tr.find("td").text
+                    infoDict["nationality"] = removeDisturbChars(tr.find("td").text)
                 elif category == "代表作" or category == "知名作品":
                     td = tr.find("td")
                     workNames = ""
                     for index, tag in enumerate(td.find_all("a")):
-                        workName = tag.text
+                        workName = removeDisturbChars(tag.text)
                         workName = "《" + workName
                         workName += "》"
                         workNames += workName
@@ -91,7 +100,7 @@ def crawlPeopleInfo(peopleName: str, infoDict: dict, workInfoList: list, logPath
                             workURLDict[workName] = insertHead(tag["href"])
                         infoDict["repwork"] = workNames
                 elif category == "体裁" or category == "知名于":
-                    infoDict["major"] = tr.find("td").text
+                    infoDict["major"] = removeDisturbChars(tr.find("td").text)
             # 下载人物头像
             headImgTag = tbody.find("img")
             if headImgTag != None:
@@ -110,7 +119,7 @@ def crawlPeopleInfo(peopleName: str, infoDict: dict, workInfoList: list, logPath
             print("\t发生异常：")
             traceback.print_exc()
             logFile.write("\t发生异常：\n")
-            logFile.write(ex)
+            logFile.write(str(ex))
             logFile.write("\n")
 
 
@@ -137,7 +146,7 @@ def crawlCoordinate(url: str) -> tuple:
         else:
             sign = -1
         latitude = float(latitudeText.split("°")[0])
-        latitude += float(latitudeText.split("°")[1][0:-2])
+        latitude += round(float(latitudeText.split("°")[1].split("′")[0]) / 60, 2)
         latitude *= sign
     # 经度
     if longitudeTag != None:
@@ -147,7 +156,7 @@ def crawlCoordinate(url: str) -> tuple:
         else:
             sign = -1
         longitude = float(longitudeText.split("°")[0])
-        longitude += float(longitudeText.split("°")[1][0:-2])
+        longitude += round(float(longitudeText.split("°")[1].split("′")[0]) / 60, 2)
         longitude *= sign
     return (longitude, latitude)
 
@@ -220,3 +229,17 @@ def insertHead(url: str) -> str:
     # url完整
     else:
         return url
+
+
+def removeDisturbChars(oriText: str) -> str:
+    """
+    去除网页文本中带有的干扰字符（如\n和&nbsp）\n
+    :param oriText: 原始的网页文本
+    :return: 去除干扰字符的字符串
+    """
+    s = oriText
+    s = s.replace("\n", "")
+    s = s.replace("\'", "")
+    s = s.replace("\"", "")
+    s = s.replace("\xa0", "")
+    return s
