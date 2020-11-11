@@ -1,6 +1,5 @@
 from bs4 import BeautifulSoup
 import requests
-from PeopleInfo import PeopleInfo
 import traceback
 import Util
 
@@ -12,14 +11,12 @@ workImgLibPath = "作品图片"
 encoding = "UTF-8"
 
 
-def crawlSuppleInfo(peopleInfo: PeopleInfo, logPath: str) -> None:
-    infoDict = peopleInfo.infoDict
-    workInfoList = peopleInfo.workInfoList
+def crawlSuppleInfo(peopleName: str, infoDict: dict, workInfoList: list, logPath: str) -> None:
     with open(logPath, "a+", 8192, encoding=encoding) as logFile:
         try:
-            print("正在从百度百科为 " + peopleInfo.name + " 爬取补充信息...")
-            logFile.write("正在从百度百科为 " + peopleInfo.name + " 爬取补充信息...\n")
-            url = urlTemplate.format(peopleInfo.name)
+            print("正在从百度百科为 " + peopleName + " 爬取补充信息...")
+            logFile.write("正在从百度百科为 " + peopleName + " 爬取补充信息...\n")
+            url = urlTemplate.format(peopleName)
             response = requests.get(url, headers=headers)
             response.encoding = encoding
             html = response.text
@@ -32,7 +29,7 @@ def crawlSuppleInfo(peopleInfo: PeopleInfo, logPath: str) -> None:
                 if imgTag != None:
                     imgURL = imgTag["src"]
                     postfix = "." + imgURL.split("_")[-1]
-                    imgName = peopleInfo.name + postfix
+                    imgName = peopleName + postfix
                     imgPath = headImgLibPath + "\\" + imgName
                     Util.downloadBinary(imgURL, imgPath)
                     infoDict["headimage"] = "people\\images\\" + imgName
@@ -64,14 +61,14 @@ def crawlSuppleInfo(peopleInfo: PeopleInfo, logPath: str) -> None:
             # 遍历键值列表，填充信息
             for i in range(0, len(keyList)):
                 if keyList[i] == "国籍" and infoDict["nationality"] == "":
-                    peopleInfo.infoDict["nationality"] = valueList[i]
+                    infoDict["nationality"] = valueList[i]
                 elif keyList[i] == "出生地" and infoDict["birthplace"] == "":
                     infoDict["birthplace"] = valueList[i]
                     # 解析经纬度
-                    posInfo = Util.parseCoordinate(peopleInfo.infoDict["birthplace"])
+                    posInfo = Util.parseCoordinate(infoDict["birthplace"])
                     if posInfo[0] == 0:
-                        peopleInfo.infoDict["longitude"] = posInfo[1]["location"]["lng"]
-                        peopleInfo.infoDict["latitude"] = posInfo[1]["location"]["lat"]
+                        infoDict["longitude"] = posInfo[1]["location"]["lng"]
+                        infoDict["latitude"] = posInfo[1]["location"]["lat"]
                 elif (keyList[i] == "出生日期" or keyList[i] == "出生时间") and infoDict["dateofbirth"] == "0":
                     infoDict["dateofbirth"] = valueList[i].split("年")[0]
                 elif (keyList[i] == "逝世日期" or keyList[i] == "去世时间") and infoDict["dateofdeath"] == "0":
@@ -93,7 +90,7 @@ def crawlSuppleInfo(peopleInfo: PeopleInfo, logPath: str) -> None:
                         # 格式化作品名
                         for j in range(0, len(workNameList)):
                             workNameList[j].replace("》", "")
-                        peopleInfo.workInfoList = crawlWorks(workNameList, peopleInfo.name)
+                        crawlWorks(workNameList, workInfoList, peopleName)
             print("\t完成")
             logFile.write("\t完成\n")
         except Exception as ex:
@@ -104,8 +101,15 @@ def crawlSuppleInfo(peopleInfo: PeopleInfo, logPath: str) -> None:
             logFile.write("\n")
 
 
-def crawlWorks(workNameList: list, authorName: str) -> list:
-    workInfoList = []
+def crawlWorks(workNameList: list, workInfoList: list, authorName: str) -> None:
+    """
+    依据传入的作品名称列表，爬取作品图片，并将作者-作品名-图片名封装为字典传入workInfoList。
+    通常而言，只在workInfoList为空时调用此函数。\n
+    :param workNameList: 作品名称列表。这些作品应该具有共同的作者，即传入的author。
+    :param workInfoList: 作品信息列表。函数不会读取其中的信息，而只会向列表中填充信息。
+    :param authorName: 作者名
+    :return: 无返回值
+    """
     for workName in workNameList:
         url = urlTemplate.format(workName)
         response = requests.get(url, headers=headers)
@@ -126,7 +130,6 @@ def crawlWorks(workNameList: list, authorName: str) -> list:
         workInfoList.append(workDict)
         imgPath = workImgLibPath + "\\" + imgName
         Util.downloadBinary(imgURL, imgPath)
-    return workInfoList
 
 
 def checkWork(soup: BeautifulSoup) -> bool:

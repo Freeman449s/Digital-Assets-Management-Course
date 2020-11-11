@@ -11,7 +11,7 @@ class PeopleInfo():
         self.name = name
         self.infoDict = {}
         # 字典初始化
-        self.infoDict["name"] = ""
+        self.infoDict["name"] = name
         self.infoDict["nationality"] = ""
         self.infoDict["dateofbirth"] = "0"
         self.infoDict["dateofdeath"] = "0"
