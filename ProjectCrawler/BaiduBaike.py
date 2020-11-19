@@ -12,6 +12,14 @@ encoding = "UTF-8"
 
 
 def crawlSuppleInfo(peopleName: str, infoDict: dict, workInfoList: list, logPath: str) -> None:
+    """
+    从百度百科爬取补充人物信息\n
+    :param peopleName: 人物名
+    :param infoDict: 人物信息字典
+    :param workInfoList: 作品信息列表，列表中的每个元素是一个包含“作者-作品名-图片路径”三个键的字典
+    :param logPath: 日志文件路径
+    :return: 无返回值
+    """
     with open(logPath, "a+", 8192, encoding=encoding) as logFile:
         try:
             print("正在从百度百科为 " + peopleName + " 爬取补充信息...")

@@ -13,15 +13,26 @@ encoding = "UTF-8"
 
 
 def crawlPeopleInfo(peopleName: str, infoDict: dict, workInfoList: list, logPath: str) -> None:
+    """
+    从维基百科爬取人物信息。函数根据词条上的人物信息填充人物信息字典infoDict，并根据词条上列出的代表作品，
+    进入相关词条爬取图片。作者、作品名和图片路径存在字典中，该人物所有作品的字典存在列表workInfoList内\n
+    :param peopleName: 人物名
+    :param infoDict: 人物信息字典
+    :param workInfoList: 作品信息列表，列表中的每个元素是一个包含“作者-作品名-图片路径”三个键的字典
+    :param logPath: 日志文件路径
+    :return: 无返回值
+    """
     with open(logPath, "a+", 8192, encoding=encoding) as logFile:
         try:
             print("正在从维基百科为 " + peopleName + " 爬取信息...")
             logFile.write("正在从维基百科为 " + peopleName + " 爬取信息...\n")
+            # 包装url并发出请求
             url = urlTemplate.format(peopleName)
             response = requests.get(url)
             response.encoding = encoding
             html = response.text
             soup = BeautifulSoup(html, "lxml")
+            # 检查人物词条是否存在
             if not checkPeople(soup):
                 print("\t没有此人物的词条")
                 logFile.write("\t没有此人物的词条\n")
@@ -131,6 +142,7 @@ def crawlCoordinate(url: str) -> tuple:
     """
     latitude = "0"
     longitude = "0"
+    # 发送请求，并从响应中寻找经纬度标签
     response = requests.get(url, headers=headers)
     response.encoding = encoding
     html = response.text
@@ -174,6 +186,7 @@ def crawlWorks(workURLDict: dict, workInfoList: list, authorName: str) -> None:
         # 不尝试在英文维基上爬取
         if "en.wikipedia" in url:
             continue
+        # 解析作品名，包装成url并发送请求
         workName = workName.replace("《", "")
         workName = workName.replace("》", "")
         response = requests.get(url)
@@ -181,6 +194,7 @@ def crawlWorks(workURLDict: dict, workInfoList: list, authorName: str) -> None:
         html = response.text
         soup = BeautifulSoup(html, "lxml")
         if not checkWork(soup): continue
+        # 从响应中爬取图片
         workDict = {}
         workDict["author"] = authorName
         workDict["title"] = workName
@@ -191,7 +205,7 @@ def crawlWorks(workURLDict: dict, workInfoList: list, authorName: str) -> None:
         imgName = authorName + "-" + workName + postfix
         workDict["image"] = "peopleworks\\images\\" + imgName
         workInfoList.append(workDict)
-        imgURL = insertHead(imgURL)
+        imgURL = insertHead(imgURL)  # 网页上返回的url可能不完整，需要将其补全
         Util.downloadBinary(imgURL, workImgLibPath + "\\" + imgName)
 
 
